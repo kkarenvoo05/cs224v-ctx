@@ -1,0 +1,181 @@
+round 1/30 tested=0
+  [propose r0] 3.7s in=1245 out=90
+  accepted=16 hits+=1 cum=1 ratio=0.0011 invalid=0 repeats=0 dup=0
+  [probe r1] 5.0s in=1093 out=31
+round 2/30 tested=16
+  [propose r1] 3.5s in=1614 out=90
+  accepted=16 hits+=0 cum=1 ratio=0.0011 invalid=0 repeats=0 dup=0
+  [probe r2] 3.9s in=1251 out=48
+round 3/30 tested=32
+  [propose r2] 4.2s in=1767 out=218
+  accepted=16 hits+=2 cum=3 ratio=0.0033 invalid=0 repeats=0 dup=0
+  [sum_neg r3] 12.4s in=1303 out=1043
+  [sum_pos r3] 10.6s in=900 out=775
+  [probe r3] 4.6s in=2439 out=150
+round 4/30 tested=48
+  [propose r3] 6.3s in=2955 out=475
+  [retry r3] 5.7s in=3209 out=341
+  [diagnose r3] 6.6s in=2913 out=482
+  accepted=16 hits+=0 cum=3 ratio=0.0033 invalid=0 repeats=12 dup=0
+  [sum_neg r4] 16.5s in=1455 out=1173
+  [sum_pos r4] 13.6s in=900 out=851
+  [probe r4] 6.1s in=2499 out=341
+round 5/30 tested=64
+  [propose r4] 5.4s in=3012 out=372
+  [retry r4] 4.9s in=3264 out=226
+  [diagnose r4] 7.0s in=2967 out=482
+  accepted=11 hits+=1 cum=4 ratio=0.0043 invalid=0 repeats=13 dup=0
+  [sum_neg r5] 14.3s in=1548 out=1151
+  [sum_pos r5] 11.3s in=907 out=670
+  [probe r5] 5.5s in=2243 out=284
+round 6/30 tested=75
+  [propose r5] 6.6s in=2756 out=419
+  [retry r5] 5.2s in=3010 out=311
+  [diagnose r5] 5.9s in=2713 out=379
+  accepted=13 hits+=0 cum=4 ratio=0.0043 invalid=0 repeats=17 dup=2
+  [sum_neg r6] 12.2s in=1674 out=953
+  [sum_pos r6] 12.1s in=907 out=791
+  [probe r6] 6.7s in=2443 out=386
+round 7/30 tested=88
+  [propose r6] 6.0s in=2955 out=414
+  [retry r6] 5.1s in=3208 out=286
+  [diagnose r6] 6.9s in=2911 out=398
+  accepted=16 hits+=0 cum=4 ratio=0.0043 invalid=0 repeats=14 dup=2
+  [sum_neg r7] 15.3s in=1822 out=1191
+  [sum_pos r7] 10.9s in=909 out=646
+  [probe r7] 5.8s in=2472 out=316
+round 8/30 tested=104
+  [propose r7] 6.3s in=2983 out=440
+  [retry r7] 6.0s in=3237 out=350
+  [diagnose r7] 6.4s in=2943 out=429
+  accepted=11 hits+=0 cum=4 ratio=0.0043 invalid=0 repeats=16 dup=5
+  [sum_neg r8] 13.3s in=1925 out=1019
+  [sum_pos r8] 12.9s in=910 out=799
+  [probe r8] 7.7s in=2275 out=543
+round 9/30 tested=115
+  [propose r8] 5.9s in=2785 out=439
+  [retry r8] 6.1s in=3039 out=337
+  [diagnose r8] 7.2s in=2741 out=535
+  accepted=13 hits+=1 cum=5 ratio=0.0054 invalid=0 repeats=17 dup=2
+  [sum_neg r9] 13.3s in=2037 out=956
+  [sum_pos r9] 9.9s in=919 out=622
+  [probe r9] 6.6s in=2371 out=400
+round 10/30 tested=128
+  [propose r9] 5.8s in=2879 out=399
+  [retry r9] 4.4s in=3135 out=199
+  [diagnose r9] 6.0s in=2837 out=408
+  accepted=16 hits+=1 cum=6 ratio=0.0065 invalid=0 repeats=15 dup=1
+  [sum_neg r10] 17.1s in=2178 out=1403
+  [sum_pos r10] 10.9s in=928 out=785
+  [probe r10] 6.1s in=2587 out=353
+round 11/30 tested=144
+  [propose r10] 6.6s in=3095 out=515
+  [retry r10] 7.3s in=3347 out=380
+  [diagnose r10] 6.7s in=3053 out=449
+  accepted=14 hits+=0 cum=6 ratio=0.0065 invalid=0 repeats=13 dup=5
+  [sum_neg r11] 13.4s in=2308 out=980
+  [sum_pos r11] 14.4s in=926 out=976
+  [probe r11] 5.4s in=2514 out=266
+round 12/30 tested=158
+  [propose r11] 5.9s in=3020 out=434
+  [retry r11] 6.4s in=3273 out=305
+  [diagnose r11] 6.2s in=2978 out=429
+  accepted=12 hits+=1 cum=7 ratio=0.0076 invalid=0 repeats=16 dup=4
+  [sum_neg r12] 12.8s in=2414 out=1040
+  [sum_pos r12] 13.8s in=939 out=882
+  [probe r12] 6.4s in=2382 out=340
+round 13/30 tested=170
+  [propose r12] 5.4s in=2891 out=361
+  [retry r12] 4.6s in=3144 out=227
+  [diagnose r12] 7.5s in=2847 out=464
+  accepted=10 hits+=1 cum=8 ratio=0.0087 invalid=0 repeats=14 dup=0
+  [sum_neg r13] 15.8s in=2497 out=1368
+  [sum_pos r13] 13.5s in=946 out=957
+  [probe r13] 6.0s in=2481 out=331
+round 14/30 tested=180
+  [propose r13] 5.5s in=2989 out=354
+  [retry r13] 5.3s in=3242 out=328
+  [diagnose r13] 7.0s in=2948 out=465
+  accepted=12 hits+=1 cum=9 ratio=0.0098 invalid=0 repeats=18 dup=2
+  [sum_neg r14] 14.5s in=2601 out=1157
+  [sum_pos r14] 12.3s in=957 out=873
+  [probe r14] 6.4s in=2435 out=362
+round 15/30 tested=192
+  [propose r14] 6.0s in=2945 out=396
+  [retry r14] 5.0s in=3198 out=280
+  [diagnose r14] 6.3s in=2902 out=441
+  accepted=13 hits+=0 cum=9 ratio=0.0098 invalid=0 repeats=18 dup=1
+  [sum_neg r15] 14.4s in=2724 out=1164
+  [sum_pos r15] 12.6s in=956 out=954
+  [probe r15] 6.5s in=2508 out=445
+round 16/30 tested=205
+  [propose r15] 6.0s in=3017 out=424
+  [retry r15] 6.0s in=3271 out=360
+  [diagnose r15] 6.6s in=2976 out=373
+  accepted=11 hits+=1 cum=10 ratio=0.0109 invalid=0 repeats=19 dup=2
+  [sum_neg r16] 14.9s in=2818 out=1144
+  [sum_pos r16] 15.1s in=965 out=1039
+  [probe r16] 6.4s in=2511 out=387
+round 17/30 tested=216
+  [propose r16] 6.0s in=3018 out=422
+  [retry r16] 4.5s in=3275 out=231
+  [diagnose r16] 8.4s in=2978 out=678
+  accepted=9 hits+=0 cum=10 ratio=0.0109 invalid=0 repeats=23 dup=0
+  [sum_neg r17] 12.3s in=2908 out=992
+  [sum_pos r17] 13.9s in=964 out=1027
+  [probe r17] 6.5s in=2438 out=346
+round 18/30 tested=225
+  [propose r17] 5.7s in=2948 out=351
+  [retry r17] 4.6s in=3203 out=225
+  [diagnose r17] 6.5s in=2906 out=402
+  accepted=16 hits+=2 cum=12 ratio=0.0130 invalid=0 repeats=16 dup=0
+  [sum_neg r18] 16.5s in=3037 out=1330
+  [sum_pos r18] 14.0s in=985 out=1015
+  [probe r18] 7.1s in=2592 out=394
+round 19/30 tested=241
+  [propose r18] 6.6s in=3101 out=480
+  [retry r18] 5.1s in=3356 out=221
+  [diagnose r18] 6.8s in=3057 out=476
+  accepted=14 hits+=1 cum=13 ratio=0.0141 invalid=0 repeats=18 dup=0
+  [sum_neg r19] 15.1s in=3159 out=1246
+  [sum_pos r19] 15.2s in=994 out=1055
+  [probe r19] 5.2s in=2581 out=280
+round 20/30 tested=255
+  [propose r19] 5.5s in=3091 out=404
+  [retry r19] 5.7s in=3346 out=361
+  [diagnose r19] 7.5s in=3050 out=542
+  accepted=15 hits+=1 cum=14 ratio=0.0152 invalid=0 repeats=13 dup=4
+  [sum_neg r20] 16.8s in=3293 out=1420
+  [sum_pos r20] 12.8s in=1004 out=987
+  [probe r20] 4.7s in=2464 out=236
+round 21/30 tested=270
+  [propose r20] 6.3s in=2971 out=419
+  [retry r20] 3.7s in=3227 out=58
+  [diagnose r20] 8.8s in=2926 out=698
+  accepted=13 hits+=2 cum=16 ratio=0.0174 invalid=0 repeats=11 dup=0
+  [sum_neg r21] 13.7s in=3397 out=1119
+  [sum_pos r21] 13.2s in=1022 out=1005
+  [probe r21] 7.4s in=2478 out=414
+round 22/30 tested=283
+  [propose r21] 5.7s in=2984 out=324
+  [retry r21] 5.1s in=3238 out=246
+  [diagnose r21] 9.2s in=2940 out=721
+  accepted=16 hits+=1 cum=17 ratio=0.0185 invalid=0 repeats=11 dup=5
+  [sum_neg r22] 14.2s in=3540 out=1071
+  [sum_pos r22] 13.4s in=1030 out=1064
+Traceback (most recent call last):
+  File "/Users/katherine/projects/cs224v-ctx/bio/llm_agent.py", line 304, in <module>
+    run(args)
+  File "/Users/katherine/projects/cs224v-ctx/bio/llm_agent.py", line 263, in run
+    presp = llm(f"{task}\n{view}\nMemory check (do not propose genes now). For each ID below, answer whether "
+  File "/Users/katherine/projects/cs224v-ctx/bio/llm_agent.py", line 115, in __call__
+    r = call(prompt, kind, round_)
+  File "/Users/katherine/projects/cs224v-ctx/bio/llm_agent.py", line 98, in _claude
+    out = subprocess.run(cmd, input=prompt, capture_output=True, text=True, timeout=600, cwd=empty)
+  File "/Users/katherine/anaconda3/lib/python3.10/subprocess.py", line 503, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/Users/katherine/anaconda3/lib/python3.10/subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Users/katherine/anaconda3/lib/python3.10/subprocess.py", line 1863, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'claude'

@@ -1,0 +1,228 @@
+round 1/30 tested=0
+  [propose r0] 27.2s in=735 out=144
+  accepted=16 hits+=1 cum=1 ratio=0.0011 invalid=0 repeats=0 dup=0
+  [probe r1] 7.1s in=506 out=31
+round 2/30 tested=16
+  [propose r1] 36.3s in=1274 out=126
+  accepted=16 hits+=1 cum=2 ratio=0.0022 invalid=0 repeats=0 dup=0
+  [probe r2] 11.5s in=753 out=49
+round 3/30 tested=32
+  [propose r2] 29.1s in=1514 out=129
+  accepted=16 hits+=1 cum=3 ratio=0.0033 invalid=0 repeats=0 dup=0
+  [sum_neg r3] 41.8s in=887 out=152
+  [sum_pos r3] 13.8s in=256 out=108
+  [probe r3] 9.8s in=577 out=30
+round 4/30 tested=48
+  [propose r3] 28.1s in=1338 out=129
+  [retry r3] 10.7s in=1641 out=51
+  [diagnose r3] 17.0s in=1336 out=80
+  accepted=16 hits+=1 cum=4 ratio=0.0043 invalid=0 repeats=8 dup=0
+  [sum_neg r4] 37.8s in=1112 out=159
+  [sum_pos r4] 19.9s in=271 out=130
+  [probe r4] 9.1s in=616 out=40
+round 5/30 tested=64
+  [propose r4] 30.2s in=1370 out=129
+  [retry r4] 5.5s in=1674 out=21
+  [diagnose r4] 8.2s in=1319 out=10
+  accepted=16 hits+=0 cum=4 ratio=0.0043 invalid=0 repeats=1 dup=2
+  [sum_neg r5] 45.1s in=1352 out=196
+  [sum_pos r5] 28.9s in=271 out=146
+  [probe r5] 9.4s in=672 out=40
+round 6/30 tested=80
+  [propose r5] 32.8s in=1426 out=129
+  [retry r5] 28.8s in=1730 out=122
+  [diagnose r5] 12.8s in=1403 out=50
+  accepted=16 hits+=0 cum=4 ratio=0.0043 invalid=0 repeats=5 dup=0
+  [sum_neg r6] 36.9s in=1592 out=193
+  [sum_pos r6] 22.4s in=271 out=146
+  [probe r6] 11.0s in=672 out=40
+round 7/30 tested=96
+  [propose r6] 26.9s in=1426 out=129
+  [retry r6] 27.2s in=1730 out=75
+  [diagnose r6] 23.4s in=1452 out=120
+  accepted=16 hits+=0 cum=4 ratio=0.0043 invalid=0 repeats=12 dup=0
+  [sum_neg r7] 38.2s in=1832 out=182
+  [sum_pos r7] 17.1s in=271 out=125
+  [probe r7] 10.1s in=643 out=40
+round 8/30 tested=112
+  [propose r7] 30.8s in=1397 out=129
+  [retry r7] 30.2s in=1702 out=129
+  [diagnose r7] 31.4s in=1423 out=120
+  accepted=16 hits+=2 cum=6 ratio=0.0065 invalid=0 repeats=16 dup=0
+  [sum_neg r8] 32.7s in=2042 out=175
+  [sum_pos r8] 15.9s in=301 out=115
+  [probe r8] 15.2s in=636 out=50
+round 9/30 tested=128
+  [propose r8] 41.4s in=1383 out=129
+  [retry r8] 11.9s in=1686 out=51
+  [diagnose r8] 19.4s in=1381 out=80
+  accepted=16 hits+=1 cum=7 ratio=0.0076 invalid=0 repeats=8 dup=0
+  [sum_neg r9] 35.6s in=2267 out=170
+  [sum_pos r9] 19.3s in=316 out=129
+  [probe r9] 12.1s in=648 out=50
+round 10/30 tested=144
+  [propose r9] 36.0s in=1396 out=144
+  [retry r9] 25.3s in=1714 out=65
+  [diagnose r9] 20.7s in=1400 out=90
+  accepted=16 hits+=1 cum=8 ratio=0.0087 invalid=0 repeats=9 dup=0
+  [sum_neg r10] 41.8s in=2492 out=201
+  [sum_pos r10] 21.6s in=331 out=123
+  [probe r10] 11.9s in=676 out=50
+round 11/30 tested=160
+  [propose r10] 32.1s in=1425 out=129
+  [retry r10] 12.1s in=1729 out=69
+  [diagnose r10] 42.8s in=1442 out=110
+  accepted=16 hits+=1 cum=9 ratio=0.0098 invalid=0 repeats=11 dup=0
+  [sum_neg r11] 26.2s in=2717 out=145
+  [sum_pos r11] 41.0s in=346 out=200
+  [probe r11] 12.5s in=700 out=50
+round 12/30 tested=176
+  [propose r11] 35.6s in=1449 out=129
+  [retry r11] 15.5s in=1753 out=81
+  [diagnose r11] 48.0s in=1473 out=120
+  accepted=16 hits+=3 cum=12 ratio=0.0130 invalid=0 repeats=13 dup=0
+  [sum_neg r12] 32.2s in=2912 out=185
+  [sum_pos r12] 30.2s in=391 out=159
+  [probe r12] 13.2s in=704 out=50
+round 13/30 tested=192
+  [propose r12] 32.4s in=1453 out=129
+  [retry r12] 20.5s in=1757 out=123
+  [diagnose r12] 29.6s in=1477 out=120
+  accepted=16 hits+=1 cum=13 ratio=0.0141 invalid=0 repeats=15 dup=0
+  [sum_neg r13] 53.9s in=3137 out=246
+  [sum_pos r13] 39.7s in=406 out=193
+  [probe r13] 15.4s in=803 out=64
+round 14/30 tested=208
+  [propose r13] 33.8s in=1552 out=129
+  [retry r13] 25.3s in=1856 out=129
+  [diagnose r13] 36.3s in=1576 out=120
+  accepted=16 hits+=2 cum=15 ratio=0.0163 invalid=0 repeats=12 dup=4
+  [sum_neg r14] 46.6s in=3347 out=226
+  [sum_pos r14] 20.3s in=436 out=141
+  [probe r14] 12.5s in=735 out=50
+round 15/30 tested=224
+  [propose r14] 31.0s in=1484 out=129
+  [retry r14] 40.0s in=1789 out=129
+  [diagnose r14] 28.8s in=1508 out=120
+  accepted=0 hits+=0 cum=15 ratio=0.0163 invalid=0 repeats=32 dup=0
+  [sum_neg r15] 29.8s in=3347 out=201
+  [sum_pos r15] 28.1s in=436 out=143
+  [probe r15] 18.2s in=709 out=40
+round 16/30 tested=224
+  [propose r15] 33.1s in=1465 out=129
+  [retry r15] 28.5s in=1770 out=129
+  [diagnose r15] 28.5s in=1489 out=120
+  accepted=4 hits+=0 cum=15 ratio=0.0163 invalid=0 repeats=28 dup=0
+  [sum_neg r16] 24.7s in=3407 out=155
+  [sum_pos r16] 28.0s in=436 out=191
+  [probe r16] 18.0s in=715 out=40
+round 17/30 tested=228
+  [propose r16] 49.1s in=1471 out=144
+  [retry r16] 19.7s in=1790 out=93
+  [diagnose r16] 33.4s in=1495 out=120
+  accepted=16 hits+=0 cum=15 ratio=0.0163 invalid=0 repeats=13 dup=0
+  [sum_neg r17] 30.0s in=3647 out=159
+  [sum_pos r17] 24.2s in=436 out=159
+  [probe r17] 13.1s in=698 out=50
+round 18/30 tested=244
+  [propose r17] 51.6s in=1447 out=144
+  [retry r17] 12.0s in=1765 out=65
+  [diagnose r17] 22.2s in=1450 out=90
+  accepted=16 hits+=1 cum=16 ratio=0.0174 invalid=0 repeats=9 dup=0
+  [sum_neg r18] 52.8s in=3872 out=265
+  [sum_pos r18] 20.2s in=451 out=118
+  [probe r18] 22.7s in=760 out=40
+round 19/30 tested=260
+  [propose r18] 34.1s in=1516 out=129
+  [retry r18] 34.6s in=1820 out=129
+  [diagnose r18] 44.4s in=1540 out=120
+  accepted=16 hits+=1 cum=17 ratio=0.0185 invalid=0 repeats=15 dup=0
+  [sum_neg r19] 75.3s in=4097 out=322
+  [sum_pos r19] 38.3s in=466 out=129
+  [probe r19] 17.0s in=839 out=58
+round 20/30 tested=276
+  [propose r19] 39.4s in=1588 out=126
+  [retry r19] 15.3s in=1888 out=57
+  [diagnose r19] 41.6s in=1591 out=90
+  accepted=16 hits+=1 cum=18 ratio=0.0196 invalid=0 repeats=9 dup=0
+  [sum_neg r20] 74.2s in=4322 out=264
+  [sum_pos r20] 29.1s in=481 out=146
+  [probe r20] 15.5s in=802 out=58
+round 21/30 tested=292
+  [propose r20] 59.7s in=1551 out=129
+  [retry r20] 17.5s in=1855 out=99
+  [diagnose r20] 28.1s in=1575 out=120
+  accepted=16 hits+=2 cum=20 ratio=0.0217 invalid=0 repeats=14 dup=0
+  [sum_neg r21] 36.0s in=4532 out=214
+  [sum_pos r21] 20.2s in=511 out=135
+  [probe r21] 11.9s in=745 out=50
+round 22/30 tested=308
+  [propose r21] 30.6s in=1494 out=129
+  [retry r21] 21.0s in=1799 out=129
+  [diagnose r21] 25.9s in=1518 out=120
+  accepted=16 hits+=0 cum=20 ratio=0.0217 invalid=0 repeats=16 dup=0
+  [sum_neg r22] 34.8s in=4772 out=204
+  [sum_pos r22] 18.8s in=511 out=130
+  [probe r22] 11.3s in=727 out=40
+round 23/30 tested=324
+  [propose r22] 31.9s in=1483 out=129
+  [retry r22] 17.9s in=1787 out=99
+  [diagnose r22] 26.2s in=1507 out=120
+  accepted=16 hits+=0 cum=20 ratio=0.0217 invalid=0 repeats=15 dup=0
+  [sum_neg r23] 41.7s in=5012 out=248
+  [sum_pos r23] 19.1s in=511 out=130
+  [probe r23] 13.4s in=782 out=50
+round 24/30 tested=340
+  [propose r23] 36.4s in=1531 out=144
+  [retry r23] 16.5s in=1850 out=86
+  [diagnose r23] 26.3s in=1555 out=120
+  accepted=16 hits+=3 cum=23 ratio=0.0250 invalid=0 repeats=12 dup=0
+  [sum_neg r24] 46.6s in=5207 out=276
+  [sum_pos r24] 21.8s in=556 out=139
+  [probe r24] 13.4s in=823 out=50
+round 25/30 tested=356
+  [propose r24] 32.2s in=1572 out=129
+  [retry r24] 17.8s in=1876 out=99
+  [diagnose r24] 25.5s in=1596 out=120
+  accepted=16 hits+=0 cum=23 ratio=0.0250 invalid=0 repeats=15 dup=1
+  [sum_neg r25] 28.9s in=5447 out=157
+  [sum_pos r25] 23.3s in=556 out=152
+  [probe r25] 12.6s in=721 out=50
+round 26/30 tested=372
+  [propose r25] 32.7s in=1470 out=129
+  [retry r25] 16.1s in=1774 out=87
+  [diagnose r25] 27.1s in=1494 out=120
+  accepted=16 hits+=0 cum=23 ratio=0.0250 invalid=0 repeats=14 dup=0
+  [sum_neg r26] 28.4s in=5687 out=151
+  [sum_pos r26] 18.4s in=556 out=122
+  [probe r26] 12.5s in=689 out=50
+round 27/30 tested=388
+  [propose r26] 33.5s in=1438 out=129
+  [retry r26] 10.9s in=1741 out=51
+  [diagnose r26] 20.5s in=1434 out=80
+  accepted=16 hits+=0 cum=23 ratio=0.0250 invalid=0 repeats=8 dup=0
+  [sum_neg r27] 60.0s in=5927 out=292
+  [sum_pos r27] 19.2s in=556 out=135
+  [probe r27] 13.2s in=847 out=50
+round 28/30 tested=404
+  [propose r27] 32.8s in=1596 out=129
+  [retry r27] 15.9s in=1900 out=93
+  [diagnose r27] 24.8s in=1620 out=120
+  accepted=16 hits+=1 cum=24 ratio=0.0261 invalid=0 repeats=13 dup=0
+  [sum_neg r28] 31.2s in=6152 out=121
+  [sum_pos r28] 26.7s in=571 out=140
+  [probe r28] 10.0s in=685 out=50
+round 29/30 tested=420
+  [propose r28] 26.9s in=1434 out=129
+  [retry r28] 11.3s in=1738 out=75
+  [diagnose r28] 31.5s in=1458 out=120
+  accepted=16 hits+=1 cum=25 ratio=0.0272 invalid=0 repeats=12 dup=0
+  [sum_neg r29] 24.7s in=6377 out=147
+  [sum_pos r29] 26.3s in=586 out=109
+  [probe r29] 19.6s in=684 out=50
+round 30/30 tested=436
+  [propose r29] 27.7s in=1433 out=144
+  [retry r29] 6.3s in=1752 out=30
+  [diagnose r29] 11.6s in=1401 out=40
+  accepted=16 hits+=1 cum=26 ratio=0.0283 invalid=0 repeats=4 dup=0
+{"wall_s": 4409.6, "n_calls": 167, "totals": {"rounds": 30, "tested": 452, "cum_hits": 26, "hit_ratio": 0.02826086956521739, "invalid": 0, "repeats": 339, "dup_in_batch": 7, "overflow": 17, "short_batches": 2}}

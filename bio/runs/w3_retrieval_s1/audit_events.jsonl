@@ -1,0 +1,2120 @@
+{"type": "observe", "step": 0, "key": "G00011.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G00026.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G00033.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G00091.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G00100.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G00102.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G00104.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G00118.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G00197.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G00228.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G00287.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G00293.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G00299.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G00338.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G00376.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G00508.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G00531.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G00695.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G00717.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G00741.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G00742.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G00796.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G00827.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G00965.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G01029.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G01174.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G01184.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G01189.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G01200.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G01208.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G01231.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G01242.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G01271.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G01287.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G01290.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G01344.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G01417.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G01457.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G01561.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G01609.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G01645.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G01656.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G01676.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G01727.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G01753.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G01816.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G01819.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G01831.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G01920.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G01953.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G01971.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G01972.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G02021.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G02051.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G02236.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G02304.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G02343.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G02368.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G02386.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G02414.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G02456.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G02490.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G02531.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G02552.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G02562.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G02576.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G02600.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G02615.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G02647.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G02649.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G02711.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G02766.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G02781.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G02823.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G02832.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G02847.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G02913.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G02924.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G02945.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G02950.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G03012.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G03028.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G03064.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G03134.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G03151.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G03225.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G03247.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G03327.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G03335.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G03393.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G03557.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G03663.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G03772.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G03798.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G03865.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G03909.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G04016.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G04023.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G04106.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G04221.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G04249.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G04272.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G04287.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G04358.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G04372.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G04383.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G04421.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G04455.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G04532.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G04557.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G04639.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G04767.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G04797.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G04885.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G04887.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G04903.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G04966.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G05063.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G05167.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G05175.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G05206.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G05217.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G05245.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G05352.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G05373.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G05381.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G05407.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G05414.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G05440.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G05485.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G05497.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G05506.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G05540.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G05544.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G05556.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G05642.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G05673.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G05784.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G05790.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G05872.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G05891.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G05917.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G05927.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G05969.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G05976.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G06106.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G06114.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G06121.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G06171.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G06185.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G06195.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G06230.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G06231.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G06305.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G06308.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G06371.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G06496.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G06522.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G06644.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G06685.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G06692.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G06733.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G06774.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G06815.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G06910.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G06929.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G06939.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G07014.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G07020.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G07036.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G07092.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G07204.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G07291.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G07300.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G07327.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G07481.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G07487.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G07522.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G07573.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G07586.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G07643.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G07646.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G07668.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G07674.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G07736.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G07765.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G07797.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G07840.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G07935.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G07948.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G08209.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G08289.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G08294.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G08364.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G08389.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G08402.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G08478.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G08484.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G08514.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G08530.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G08540.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G08543.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G08546.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G08582.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G08584.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G08604.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G08639.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G08665.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G08678.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G08681.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G08758.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G08806.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G08850.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G09001.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G09030.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G09083.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G09155.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G09188.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G09253.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G09257.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G09358.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G09421.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G09422.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G09427.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G09451.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G09456.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G09479.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G09520.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G09543.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G09556.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G09589.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G09645.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G09681.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G09697.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G09700.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G09729.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G09761.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G09764.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G09823.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G09842.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G09898.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G10010.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G10020.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G10168.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G10317.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G10441.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G10487.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G10516.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G10530.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G10551.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G10574.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G10608.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G10681.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G10701.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G10721.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G10740.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G10744.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G10791.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G10803.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G10908.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G10943.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G10953.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G11019.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G11031.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G11212.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G11286.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G11362.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G11381.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G11384.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G11405.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G11438.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G11470.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G11529.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G11605.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G11606.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G11712.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G11737.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G11739.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G11745.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G11840.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G11866.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G11868.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G11899.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G11929.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G11966.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G12005.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G12038.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G12039.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G12044.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G12108.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G12111.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G12127.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G12197.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G12217.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G12225.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G12284.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G12285.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G12314.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G12341.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G12370.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G12388.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G12401.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G12410.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G12462.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G12472.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G12489.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G12541.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G12574.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G12590.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G12609.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G12654.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G12669.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G12730.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G12750.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G12815.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G12857.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G12896.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G12966.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G12972.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G12974.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G13042.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G13056.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G13096.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G13121.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G13274.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G13276.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G13308.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G13317.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G13357.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G13561.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G13746.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G13758.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G13827.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G13845.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G13853.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G13865.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G13888.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G13905.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G13933.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G13964.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G14035.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G14047.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G14110.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G14116.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G14179.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G14189.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G14242.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G14253.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G14272.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G14346.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G14369.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G14391.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G14410.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G14431.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G14450.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G14491.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G14505.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G14530.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G14587.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G14610.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G14623.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G14627.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G14635.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G14651.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G14661.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G14714.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G14718.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G14725.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G14877.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G14921.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G14924.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G14932.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G14941.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G14967.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G14996.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G15005.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G15016.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G15111.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G15193.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G15200.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G15254.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G15264.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G15346.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G15361.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G15387.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G15408.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G15551.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G15575.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G15585.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G15672.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G15711.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G15739.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G15753.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G15755.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G15783.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G15801.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G15870.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G15921.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G15936.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G15977.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G16043.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G16056.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G16078.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G16087.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G16104.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G16116.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G16126.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G16131.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G16166.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G16182.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G16186.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G16226.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G16311.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G16381.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G16421.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G16463.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G16482.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G16621.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G16682.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G16689.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G16706.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G16722.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G16742.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G16811.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G16824.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G16855.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G16930.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G16998.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G17002.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G17038.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G17130.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G17219.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G17263.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G17280.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G17282.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G17318.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G17354.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G17373.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G17381.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G17434.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G17485.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G17611.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G17694.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G17862.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G17870.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G17887.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G17898.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G17999.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G18013.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G18018.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G18129.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G18183.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G18220.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G18237.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G18263.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G18267.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G18296.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G18333.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G18368.tested", "value": false, "item_id": "pool"}
+{"type": "observe", "step": 0, "key": "G18403.tested", "value": false, "item_id": "pool"}
+{"type": "use", "step": 0, "key": "G07522.tested", "value": false, "entity": "G07522.tested"}
+{"type": "use", "step": 0, "key": "G05540.tested", "value": false, "entity": "G05540.tested"}
+{"type": "use", "step": 0, "key": "G05175.tested", "value": false, "entity": "G05175.tested"}
+{"type": "use", "step": 0, "key": "G04421.tested", "value": false, "entity": "G04421.tested"}
+{"type": "use", "step": 0, "key": "G16482.tested", "value": false, "entity": "G16482.tested"}
+{"type": "use", "step": 0, "key": "G17999.tested", "value": false, "entity": "G17999.tested"}
+{"type": "use", "step": 0, "key": "G15870.tested", "value": false, "entity": "G15870.tested"}
+{"type": "use", "step": 0, "key": "G12972.tested", "value": false, "entity": "G12972.tested"}
+{"type": "use", "step": 0, "key": "G01819.tested", "value": false, "entity": "G01819.tested"}
+{"type": "use", "step": 0, "key": "G01457.tested", "value": false, "entity": "G01457.tested"}
+{"type": "use", "step": 0, "key": "G09729.tested", "value": false, "entity": "G09729.tested"}
+{"type": "use", "step": 0, "key": "G03012.tested", "value": false, "entity": "G03012.tested"}
+{"type": "use", "step": 0, "key": "G17373.tested", "value": false, "entity": "G17373.tested"}
+{"type": "use", "step": 0, "key": "G06371.tested", "value": false, "entity": "G06371.tested"}
+{"type": "use", "step": 0, "key": "G02823.tested", "value": false, "entity": "G02823.tested"}
+{"type": "use", "step": 0, "key": "G09681.tested", "value": false, "entity": "G09681.tested"}
+{"type": "observe", "step": 0, "key": "G07522.score", "value": -0.253, "item_id": "r0:G07522"}
+{"type": "update", "step": 0, "key": "G07522.tested", "value": true}
+{"type": "observe", "step": 0, "key": "G05540.score", "value": -0.04852565, "item_id": "r0:G05540"}
+{"type": "update", "step": 0, "key": "G05540.tested", "value": true}
+{"type": "observe", "step": 0, "key": "G05175.score", "value": -0.69825, "item_id": "r0:G05175"}
+{"type": "update", "step": 0, "key": "G05175.tested", "value": true}
+{"type": "observe", "step": 0, "key": "G04421.score", "value": 0.0052715, "item_id": "r0:G04421"}
+{"type": "update", "step": 0, "key": "G04421.tested", "value": true}
+{"type": "observe", "step": 0, "key": "G16482.score", "value": 0.031364, "item_id": "r0:G16482"}
+{"type": "update", "step": 0, "key": "G16482.tested", "value": true}
+{"type": "observe", "step": 0, "key": "G17999.score", "value": -0.0397735, "item_id": "r0:G17999"}
+{"type": "update", "step": 0, "key": "G17999.tested", "value": true}
+{"type": "observe", "step": 0, "key": "G15870.score", "value": 0.060578, "item_id": "r0:G15870"}
+{"type": "update", "step": 0, "key": "G15870.tested", "value": true}
+{"type": "observe", "step": 0, "key": "G12972.score", "value": -0.2630845, "item_id": "r0:G12972"}
+{"type": "update", "step": 0, "key": "G12972.tested", "value": true}
+{"type": "observe", "step": 0, "key": "G01819.score", "value": 0.00332065, "item_id": "r0:G01819"}
+{"type": "update", "step": 0, "key": "G01819.tested", "value": true}
+{"type": "observe", "step": 0, "key": "G01457.score", "value": -0.30075, "item_id": "r0:G01457"}
+{"type": "update", "step": 0, "key": "G01457.tested", "value": true}
+{"type": "observe", "step": 0, "key": "G09729.score", "value": -0.231185, "item_id": "r0:G09729"}
+{"type": "update", "step": 0, "key": "G09729.tested", "value": true}
+{"type": "observe", "step": 0, "key": "G03012.score", "value": 0.306925, "item_id": "r0:G03012"}
+{"type": "update", "step": 0, "key": "G03012.tested", "value": true}
+{"type": "observe", "step": 0, "key": "G17373.score", "value": -0.215065, "item_id": "r0:G17373"}
+{"type": "update", "step": 0, "key": "G17373.tested", "value": true}
+{"type": "observe", "step": 0, "key": "G06371.score", "value": -0.062742, "item_id": "r0:G06371"}
+{"type": "update", "step": 0, "key": "G06371.tested", "value": true}
+{"type": "observe", "step": 0, "key": "G02823.score", "value": 0.0637145, "item_id": "r0:G02823"}
+{"type": "update", "step": 0, "key": "G02823.tested", "value": true}
+{"type": "observe", "step": 0, "key": "G09681.score", "value": -0.298095, "item_id": "r0:G09681"}
+{"type": "update", "step": 0, "key": "G09681.tested", "value": true}
+{"type": "read", "step": 1, "item_id": "r0:G07522"}
+{"type": "read", "step": 1, "item_id": "r0:G05540"}
+{"type": "read", "step": 1, "item_id": "r0:G05175"}
+{"type": "read", "step": 1, "item_id": "r0:G04421"}
+{"type": "read", "step": 1, "item_id": "r0:G16482"}
+{"type": "read", "step": 1, "item_id": "r0:G17999"}
+{"type": "read", "step": 1, "item_id": "r0:G15870"}
+{"type": "read", "step": 1, "item_id": "r0:G12972"}
+{"type": "read", "step": 1, "item_id": "r0:G01819"}
+{"type": "read", "step": 1, "item_id": "r0:G01457"}
+{"type": "read", "step": 1, "item_id": "r0:G09729"}
+{"type": "read", "step": 1, "item_id": "r0:G03012"}
+{"type": "read", "step": 1, "item_id": "r0:G17373"}
+{"type": "read", "step": 1, "item_id": "r0:G06371"}
+{"type": "read", "step": 1, "item_id": "r0:G02823"}
+{"type": "read", "step": 1, "item_id": "r0:G09681"}
+{"type": "use", "step": 1, "key": "G12574.tested", "value": false, "entity": "G12574.tested"}
+{"type": "use", "step": 1, "key": "G14996.tested", "value": false, "entity": "G14996.tested"}
+{"type": "use", "step": 1, "key": "G13121.tested", "value": false, "entity": "G13121.tested"}
+{"type": "use", "step": 1, "key": "G17002.tested", "value": false, "entity": "G17002.tested"}
+{"type": "use", "step": 1, "key": "G18013.tested", "value": false, "entity": "G18013.tested"}
+{"type": "use", "step": 1, "key": "G08209.tested", "value": false, "entity": "G08209.tested"}
+{"type": "use", "step": 1, "key": "G02711.tested", "value": false, "entity": "G02711.tested"}
+{"type": "use", "step": 1, "key": "G11019.tested", "value": false, "entity": "G11019.tested"}
+{"type": "use", "step": 1, "key": "G10721.tested", "value": false, "entity": "G10721.tested"}
+{"type": "use", "step": 1, "key": "G12541.tested", "value": false, "entity": "G12541.tested"}
+{"type": "use", "step": 1, "key": "G04358.tested", "value": false, "entity": "G04358.tested"}
+{"type": "use", "step": 1, "key": "G08530.tested", "value": false, "entity": "G08530.tested"}
+{"type": "use", "step": 1, "key": "G12005.tested", "value": false, "entity": "G12005.tested"}
+{"type": "use", "step": 1, "key": "G05381.tested", "value": false, "entity": "G05381.tested"}
+{"type": "use", "step": 1, "key": "G04903.tested", "value": false, "entity": "G04903.tested"}
+{"type": "use", "step": 1, "key": "G08584.tested", "value": false, "entity": "G08584.tested"}
+{"type": "observe", "step": 1, "key": "G12574.score", "value": -0.144705, "item_id": "r1:G12574"}
+{"type": "update", "step": 1, "key": "G12574.tested", "value": true}
+{"type": "observe", "step": 1, "key": "G14996.score", "value": 0.05573715, "item_id": "r1:G14996"}
+{"type": "update", "step": 1, "key": "G14996.tested", "value": true}
+{"type": "observe", "step": 1, "key": "G13121.score", "value": -0.0451885, "item_id": "r1:G13121"}
+{"type": "update", "step": 1, "key": "G13121.tested", "value": true}
+{"type": "observe", "step": 1, "key": "G17002.score", "value": 0.11146625, "item_id": "r1:G17002"}
+{"type": "update", "step": 1, "key": "G17002.tested", "value": true}
+{"type": "observe", "step": 1, "key": "G18013.score", "value": -0.512055, "item_id": "r1:G18013"}
+{"type": "update", "step": 1, "key": "G18013.tested", "value": true}
+{"type": "observe", "step": 1, "key": "G08209.score", "value": 0.0826635, "item_id": "r1:G08209"}
+{"type": "update", "step": 1, "key": "G08209.tested", "value": true}
+{"type": "observe", "step": 1, "key": "G02711.score", "value": 0.0363415, "item_id": "r1:G02711"}
+{"type": "update", "step": 1, "key": "G02711.tested", "value": true}
+{"type": "observe", "step": 1, "key": "G11019.score", "value": -0.090864, "item_id": "r1:G11019"}
+{"type": "update", "step": 1, "key": "G11019.tested", "value": true}
+{"type": "observe", "step": 1, "key": "G10721.score", "value": 0.005698972, "item_id": "r1:G10721"}
+{"type": "update", "step": 1, "key": "G10721.tested", "value": true}
+{"type": "observe", "step": 1, "key": "G12541.score", "value": 0.1052945, "item_id": "r1:G12541"}
+{"type": "update", "step": 1, "key": "G12541.tested", "value": true}
+{"type": "observe", "step": 1, "key": "G04358.score", "value": -0.3157165, "item_id": "r1:G04358"}
+{"type": "update", "step": 1, "key": "G04358.tested", "value": true}
+{"type": "observe", "step": 1, "key": "G08530.score", "value": 0.00501, "item_id": "r1:G08530"}
+{"type": "update", "step": 1, "key": "G08530.tested", "value": true}
+{"type": "observe", "step": 1, "key": "G12005.score", "value": 0.31171, "item_id": "r1:G12005"}
+{"type": "update", "step": 1, "key": "G12005.tested", "value": true}
+{"type": "observe", "step": 1, "key": "G05381.score", "value": 0.049906, "item_id": "r1:G05381"}
+{"type": "update", "step": 1, "key": "G05381.tested", "value": true}
+{"type": "observe", "step": 1, "key": "G04903.score", "value": 0.018203, "item_id": "r1:G04903"}
+{"type": "update", "step": 1, "key": "G04903.tested", "value": true}
+{"type": "observe", "step": 1, "key": "G08584.score", "value": -0.165605, "item_id": "r1:G08584"}
+{"type": "update", "step": 1, "key": "G08584.tested", "value": true}
+{"type": "read", "step": 2, "item_id": "r0:G07522"}
+{"type": "read", "step": 2, "item_id": "r0:G05540"}
+{"type": "read", "step": 2, "item_id": "r0:G05175"}
+{"type": "read", "step": 2, "item_id": "r0:G04421"}
+{"type": "read", "step": 2, "item_id": "r0:G16482"}
+{"type": "read", "step": 2, "item_id": "r0:G17999"}
+{"type": "read", "step": 2, "item_id": "r0:G15870"}
+{"type": "read", "step": 2, "item_id": "r0:G12972"}
+{"type": "read", "step": 2, "item_id": "r0:G01819"}
+{"type": "read", "step": 2, "item_id": "r0:G01457"}
+{"type": "read", "step": 2, "item_id": "r0:G09729"}
+{"type": "read", "step": 2, "item_id": "r0:G03012"}
+{"type": "read", "step": 2, "item_id": "r0:G17373"}
+{"type": "read", "step": 2, "item_id": "r0:G06371"}
+{"type": "read", "step": 2, "item_id": "r0:G02823"}
+{"type": "read", "step": 2, "item_id": "r0:G09681"}
+{"type": "read", "step": 2, "item_id": "r1:G12574"}
+{"type": "read", "step": 2, "item_id": "r1:G14996"}
+{"type": "read", "step": 2, "item_id": "r1:G13121"}
+{"type": "read", "step": 2, "item_id": "r1:G17002"}
+{"type": "read", "step": 2, "item_id": "r1:G18013"}
+{"type": "read", "step": 2, "item_id": "r1:G08209"}
+{"type": "read", "step": 2, "item_id": "r1:G02711"}
+{"type": "read", "step": 2, "item_id": "r1:G11019"}
+{"type": "read", "step": 2, "item_id": "r1:G10721"}
+{"type": "read", "step": 2, "item_id": "r1:G12541"}
+{"type": "read", "step": 2, "item_id": "r1:G04358"}
+{"type": "read", "step": 2, "item_id": "r1:G08530"}
+{"type": "read", "step": 2, "item_id": "r1:G12005"}
+{"type": "read", "step": 2, "item_id": "r1:G05381"}
+{"type": "read", "step": 2, "item_id": "r1:G04903"}
+{"type": "read", "step": 2, "item_id": "r1:G08584"}
+{"type": "use", "step": 2, "key": "G04421.tested", "value": false, "entity": "G04421.tested", "belief": true}
+{"type": "use", "step": 2, "key": "G13121.tested", "value": false, "entity": "G13121.tested", "belief": false}
+{"type": "use", "step": 2, "key": "G14996.tested", "value": false, "entity": "G14996.tested"}
+{"type": "use", "step": 2, "key": "G05540.tested", "value": false, "entity": "G05540.tested", "belief": true}
+{"type": "use", "step": 2, "key": "G04421.tested", "value": false, "entity": "G04421.tested", "belief": true}
+{"type": "use", "step": 2, "key": "G13121.tested", "value": false, "entity": "G13121.tested", "belief": false}
+{"type": "use", "step": 2, "key": "G14996.tested", "value": false, "entity": "G14996.tested"}
+{"type": "use", "step": 2, "key": "G05540.tested", "value": false, "entity": "G05540.tested", "belief": true}
+{"type": "use", "step": 2, "key": "G08209.tested", "value": false, "entity": "G08209.tested", "belief": false}
+{"type": "use", "step": 2, "key": "G12005.tested", "value": false, "entity": "G12005.tested", "belief": false}
+{"type": "use", "step": 2, "key": "G08530.tested", "value": false, "entity": "G08530.tested", "belief": false}
+{"type": "use", "step": 2, "key": "G12574.tested", "value": false, "entity": "G12574.tested", "belief": false}
+{"type": "use", "step": 2, "key": "G18018.tested", "value": false, "entity": "G18018.tested"}
+{"type": "use", "step": 2, "key": "G08546.tested", "value": false, "entity": "G08546.tested"}
+{"type": "use", "step": 2, "key": "G14714.tested", "value": false, "entity": "G14714.tested"}
+{"type": "use", "step": 2, "key": "G00531.tested", "value": false, "entity": "G00531.tested"}
+{"type": "use", "step": 2, "key": "G01189.tested", "value": false, "entity": "G01189.tested"}
+{"type": "use", "step": 2, "key": "G15016.tested", "value": false, "entity": "G15016.tested"}
+{"type": "use", "step": 2, "key": "G10681.tested", "value": false, "entity": "G10681.tested"}
+{"type": "use", "step": 2, "key": "G14651.tested", "value": false, "entity": "G14651.tested"}
+{"type": "use", "step": 2, "key": "G02456.tested", "value": false, "entity": "G02456.tested"}
+{"type": "use", "step": 2, "key": "G11438.tested", "value": false, "entity": "G11438.tested"}
+{"type": "use", "step": 2, "key": "G13561.tested", "value": false, "entity": "G13561.tested"}
+{"type": "use", "step": 2, "key": "G06910.tested", "value": false, "entity": "G06910.tested"}
+{"type": "observe", "step": 2, "key": "G18018.score", "value": -0.31564, "item_id": "r2:G18018"}
+{"type": "update", "step": 2, "key": "G18018.tested", "value": true}
+{"type": "observe", "step": 2, "key": "G08546.score", "value": -0.036504, "item_id": "r2:G08546"}
+{"type": "update", "step": 2, "key": "G08546.tested", "value": true}
+{"type": "observe", "step": 2, "key": "G14714.score", "value": 0.00389, "item_id": "r2:G14714"}
+{"type": "update", "step": 2, "key": "G14714.tested", "value": true}
+{"type": "observe", "step": 2, "key": "G00531.score", "value": -0.1219225, "item_id": "r2:G00531"}
+{"type": "update", "step": 2, "key": "G00531.tested", "value": true}
+{"type": "observe", "step": 2, "key": "G01189.score", "value": 0.221715, "item_id": "r2:G01189"}
+{"type": "update", "step": 2, "key": "G01189.tested", "value": true}
+{"type": "observe", "step": 2, "key": "G15016.score", "value": -0.255, "item_id": "r2:G15016"}
+{"type": "update", "step": 2, "key": "G15016.tested", "value": true}
+{"type": "observe", "step": 2, "key": "G10681.score", "value": 0.1557085, "item_id": "r2:G10681"}
+{"type": "update", "step": 2, "key": "G10681.tested", "value": true}
+{"type": "observe", "step": 2, "key": "G14651.score", "value": 0.0414255, "item_id": "r2:G14651"}
+{"type": "update", "step": 2, "key": "G14651.tested", "value": true}
+{"type": "observe", "step": 2, "key": "G02456.score", "value": -0.281615, "item_id": "r2:G02456"}
+{"type": "update", "step": 2, "key": "G02456.tested", "value": true}
+{"type": "observe", "step": 2, "key": "G11438.score", "value": -0.09251, "item_id": "r2:G11438"}
+{"type": "update", "step": 2, "key": "G11438.tested", "value": true}
+{"type": "observe", "step": 2, "key": "G13561.score", "value": 0.18564, "item_id": "r2:G13561"}
+{"type": "update", "step": 2, "key": "G13561.tested", "value": true}
+{"type": "observe", "step": 2, "key": "G06910.score", "value": 0.3063415, "item_id": "r2:G06910"}
+{"type": "update", "step": 2, "key": "G06910.tested", "value": true}
+{"type": "use", "step": 3, "key": "G06910.tested", "value": false, "entity": "G06910.tested", "belief": true}
+{"type": "use", "step": 3, "key": "G02711.tested", "value": false, "entity": "G02711.tested", "belief": true}
+{"type": "use", "step": 3, "key": "G08209.tested", "value": false, "entity": "G08209.tested", "belief": true}
+{"type": "use", "step": 3, "key": "G01645.tested", "value": false, "entity": "G01645.tested"}
+{"type": "use", "step": 3, "key": "G12370.tested", "value": false, "entity": "G12370.tested"}
+{"type": "use", "step": 3, "key": "G14431.tested", "value": false, "entity": "G14431.tested"}
+{"type": "use", "step": 3, "key": "G12284.tested", "value": false, "entity": "G12284.tested"}
+{"type": "use", "step": 3, "key": "G09451.tested", "value": false, "entity": "G09451.tested"}
+{"type": "use", "step": 3, "key": "G12654.tested", "value": false, "entity": "G12654.tested"}
+{"type": "use", "step": 3, "key": "G14877.tested", "value": false, "entity": "G14877.tested"}
+{"type": "use", "step": 3, "key": "G10010.tested", "value": false, "entity": "G10010.tested"}
+{"type": "use", "step": 3, "key": "G15408.tested", "value": false, "entity": "G15408.tested"}
+{"type": "use", "step": 3, "key": "G10441.tested", "value": false, "entity": "G10441.tested"}
+{"type": "use", "step": 3, "key": "G10516.tested", "value": false, "entity": "G10516.tested"}
+{"type": "use", "step": 3, "key": "G02924.tested", "value": false, "entity": "G02924.tested"}
+{"type": "use", "step": 3, "key": "G06939.tested", "value": false, "entity": "G06939.tested"}
+{"type": "use", "step": 3, "key": "G02414.tested", "value": false, "entity": "G02414.tested"}
+{"type": "use", "step": 3, "key": "G06185.tested", "value": false, "entity": "G06185.tested"}
+{"type": "use", "step": 3, "key": "G08364.tested", "value": false, "entity": "G08364.tested"}
+{"type": "observe", "step": 3, "key": "G01645.score", "value": 0.014476, "item_id": "r3:G01645"}
+{"type": "update", "step": 3, "key": "G01645.tested", "value": true}
+{"type": "observe", "step": 3, "key": "G12370.score", "value": -0.03745, "item_id": "r3:G12370"}
+{"type": "update", "step": 3, "key": "G12370.tested", "value": true}
+{"type": "observe", "step": 3, "key": "G14431.score", "value": -0.1250175, "item_id": "r3:G14431"}
+{"type": "update", "step": 3, "key": "G14431.tested", "value": true}
+{"type": "observe", "step": 3, "key": "G12284.score", "value": -0.0559785, "item_id": "r3:G12284"}
+{"type": "update", "step": 3, "key": "G12284.tested", "value": true}
+{"type": "observe", "step": 3, "key": "G09451.score", "value": -0.20293, "item_id": "r3:G09451"}
+{"type": "update", "step": 3, "key": "G09451.tested", "value": true}
+{"type": "observe", "step": 3, "key": "G12654.score", "value": 0.000965, "item_id": "r3:G12654"}
+{"type": "update", "step": 3, "key": "G12654.tested", "value": true}
+{"type": "observe", "step": 3, "key": "G14877.score", "value": -0.1365995, "item_id": "r3:G14877"}
+{"type": "update", "step": 3, "key": "G14877.tested", "value": true}
+{"type": "observe", "step": 3, "key": "G10010.score", "value": 0.205, "item_id": "r3:G10010"}
+{"type": "update", "step": 3, "key": "G10010.tested", "value": true}
+{"type": "observe", "step": 3, "key": "G15408.score", "value": -0.031804, "item_id": "r3:G15408"}
+{"type": "update", "step": 3, "key": "G15408.tested", "value": true}
+{"type": "observe", "step": 3, "key": "G10441.score", "value": 0.1557535, "item_id": "r3:G10441"}
+{"type": "update", "step": 3, "key": "G10441.tested", "value": true}
+{"type": "observe", "step": 3, "key": "G10516.score", "value": -0.0118275, "item_id": "r3:G10516"}
+{"type": "update", "step": 3, "key": "G10516.tested", "value": true}
+{"type": "observe", "step": 3, "key": "G02924.score", "value": 0.1311585, "item_id": "r3:G02924"}
+{"type": "update", "step": 3, "key": "G02924.tested", "value": true}
+{"type": "observe", "step": 3, "key": "G06939.score", "value": 0.09019, "item_id": "r3:G06939"}
+{"type": "update", "step": 3, "key": "G06939.tested", "value": true}
+{"type": "observe", "step": 3, "key": "G02414.score", "value": 0.384885, "item_id": "r3:G02414"}
+{"type": "update", "step": 3, "key": "G02414.tested", "value": true}
+{"type": "observe", "step": 3, "key": "G06185.score", "value": 0.409975, "item_id": "r3:G06185"}
+{"type": "update", "step": 3, "key": "G06185.tested", "value": true}
+{"type": "observe", "step": 3, "key": "G08364.score", "value": -0.0674025, "item_id": "r3:G08364"}
+{"type": "update", "step": 3, "key": "G08364.tested", "value": true}
+{"type": "use", "step": 4, "key": "G08530.tested", "value": false, "entity": "G08530.tested", "belief": true}
+{"type": "use", "step": 4, "key": "G02552.tested", "value": false, "entity": "G02552.tested"}
+{"type": "use", "step": 4, "key": "G02051.tested", "value": false, "entity": "G02051.tested"}
+{"type": "use", "step": 4, "key": "G16116.tested", "value": false, "entity": "G16116.tested"}
+{"type": "use", "step": 4, "key": "G13746.tested", "value": false, "entity": "G13746.tested"}
+{"type": "use", "step": 4, "key": "G16722.tested", "value": false, "entity": "G16722.tested"}
+{"type": "use", "step": 4, "key": "G17219.tested", "value": false, "entity": "G17219.tested"}
+{"type": "use", "step": 4, "key": "G17694.tested", "value": false, "entity": "G17694.tested"}
+{"type": "use", "step": 4, "key": "G02576.tested", "value": false, "entity": "G02576.tested"}
+{"type": "use", "step": 4, "key": "G11737.tested", "value": false, "entity": "G11737.tested"}
+{"type": "use", "step": 4, "key": "G18220.tested", "value": false, "entity": "G18220.tested"}
+{"type": "use", "step": 4, "key": "G09823.tested", "value": false, "entity": "G09823.tested"}
+{"type": "use", "step": 4, "key": "G14635.tested", "value": false, "entity": "G14635.tested"}
+{"type": "use", "step": 4, "key": "G03327.tested", "value": false, "entity": "G03327.tested"}
+{"type": "use", "step": 4, "key": "G02368.tested", "value": false, "entity": "G02368.tested"}
+{"type": "use", "step": 4, "key": "G11470.tested", "value": false, "entity": "G11470.tested"}
+{"type": "use", "step": 4, "key": "G08665.tested", "value": false, "entity": "G08665.tested"}
+{"type": "observe", "step": 4, "key": "G02552.score", "value": -0.184155, "item_id": "r4:G02552"}
+{"type": "update", "step": 4, "key": "G02552.tested", "value": true}
+{"type": "observe", "step": 4, "key": "G02051.score", "value": 0.055526, "item_id": "r4:G02051"}
+{"type": "update", "step": 4, "key": "G02051.tested", "value": true}
+{"type": "observe", "step": 4, "key": "G16116.score", "value": -0.064353, "item_id": "r4:G16116"}
+{"type": "update", "step": 4, "key": "G16116.tested", "value": true}
+{"type": "observe", "step": 4, "key": "G13746.score", "value": 0.009470234, "item_id": "r4:G13746"}
+{"type": "update", "step": 4, "key": "G13746.tested", "value": true}
+{"type": "observe", "step": 4, "key": "G16722.score", "value": -0.126795, "item_id": "r4:G16722"}
+{"type": "update", "step": 4, "key": "G16722.tested", "value": true}
+{"type": "observe", "step": 4, "key": "G17219.score", "value": 0.033895, "item_id": "r4:G17219"}
+{"type": "update", "step": 4, "key": "G17219.tested", "value": true}
+{"type": "observe", "step": 4, "key": "G17694.score", "value": -0.031141, "item_id": "r4:G17694"}
+{"type": "update", "step": 4, "key": "G17694.tested", "value": true}
+{"type": "observe", "step": 4, "key": "G02576.score", "value": 0.12899, "item_id": "r4:G02576"}
+{"type": "update", "step": 4, "key": "G02576.tested", "value": true}
+{"type": "observe", "step": 4, "key": "G11737.score", "value": -0.09821, "item_id": "r4:G11737"}
+{"type": "update", "step": 4, "key": "G11737.tested", "value": true}
+{"type": "observe", "step": 4, "key": "G18220.score", "value": 0.0409995, "item_id": "r4:G18220"}
+{"type": "update", "step": 4, "key": "G18220.tested", "value": true}
+{"type": "observe", "step": 4, "key": "G09823.score", "value": 0.367535, "item_id": "r4:G09823"}
+{"type": "update", "step": 4, "key": "G09823.tested", "value": true}
+{"type": "observe", "step": 4, "key": "G14635.score", "value": 0.2589615, "item_id": "r4:G14635"}
+{"type": "update", "step": 4, "key": "G14635.tested", "value": true}
+{"type": "observe", "step": 4, "key": "G03327.score", "value": 1.5e-05, "item_id": "r4:G03327"}
+{"type": "update", "step": 4, "key": "G03327.tested", "value": true}
+{"type": "observe", "step": 4, "key": "G02368.score", "value": -0.0910245, "item_id": "r4:G02368"}
+{"type": "update", "step": 4, "key": "G02368.tested", "value": true}
+{"type": "observe", "step": 4, "key": "G11470.score", "value": -0.458085, "item_id": "r4:G11470"}
+{"type": "update", "step": 4, "key": "G11470.tested", "value": true}
+{"type": "observe", "step": 4, "key": "G08665.score", "value": -0.153877, "item_id": "r4:G08665"}
+{"type": "update", "step": 4, "key": "G08665.tested", "value": true}
+{"type": "use", "step": 5, "key": "G04358.tested", "value": false, "entity": "G04358.tested", "belief": true}
+{"type": "use", "step": 5, "key": "G10721.tested", "value": false, "entity": "G10721.tested", "belief": true}
+{"type": "use", "step": 5, "key": "G08530.tested", "value": false, "entity": "G08530.tested", "belief": true}
+{"type": "use", "step": 5, "key": "G05175.tested", "value": false, "entity": "G05175.tested", "belief": true}
+{"type": "use", "step": 5, "key": "G02051.tested", "value": false, "entity": "G02051.tested", "belief": false}
+{"type": "use", "step": 5, "key": "G16116.tested", "value": false, "entity": "G16116.tested", "belief": false}
+{"type": "use", "step": 5, "key": "G02552.tested", "value": false, "entity": "G02552.tested", "belief": false}
+{"type": "use", "step": 5, "key": "G13746.tested", "value": false, "entity": "G13746.tested", "belief": false}
+{"type": "use", "step": 5, "key": "G06910.tested", "value": false, "entity": "G06910.tested", "belief": false}
+{"type": "use", "step": 5, "key": "G01645.tested", "value": false, "entity": "G01645.tested", "belief": false}
+{"type": "use", "step": 5, "key": "G00742.tested", "value": false, "entity": "G00742.tested"}
+{"type": "use", "step": 5, "key": "G00091.tested", "value": false, "entity": "G00091.tested"}
+{"type": "use", "step": 5, "key": "G05414.tested", "value": false, "entity": "G05414.tested"}
+{"type": "use", "step": 5, "key": "G06774.tested", "value": false, "entity": "G06774.tested"}
+{"type": "use", "step": 5, "key": "G02945.tested", "value": false, "entity": "G02945.tested"}
+{"type": "use", "step": 5, "key": "G10908.tested", "value": false, "entity": "G10908.tested"}
+{"type": "use", "step": 5, "key": "G16682.tested", "value": false, "entity": "G16682.tested"}
+{"type": "use", "step": 5, "key": "G14369.tested", "value": false, "entity": "G14369.tested"}
+{"type": "use", "step": 5, "key": "G12896.tested", "value": false, "entity": "G12896.tested"}
+{"type": "use", "step": 5, "key": "G14921.tested", "value": false, "entity": "G14921.tested"}
+{"type": "use", "step": 5, "key": "G05245.tested", "value": false, "entity": "G05245.tested"}
+{"type": "use", "step": 5, "key": "G17282.tested", "value": false, "entity": "G17282.tested"}
+{"type": "use", "step": 5, "key": "G00011.tested", "value": false, "entity": "G00011.tested"}
+{"type": "use", "step": 5, "key": "G09001.tested", "value": false, "entity": "G09001.tested"}
+{"type": "use", "step": 5, "key": "G11866.tested", "value": false, "entity": "G11866.tested"}
+{"type": "observe", "step": 5, "key": "G00742.score", "value": -0.017365, "item_id": "r5:G00742"}
+{"type": "update", "step": 5, "key": "G00742.tested", "value": true}
+{"type": "observe", "step": 5, "key": "G00091.score", "value": -0.0103075, "item_id": "r5:G00091"}
+{"type": "update", "step": 5, "key": "G00091.tested", "value": true}
+{"type": "observe", "step": 5, "key": "G05414.score", "value": 0.15269, "item_id": "r5:G05414"}
+{"type": "update", "step": 5, "key": "G05414.tested", "value": true}
+{"type": "observe", "step": 5, "key": "G06774.score", "value": 0.00672, "item_id": "r5:G06774"}
+{"type": "update", "step": 5, "key": "G06774.tested", "value": true}
+{"type": "observe", "step": 5, "key": "G02945.score", "value": -0.080745, "item_id": "r5:G02945"}
+{"type": "update", "step": 5, "key": "G02945.tested", "value": true}
+{"type": "observe", "step": 5, "key": "G10908.score", "value": -0.02916, "item_id": "r5:G10908"}
+{"type": "update", "step": 5, "key": "G10908.tested", "value": true}
+{"type": "observe", "step": 5, "key": "G16682.score", "value": -0.18944, "item_id": "r5:G16682"}
+{"type": "update", "step": 5, "key": "G16682.tested", "value": true}
+{"type": "observe", "step": 5, "key": "G14369.score", "value": -0.0162305, "item_id": "r5:G14369"}
+{"type": "update", "step": 5, "key": "G14369.tested", "value": true}
+{"type": "observe", "step": 5, "key": "G12896.score", "value": -0.074795, "item_id": "r5:G12896"}
+{"type": "update", "step": 5, "key": "G12896.tested", "value": true}
+{"type": "observe", "step": 5, "key": "G14921.score", "value": -0.012923, "item_id": "r5:G14921"}
+{"type": "update", "step": 5, "key": "G14921.tested", "value": true}
+{"type": "observe", "step": 5, "key": "G05245.score", "value": 0.20266, "item_id": "r5:G05245"}
+{"type": "update", "step": 5, "key": "G05245.tested", "value": true}
+{"type": "observe", "step": 5, "key": "G17282.score", "value": 0.061115, "item_id": "r5:G17282"}
+{"type": "update", "step": 5, "key": "G17282.tested", "value": true}
+{"type": "observe", "step": 5, "key": "G00011.score", "value": -0.28507, "item_id": "r5:G00011"}
+{"type": "update", "step": 5, "key": "G00011.tested", "value": true}
+{"type": "observe", "step": 5, "key": "G09001.score", "value": -0.074215, "item_id": "r5:G09001"}
+{"type": "update", "step": 5, "key": "G09001.tested", "value": true}
+{"type": "observe", "step": 5, "key": "G11866.score", "value": -0.14093, "item_id": "r5:G11866"}
+{"type": "update", "step": 5, "key": "G11866.tested", "value": true}
+{"type": "use", "step": 6, "key": "G01231.tested", "value": false, "entity": "G01231.tested"}
+{"type": "use", "step": 6, "key": "G01417.tested", "value": false, "entity": "G01417.tested"}
+{"type": "use", "step": 6, "key": "G12314.tested", "value": false, "entity": "G12314.tested"}
+{"type": "use", "step": 6, "key": "G09520.tested", "value": false, "entity": "G09520.tested"}
+{"type": "use", "step": 6, "key": "G02649.tested", "value": false, "entity": "G02649.tested"}
+{"type": "use", "step": 6, "key": "G13845.tested", "value": false, "entity": "G13845.tested"}
+{"type": "use", "step": 6, "key": "G05642.tested", "value": false, "entity": "G05642.tested"}
+{"type": "use", "step": 6, "key": "G09456.tested", "value": false, "entity": "G09456.tested"}
+{"type": "use", "step": 6, "key": "G15921.tested", "value": false, "entity": "G15921.tested"}
+{"type": "use", "step": 6, "key": "G01290.tested", "value": false, "entity": "G01290.tested"}
+{"type": "use", "step": 6, "key": "G09253.tested", "value": false, "entity": "G09253.tested"}
+{"type": "use", "step": 6, "key": "G08604.tested", "value": false, "entity": "G08604.tested"}
+{"type": "use", "step": 6, "key": "G12590.tested", "value": false, "entity": "G12590.tested"}
+{"type": "use", "step": 6, "key": "G14391.tested", "value": false, "entity": "G14391.tested"}
+{"type": "use", "step": 6, "key": "G07586.tested", "value": false, "entity": "G07586.tested"}
+{"type": "use", "step": 6, "key": "G11605.tested", "value": false, "entity": "G11605.tested"}
+{"type": "observe", "step": 6, "key": "G01231.score", "value": 0.1263665, "item_id": "r6:G01231"}
+{"type": "update", "step": 6, "key": "G01231.tested", "value": true}
+{"type": "observe", "step": 6, "key": "G01417.score", "value": 0.1112475, "item_id": "r6:G01417"}
+{"type": "update", "step": 6, "key": "G01417.tested", "value": true}
+{"type": "observe", "step": 6, "key": "G12314.score", "value": 0.00325, "item_id": "r6:G12314"}
+{"type": "update", "step": 6, "key": "G12314.tested", "value": true}
+{"type": "observe", "step": 6, "key": "G09520.score", "value": 0.025435, "item_id": "r6:G09520"}
+{"type": "update", "step": 6, "key": "G09520.tested", "value": true}
+{"type": "observe", "step": 6, "key": "G02649.score", "value": -0.03357, "item_id": "r6:G02649"}
+{"type": "update", "step": 6, "key": "G02649.tested", "value": true}
+{"type": "observe", "step": 6, "key": "G13845.score", "value": 0.066418, "item_id": "r6:G13845"}
+{"type": "update", "step": 6, "key": "G13845.tested", "value": true}
+{"type": "observe", "step": 6, "key": "G05642.score", "value": 0.087615, "item_id": "r6:G05642"}
+{"type": "update", "step": 6, "key": "G05642.tested", "value": true}
+{"type": "observe", "step": 6, "key": "G09456.score", "value": -0.2267495, "item_id": "r6:G09456"}
+{"type": "update", "step": 6, "key": "G09456.tested", "value": true}
+{"type": "observe", "step": 6, "key": "G15921.score", "value": -0.011655, "item_id": "r6:G15921"}
+{"type": "update", "step": 6, "key": "G15921.tested", "value": true}
+{"type": "observe", "step": 6, "key": "G01290.score", "value": -0.075611, "item_id": "r6:G01290"}
+{"type": "update", "step": 6, "key": "G01290.tested", "value": true}
+{"type": "observe", "step": 6, "key": "G09253.score", "value": 0.114828, "item_id": "r6:G09253"}
+{"type": "update", "step": 6, "key": "G09253.tested", "value": true}
+{"type": "observe", "step": 6, "key": "G08604.score", "value": -0.1373395, "item_id": "r6:G08604"}
+{"type": "update", "step": 6, "key": "G08604.tested", "value": true}
+{"type": "observe", "step": 6, "key": "G12590.score", "value": 0.008705, "item_id": "r6:G12590"}
+{"type": "update", "step": 6, "key": "G12590.tested", "value": true}
+{"type": "observe", "step": 6, "key": "G14391.score", "value": -0.205205, "item_id": "r6:G14391"}
+{"type": "update", "step": 6, "key": "G14391.tested", "value": true}
+{"type": "observe", "step": 6, "key": "G07586.score", "value": -0.1366915, "item_id": "r6:G07586"}
+{"type": "update", "step": 6, "key": "G07586.tested", "value": true}
+{"type": "observe", "step": 6, "key": "G11605.score", "value": -0.52289, "item_id": "r6:G11605"}
+{"type": "update", "step": 6, "key": "G11605.tested", "value": true}
+{"type": "use", "step": 7, "key": "G16131.tested", "value": false, "entity": "G16131.tested"}
+{"type": "use", "step": 7, "key": "G08514.tested", "value": false, "entity": "G08514.tested"}
+{"type": "use", "step": 7, "key": "G06121.tested", "value": false, "entity": "G06121.tested"}
+{"type": "use", "step": 7, "key": "G11362.tested", "value": false, "entity": "G11362.tested"}
+{"type": "use", "step": 7, "key": "G12730.tested", "value": false, "entity": "G12730.tested"}
+{"type": "use", "step": 7, "key": "G07797.tested", "value": false, "entity": "G07797.tested"}
+{"type": "use", "step": 7, "key": "G07765.tested", "value": false, "entity": "G07765.tested"}
+{"type": "use", "step": 7, "key": "G04797.tested", "value": false, "entity": "G04797.tested"}
+{"type": "use", "step": 7, "key": "G06305.tested", "value": false, "entity": "G06305.tested"}
+{"type": "use", "step": 7, "key": "G14035.tested", "value": false, "entity": "G14035.tested"}
+{"type": "use", "step": 7, "key": "G15200.tested", "value": false, "entity": "G15200.tested"}
+{"type": "use", "step": 7, "key": "G16930.tested", "value": false, "entity": "G16930.tested"}
+{"type": "use", "step": 7, "key": "G11899.tested", "value": false, "entity": "G11899.tested"}
+{"type": "use", "step": 7, "key": "G00228.tested", "value": false, "entity": "G00228.tested"}
+{"type": "use", "step": 7, "key": "G05790.tested", "value": false, "entity": "G05790.tested"}
+{"type": "use", "step": 7, "key": "G10608.tested", "value": false, "entity": "G10608.tested"}
+{"type": "observe", "step": 7, "key": "G16131.score", "value": 0.0750005, "item_id": "r7:G16131"}
+{"type": "update", "step": 7, "key": "G16131.tested", "value": true}
+{"type": "observe", "step": 7, "key": "G08514.score", "value": 0.331, "item_id": "r7:G08514"}
+{"type": "update", "step": 7, "key": "G08514.tested", "value": true}
+{"type": "observe", "step": 7, "key": "G06121.score", "value": 0.1101615, "item_id": "r7:G06121"}
+{"type": "update", "step": 7, "key": "G06121.tested", "value": true}
+{"type": "observe", "step": 7, "key": "G11362.score", "value": 0.0690335, "item_id": "r7:G11362"}
+{"type": "update", "step": 7, "key": "G11362.tested", "value": true}
+{"type": "observe", "step": 7, "key": "G12730.score", "value": -0.110867, "item_id": "r7:G12730"}
+{"type": "update", "step": 7, "key": "G12730.tested", "value": true}
+{"type": "observe", "step": 7, "key": "G07797.score", "value": 0.355965, "item_id": "r7:G07797"}
+{"type": "update", "step": 7, "key": "G07797.tested", "value": true}
+{"type": "observe", "step": 7, "key": "G07765.score", "value": 0.009659, "item_id": "r7:G07765"}
+{"type": "update", "step": 7, "key": "G07765.tested", "value": true}
+{"type": "observe", "step": 7, "key": "G04797.score", "value": 0.17513, "item_id": "r7:G04797"}
+{"type": "update", "step": 7, "key": "G04797.tested", "value": true}
+{"type": "observe", "step": 7, "key": "G06305.score", "value": 0.197259, "item_id": "r7:G06305"}
+{"type": "update", "step": 7, "key": "G06305.tested", "value": true}
+{"type": "observe", "step": 7, "key": "G14035.score", "value": -0.03774, "item_id": "r7:G14035"}
+{"type": "update", "step": 7, "key": "G14035.tested", "value": true}
+{"type": "observe", "step": 7, "key": "G15200.score", "value": 0.29006, "item_id": "r7:G15200"}
+{"type": "update", "step": 7, "key": "G15200.tested", "value": true}
+{"type": "observe", "step": 7, "key": "G16930.score", "value": 0.088224, "item_id": "r7:G16930"}
+{"type": "update", "step": 7, "key": "G16930.tested", "value": true}
+{"type": "observe", "step": 7, "key": "G11899.score", "value": 0.02214275, "item_id": "r7:G11899"}
+{"type": "update", "step": 7, "key": "G11899.tested", "value": true}
+{"type": "observe", "step": 7, "key": "G00228.score", "value": -0.2294885, "item_id": "r7:G00228"}
+{"type": "update", "step": 7, "key": "G00228.tested", "value": true}
+{"type": "observe", "step": 7, "key": "G05790.score", "value": 0.13301, "item_id": "r7:G05790"}
+{"type": "update", "step": 7, "key": "G05790.tested", "value": true}
+{"type": "observe", "step": 7, "key": "G10608.score", "value": -0.194185, "item_id": "r7:G10608"}
+{"type": "update", "step": 7, "key": "G10608.tested", "value": true}
+{"type": "use", "step": 8, "key": "G06230.tested", "value": false, "entity": "G06230.tested"}
+{"type": "use", "step": 8, "key": "G04887.tested", "value": false, "entity": "G04887.tested"}
+{"type": "use", "step": 8, "key": "G10791.tested", "value": false, "entity": "G10791.tested"}
+{"type": "use", "step": 8, "key": "G16104.tested", "value": false, "entity": "G16104.tested"}
+{"type": "use", "step": 8, "key": "G08678.tested", "value": false, "entity": "G08678.tested"}
+{"type": "use", "step": 8, "key": "G15711.tested", "value": false, "entity": "G15711.tested"}
+{"type": "use", "step": 8, "key": "G02386.tested", "value": false, "entity": "G02386.tested"}
+{"type": "use", "step": 8, "key": "G16087.tested", "value": false, "entity": "G16087.tested"}
+{"type": "use", "step": 8, "key": "G17434.tested", "value": false, "entity": "G17434.tested"}
+{"type": "use", "step": 8, "key": "G13865.tested", "value": false, "entity": "G13865.tested"}
+{"type": "use", "step": 8, "key": "G16742.tested", "value": false, "entity": "G16742.tested"}
+{"type": "use", "step": 8, "key": "G13308.tested", "value": false, "entity": "G13308.tested"}
+{"type": "use", "step": 8, "key": "G02600.tested", "value": false, "entity": "G02600.tested"}
+{"type": "use", "step": 8, "key": "G12039.tested", "value": false, "entity": "G12039.tested"}
+{"type": "use", "step": 8, "key": "G04639.tested", "value": false, "entity": "G04639.tested"}
+{"type": "use", "step": 8, "key": "G00118.tested", "value": false, "entity": "G00118.tested"}
+{"type": "observe", "step": 8, "key": "G06230.score", "value": -0.060205, "item_id": "r8:G06230"}
+{"type": "update", "step": 8, "key": "G06230.tested", "value": true}
+{"type": "observe", "step": 8, "key": "G04887.score", "value": -0.07932, "item_id": "r8:G04887"}
+{"type": "update", "step": 8, "key": "G04887.tested", "value": true}
+{"type": "observe", "step": 8, "key": "G10791.score", "value": 0.0449385, "item_id": "r8:G10791"}
+{"type": "update", "step": 8, "key": "G10791.tested", "value": true}
+{"type": "observe", "step": 8, "key": "G16104.score", "value": 0.0940925, "item_id": "r8:G16104"}
+{"type": "update", "step": 8, "key": "G16104.tested", "value": true}
+{"type": "observe", "step": 8, "key": "G08678.score", "value": 0.072855, "item_id": "r8:G08678"}
+{"type": "update", "step": 8, "key": "G08678.tested", "value": true}
+{"type": "observe", "step": 8, "key": "G15711.score", "value": -0.050988, "item_id": "r8:G15711"}
+{"type": "update", "step": 8, "key": "G15711.tested", "value": true}
+{"type": "observe", "step": 8, "key": "G02386.score", "value": 0.26673, "item_id": "r8:G02386"}
+{"type": "update", "step": 8, "key": "G02386.tested", "value": true}
+{"type": "observe", "step": 8, "key": "G16087.score", "value": -0.099134, "item_id": "r8:G16087"}
+{"type": "update", "step": 8, "key": "G16087.tested", "value": true}
+{"type": "observe", "step": 8, "key": "G17434.score", "value": -0.327155, "item_id": "r8:G17434"}
+{"type": "update", "step": 8, "key": "G17434.tested", "value": true}
+{"type": "observe", "step": 8, "key": "G13865.score", "value": 0.537055, "item_id": "r8:G13865"}
+{"type": "update", "step": 8, "key": "G13865.tested", "value": true}
+{"type": "observe", "step": 8, "key": "G16742.score", "value": 0.0898665, "item_id": "r8:G16742"}
+{"type": "update", "step": 8, "key": "G16742.tested", "value": true}
+{"type": "observe", "step": 8, "key": "G13308.score", "value": -0.09224, "item_id": "r8:G13308"}
+{"type": "update", "step": 8, "key": "G13308.tested", "value": true}
+{"type": "observe", "step": 8, "key": "G02600.score", "value": 0.0831059, "item_id": "r8:G02600"}
+{"type": "update", "step": 8, "key": "G02600.tested", "value": true}
+{"type": "observe", "step": 8, "key": "G12039.score", "value": 0.30093, "item_id": "r8:G12039"}
+{"type": "update", "step": 8, "key": "G12039.tested", "value": true}
+{"type": "observe", "step": 8, "key": "G04639.score", "value": -0.187015, "item_id": "r8:G04639"}
+{"type": "update", "step": 8, "key": "G04639.tested", "value": true}
+{"type": "observe", "step": 8, "key": "G00118.score", "value": 0.035065, "item_id": "r8:G00118"}
+{"type": "update", "step": 8, "key": "G00118.tested", "value": true}
+{"type": "use", "step": 9, "key": "G15977.tested", "value": false, "entity": "G15977.tested"}
+{"type": "use", "step": 9, "key": "G17263.tested", "value": false, "entity": "G17263.tested"}
+{"type": "use", "step": 9, "key": "G17038.tested", "value": false, "entity": "G17038.tested"}
+{"type": "use", "step": 9, "key": "G00796.tested", "value": false, "entity": "G00796.tested"}
+{"type": "use", "step": 9, "key": "G07291.tested", "value": false, "entity": "G07291.tested"}
+{"type": "use", "step": 9, "key": "G09030.tested", "value": false, "entity": "G09030.tested"}
+{"type": "use", "step": 9, "key": "G09842.tested", "value": false, "entity": "G09842.tested"}
+{"type": "use", "step": 9, "key": "G12462.tested", "value": false, "entity": "G12462.tested"}
+{"type": "use", "step": 9, "key": "G13317.tested", "value": false, "entity": "G13317.tested"}
+{"type": "use", "step": 9, "key": "G10953.tested", "value": false, "entity": "G10953.tested"}
+{"type": "use", "step": 9, "key": "G08681.tested", "value": false, "entity": "G08681.tested"}
+{"type": "use", "step": 9, "key": "G08543.tested", "value": false, "entity": "G08543.tested"}
+{"type": "use", "step": 9, "key": "G09257.tested", "value": false, "entity": "G09257.tested"}
+{"type": "use", "step": 9, "key": "G06692.tested", "value": false, "entity": "G06692.tested"}
+{"type": "use", "step": 9, "key": "G10487.tested", "value": false, "entity": "G10487.tested"}
+{"type": "use", "step": 9, "key": "G01953.tested", "value": false, "entity": "G01953.tested"}
+{"type": "observe", "step": 9, "key": "G15977.score", "value": 0.0941335, "item_id": "r9:G15977"}
+{"type": "update", "step": 9, "key": "G15977.tested", "value": true}
+{"type": "observe", "step": 9, "key": "G17263.score", "value": 0.34176, "item_id": "r9:G17263"}
+{"type": "update", "step": 9, "key": "G17263.tested", "value": true}
+{"type": "observe", "step": 9, "key": "G17038.score", "value": 0.123935, "item_id": "r9:G17038"}
+{"type": "update", "step": 9, "key": "G17038.tested", "value": true}
+{"type": "observe", "step": 9, "key": "G00796.score", "value": -0.0583945, "item_id": "r9:G00796"}
+{"type": "update", "step": 9, "key": "G00796.tested", "value": true}
+{"type": "observe", "step": 9, "key": "G07291.score", "value": 0.075865, "item_id": "r9:G07291"}
+{"type": "update", "step": 9, "key": "G07291.tested", "value": true}
+{"type": "observe", "step": 9, "key": "G09030.score", "value": -0.0428445, "item_id": "r9:G09030"}
+{"type": "update", "step": 9, "key": "G09030.tested", "value": true}
+{"type": "observe", "step": 9, "key": "G09842.score", "value": 0.2577085, "item_id": "r9:G09842"}
+{"type": "update", "step": 9, "key": "G09842.tested", "value": true}
+{"type": "observe", "step": 9, "key": "G12462.score", "value": 0.10866015, "item_id": "r9:G12462"}
+{"type": "update", "step": 9, "key": "G12462.tested", "value": true}
+{"type": "observe", "step": 9, "key": "G13317.score", "value": -0.27212, "item_id": "r9:G13317"}
+{"type": "update", "step": 9, "key": "G13317.tested", "value": true}
+{"type": "observe", "step": 9, "key": "G10953.score", "value": -0.241965, "item_id": "r9:G10953"}
+{"type": "update", "step": 9, "key": "G10953.tested", "value": true}
+{"type": "observe", "step": 9, "key": "G08681.score", "value": 0.086661, "item_id": "r9:G08681"}
+{"type": "update", "step": 9, "key": "G08681.tested", "value": true}
+{"type": "observe", "step": 9, "key": "G08543.score", "value": -0.1326135, "item_id": "r9:G08543"}
+{"type": "update", "step": 9, "key": "G08543.tested", "value": true}
+{"type": "observe", "step": 9, "key": "G09257.score", "value": 1.23465, "item_id": "r9:G09257"}
+{"type": "update", "step": 9, "key": "G09257.tested", "value": true}
+{"type": "observe", "step": 9, "key": "G06692.score", "value": -0.14282, "item_id": "r9:G06692"}
+{"type": "update", "step": 9, "key": "G06692.tested", "value": true}
+{"type": "observe", "step": 9, "key": "G10487.score", "value": 0.0351135, "item_id": "r9:G10487"}
+{"type": "update", "step": 9, "key": "G10487.tested", "value": true}
+{"type": "observe", "step": 9, "key": "G01953.score", "value": -0.0171715, "item_id": "r9:G01953"}
+{"type": "update", "step": 9, "key": "G01953.tested", "value": true}
+{"type": "use", "step": 10, "key": "G06195.tested", "value": false, "entity": "G06195.tested"}
+{"type": "use", "step": 10, "key": "G07668.tested", "value": false, "entity": "G07668.tested"}
+{"type": "use", "step": 10, "key": "G09427.tested", "value": false, "entity": "G09427.tested"}
+{"type": "use", "step": 10, "key": "G00299.tested", "value": false, "entity": "G00299.tested"}
+{"type": "use", "step": 10, "key": "G13042.tested", "value": false, "entity": "G13042.tested"}
+{"type": "use", "step": 10, "key": "G05352.tested", "value": false, "entity": "G05352.tested"}
+{"type": "use", "step": 10, "key": "G07204.tested", "value": false, "entity": "G07204.tested"}
+{"type": "use", "step": 10, "key": "G13276.tested", "value": false, "entity": "G13276.tested"}
+{"type": "use", "step": 10, "key": "G01184.tested", "value": false, "entity": "G01184.tested"}
+{"type": "use", "step": 10, "key": "G16998.tested", "value": false, "entity": "G16998.tested"}
+{"type": "use", "step": 10, "key": "G07643.tested", "value": false, "entity": "G07643.tested"}
+{"type": "use", "step": 10, "key": "G07036.tested", "value": false, "entity": "G07036.tested"}
+{"type": "use", "step": 10, "key": "G05927.tested", "value": false, "entity": "G05927.tested"}
+{"type": "use", "step": 10, "key": "G02781.tested", "value": false, "entity": "G02781.tested"}
+{"type": "use", "step": 10, "key": "G05917.tested", "value": false, "entity": "G05917.tested"}
+{"type": "use", "step": 10, "key": "G06685.tested", "value": false, "entity": "G06685.tested"}
+{"type": "observe", "step": 10, "key": "G06195.score", "value": -0.098315, "item_id": "r10:G06195"}
+{"type": "update", "step": 10, "key": "G06195.tested", "value": true}
+{"type": "observe", "step": 10, "key": "G07668.score", "value": 0.15732525, "item_id": "r10:G07668"}
+{"type": "update", "step": 10, "key": "G07668.tested", "value": true}
+{"type": "observe", "step": 10, "key": "G09427.score", "value": -0.168318, "item_id": "r10:G09427"}
+{"type": "update", "step": 10, "key": "G09427.tested", "value": true}
+{"type": "observe", "step": 10, "key": "G00299.score", "value": 0.183625, "item_id": "r10:G00299"}
+{"type": "update", "step": 10, "key": "G00299.tested", "value": true}
+{"type": "observe", "step": 10, "key": "G13042.score", "value": 0.338295, "item_id": "r10:G13042"}
+{"type": "update", "step": 10, "key": "G13042.tested", "value": true}
+{"type": "observe", "step": 10, "key": "G05352.score", "value": -0.0207, "item_id": "r10:G05352"}
+{"type": "update", "step": 10, "key": "G05352.tested", "value": true}
+{"type": "observe", "step": 10, "key": "G07204.score", "value": -0.0691545, "item_id": "r10:G07204"}
+{"type": "update", "step": 10, "key": "G07204.tested", "value": true}
+{"type": "observe", "step": 10, "key": "G13276.score", "value": 0.162925, "item_id": "r10:G13276"}
+{"type": "update", "step": 10, "key": "G13276.tested", "value": true}
+{"type": "observe", "step": 10, "key": "G01184.score", "value": 0.0312805, "item_id": "r10:G01184"}
+{"type": "update", "step": 10, "key": "G01184.tested", "value": true}
+{"type": "observe", "step": 10, "key": "G16998.score", "value": 0.13378, "item_id": "r10:G16998"}
+{"type": "update", "step": 10, "key": "G16998.tested", "value": true}
+{"type": "observe", "step": 10, "key": "G07643.score", "value": 0.0839936, "item_id": "r10:G07643"}
+{"type": "update", "step": 10, "key": "G07643.tested", "value": true}
+{"type": "observe", "step": 10, "key": "G07036.score", "value": 0.0084115, "item_id": "r10:G07036"}
+{"type": "update", "step": 10, "key": "G07036.tested", "value": true}
+{"type": "observe", "step": 10, "key": "G05927.score", "value": -0.13096, "item_id": "r10:G05927"}
+{"type": "update", "step": 10, "key": "G05927.tested", "value": true}
+{"type": "observe", "step": 10, "key": "G02781.score", "value": 0.123053, "item_id": "r10:G02781"}
+{"type": "update", "step": 10, "key": "G02781.tested", "value": true}
+{"type": "observe", "step": 10, "key": "G05917.score", "value": -0.24204, "item_id": "r10:G05917"}
+{"type": "update", "step": 10, "key": "G05917.tested", "value": true}
+{"type": "observe", "step": 10, "key": "G06685.score", "value": -0.158546, "item_id": "r10:G06685"}
+{"type": "update", "step": 10, "key": "G06685.tested", "value": true}
+{"type": "use", "step": 11, "key": "G17870.tested", "value": false, "entity": "G17870.tested"}
+{"type": "use", "step": 11, "key": "G05506.tested", "value": false, "entity": "G05506.tested"}
+{"type": "use", "step": 11, "key": "G10551.tested", "value": false, "entity": "G10551.tested"}
+{"type": "use", "step": 11, "key": "G17381.tested", "value": false, "entity": "G17381.tested"}
+{"type": "use", "step": 11, "key": "G02913.tested", "value": false, "entity": "G02913.tested"}
+{"type": "use", "step": 11, "key": "G05485.tested", "value": false, "entity": "G05485.tested"}
+{"type": "use", "step": 11, "key": "G17354.tested", "value": false, "entity": "G17354.tested"}
+{"type": "use", "step": 11, "key": "G10530.tested", "value": false, "entity": "G10530.tested"}
+{"type": "use", "step": 11, "key": "G00293.tested", "value": false, "entity": "G00293.tested"}
+{"type": "use", "step": 11, "key": "G10574.tested", "value": false, "entity": "G10574.tested"}
+{"type": "use", "step": 11, "key": "G04532.tested", "value": false, "entity": "G04532.tested"}
+{"type": "use", "step": 11, "key": "G11031.tested", "value": false, "entity": "G11031.tested"}
+{"type": "use", "step": 11, "key": "G04023.tested", "value": false, "entity": "G04023.tested"}
+{"type": "use", "step": 11, "key": "G05167.tested", "value": false, "entity": "G05167.tested"}
+{"type": "use", "step": 11, "key": "G01972.tested", "value": false, "entity": "G01972.tested"}
+{"type": "use", "step": 11, "key": "G04016.tested", "value": false, "entity": "G04016.tested"}
+{"type": "observe", "step": 11, "key": "G17870.score", "value": 0.0663485, "item_id": "r11:G17870"}
+{"type": "update", "step": 11, "key": "G17870.tested", "value": true}
+{"type": "observe", "step": 11, "key": "G05506.score", "value": -0.00106, "item_id": "r11:G05506"}
+{"type": "update", "step": 11, "key": "G05506.tested", "value": true}
+{"type": "observe", "step": 11, "key": "G10551.score", "value": 0.044035, "item_id": "r11:G10551"}
+{"type": "update", "step": 11, "key": "G10551.tested", "value": true}
+{"type": "observe", "step": 11, "key": "G17381.score", "value": -0.0362255, "item_id": "r11:G17381"}
+{"type": "update", "step": 11, "key": "G17381.tested", "value": true}
+{"type": "observe", "step": 11, "key": "G02913.score", "value": 0.14449, "item_id": "r11:G02913"}
+{"type": "update", "step": 11, "key": "G02913.tested", "value": true}
+{"type": "observe", "step": 11, "key": "G05485.score", "value": 0.190815, "item_id": "r11:G05485"}
+{"type": "update", "step": 11, "key": "G05485.tested", "value": true}
+{"type": "observe", "step": 11, "key": "G17354.score", "value": -0.03381, "item_id": "r11:G17354"}
+{"type": "update", "step": 11, "key": "G17354.tested", "value": true}
+{"type": "observe", "step": 11, "key": "G10530.score", "value": -0.116675, "item_id": "r11:G10530"}
+{"type": "update", "step": 11, "key": "G10530.tested", "value": true}
+{"type": "observe", "step": 11, "key": "G00293.score", "value": 0.0619935, "item_id": "r11:G00293"}
+{"type": "update", "step": 11, "key": "G00293.tested", "value": true}
+{"type": "observe", "step": 11, "key": "G10574.score", "value": -0.069506, "item_id": "r11:G10574"}
+{"type": "update", "step": 11, "key": "G10574.tested", "value": true}
+{"type": "observe", "step": 11, "key": "G04532.score", "value": -0.269185, "item_id": "r11:G04532"}
+{"type": "update", "step": 11, "key": "G04532.tested", "value": true}
+{"type": "observe", "step": 11, "key": "G11031.score", "value": 0.113125, "item_id": "r11:G11031"}
+{"type": "update", "step": 11, "key": "G11031.tested", "value": true}
+{"type": "observe", "step": 11, "key": "G04023.score", "value": -0.04571, "item_id": "r11:G04023"}
+{"type": "update", "step": 11, "key": "G04023.tested", "value": true}
+{"type": "observe", "step": 11, "key": "G05167.score", "value": -0.01508, "item_id": "r11:G05167"}
+{"type": "update", "step": 11, "key": "G05167.tested", "value": true}
+{"type": "observe", "step": 11, "key": "G01972.score", "value": -0.0509735, "item_id": "r11:G01972"}
+{"type": "update", "step": 11, "key": "G01972.tested", "value": true}
+{"type": "observe", "step": 11, "key": "G04016.score", "value": 0.0535855, "item_id": "r11:G04016"}
+{"type": "update", "step": 11, "key": "G04016.tested", "value": true}
+{"type": "use", "step": 12, "key": "G05784.tested", "value": false, "entity": "G05784.tested"}
+{"type": "use", "step": 12, "key": "G06308.tested", "value": false, "entity": "G06308.tested"}
+{"type": "use", "step": 12, "key": "G04767.tested", "value": false, "entity": "G04767.tested"}
+{"type": "use", "step": 12, "key": "G17485.tested", "value": false, "entity": "G17485.tested"}
+{"type": "use", "step": 12, "key": "G14610.tested", "value": false, "entity": "G14610.tested"}
+{"type": "use", "step": 12, "key": "G14047.tested", "value": false, "entity": "G14047.tested"}
+{"type": "use", "step": 12, "key": "G18237.tested", "value": false, "entity": "G18237.tested"}
+{"type": "use", "step": 12, "key": "G00827.tested", "value": false, "entity": "G00827.tested"}
+{"type": "use", "step": 12, "key": "G10317.tested", "value": false, "entity": "G10317.tested"}
+{"type": "use", "step": 12, "key": "G08484.tested", "value": false, "entity": "G08484.tested"}
+{"type": "use", "step": 12, "key": "G04287.tested", "value": false, "entity": "G04287.tested"}
+{"type": "use", "step": 12, "key": "G08850.tested", "value": false, "entity": "G08850.tested"}
+{"type": "use", "step": 12, "key": "G07092.tested", "value": false, "entity": "G07092.tested"}
+{"type": "use", "step": 12, "key": "G05556.tested", "value": false, "entity": "G05556.tested"}
+{"type": "use", "step": 12, "key": "G10740.tested", "value": false, "entity": "G10740.tested"}
+{"type": "use", "step": 12, "key": "G01816.tested", "value": false, "entity": "G01816.tested"}
+{"type": "observe", "step": 12, "key": "G05784.score", "value": -0.020384, "item_id": "r12:G05784"}
+{"type": "update", "step": 12, "key": "G05784.tested", "value": true}
+{"type": "observe", "step": 12, "key": "G06308.score", "value": 0.0294805, "item_id": "r12:G06308"}
+{"type": "update", "step": 12, "key": "G06308.tested", "value": true}
+{"type": "observe", "step": 12, "key": "G04767.score", "value": -0.015441, "item_id": "r12:G04767"}
+{"type": "update", "step": 12, "key": "G04767.tested", "value": true}
+{"type": "observe", "step": 12, "key": "G17485.score", "value": 0.114639, "item_id": "r12:G17485"}
+{"type": "update", "step": 12, "key": "G17485.tested", "value": true}
+{"type": "observe", "step": 12, "key": "G14610.score", "value": 0.05865475, "item_id": "r12:G14610"}
+{"type": "update", "step": 12, "key": "G14610.tested", "value": true}
+{"type": "observe", "step": 12, "key": "G14047.score", "value": -0.18762, "item_id": "r12:G14047"}
+{"type": "update", "step": 12, "key": "G14047.tested", "value": true}
+{"type": "observe", "step": 12, "key": "G18237.score", "value": -0.034765, "item_id": "r12:G18237"}
+{"type": "update", "step": 12, "key": "G18237.tested", "value": true}
+{"type": "observe", "step": 12, "key": "G00827.score", "value": 0.665965, "item_id": "r12:G00827"}
+{"type": "update", "step": 12, "key": "G00827.tested", "value": true}
+{"type": "observe", "step": 12, "key": "G10317.score", "value": -0.005368, "item_id": "r12:G10317"}
+{"type": "update", "step": 12, "key": "G10317.tested", "value": true}
+{"type": "observe", "step": 12, "key": "G08484.score", "value": 0.1648415, "item_id": "r12:G08484"}
+{"type": "update", "step": 12, "key": "G08484.tested", "value": true}
+{"type": "observe", "step": 12, "key": "G04287.score", "value": 0.165695, "item_id": "r12:G04287"}
+{"type": "update", "step": 12, "key": "G04287.tested", "value": true}
+{"type": "observe", "step": 12, "key": "G08850.score", "value": -0.224375, "item_id": "r12:G08850"}
+{"type": "update", "step": 12, "key": "G08850.tested", "value": true}
+{"type": "observe", "step": 12, "key": "G07092.score", "value": -0.266095, "item_id": "r12:G07092"}
+{"type": "update", "step": 12, "key": "G07092.tested", "value": true}
+{"type": "observe", "step": 12, "key": "G05556.score", "value": 0.0896555, "item_id": "r12:G05556"}
+{"type": "update", "step": 12, "key": "G05556.tested", "value": true}
+{"type": "observe", "step": 12, "key": "G10740.score", "value": -0.0130235, "item_id": "r12:G10740"}
+{"type": "update", "step": 12, "key": "G10740.tested", "value": true}
+{"type": "observe", "step": 12, "key": "G01816.score", "value": -0.02482, "item_id": "r12:G01816"}
+{"type": "update", "step": 12, "key": "G01816.tested", "value": true}
+{"type": "use", "step": 13, "key": "G15193.tested", "value": false, "entity": "G15193.tested"}
+{"type": "use", "step": 13, "key": "G15005.tested", "value": false, "entity": "G15005.tested"}
+{"type": "use", "step": 13, "key": "G11712.tested", "value": false, "entity": "G11712.tested"}
+{"type": "use", "step": 13, "key": "G02647.tested", "value": false, "entity": "G02647.tested"}
+{"type": "use", "step": 13, "key": "G09697.tested", "value": false, "entity": "G09697.tested"}
+{"type": "use", "step": 13, "key": "G14189.tested", "value": false, "entity": "G14189.tested"}
+{"type": "use", "step": 13, "key": "G14932.tested", "value": false, "entity": "G14932.tested"}
+{"type": "use", "step": 13, "key": "G14924.tested", "value": false, "entity": "G14924.tested"}
+{"type": "use", "step": 13, "key": "G14450.tested", "value": false, "entity": "G14450.tested"}
+{"type": "use", "step": 13, "key": "G05440.tested", "value": false, "entity": "G05440.tested"}
+{"type": "use", "step": 13, "key": "G12472.tested", "value": false, "entity": "G12472.tested"}
+{"type": "use", "step": 13, "key": "G12108.tested", "value": false, "entity": "G12108.tested"}
+{"type": "use", "step": 13, "key": "G03247.tested", "value": false, "entity": "G03247.tested"}
+{"type": "use", "step": 13, "key": "G07736.tested", "value": false, "entity": "G07736.tested"}
+{"type": "use", "step": 13, "key": "G05063.tested", "value": false, "entity": "G05063.tested"}
+{"type": "use", "step": 13, "key": "G04221.tested", "value": false, "entity": "G04221.tested"}
+{"type": "observe", "step": 13, "key": "G15193.score", "value": 0.265315, "item_id": "r13:G15193"}
+{"type": "update", "step": 13, "key": "G15193.tested", "value": true}
+{"type": "observe", "step": 13, "key": "G15005.score", "value": 0.36388, "item_id": "r13:G15005"}
+{"type": "update", "step": 13, "key": "G15005.tested", "value": true}
+{"type": "observe", "step": 13, "key": "G11712.score", "value": 0.254505, "item_id": "r13:G11712"}
+{"type": "update", "step": 13, "key": "G11712.tested", "value": true}
+{"type": "observe", "step": 13, "key": "G02647.score", "value": -0.120513, "item_id": "r13:G02647"}
+{"type": "update", "step": 13, "key": "G02647.tested", "value": true}
+{"type": "observe", "step": 13, "key": "G09697.score", "value": 0.0334955, "item_id": "r13:G09697"}
+{"type": "update", "step": 13, "key": "G09697.tested", "value": true}
+{"type": "observe", "step": 13, "key": "G14189.score", "value": 0.0772335, "item_id": "r13:G14189"}
+{"type": "update", "step": 13, "key": "G14189.tested", "value": true}
+{"type": "observe", "step": 13, "key": "G14932.score", "value": 0.109695, "item_id": "r13:G14932"}
+{"type": "update", "step": 13, "key": "G14932.tested", "value": true}
+{"type": "observe", "step": 13, "key": "G14924.score", "value": 0.034208, "item_id": "r13:G14924"}
+{"type": "update", "step": 13, "key": "G14924.tested", "value": true}
+{"type": "observe", "step": 13, "key": "G14450.score", "value": -0.080635, "item_id": "r13:G14450"}
+{"type": "update", "step": 13, "key": "G14450.tested", "value": true}
+{"type": "observe", "step": 13, "key": "G05440.score", "value": -0.22501, "item_id": "r13:G05440"}
+{"type": "update", "step": 13, "key": "G05440.tested", "value": true}
+{"type": "observe", "step": 13, "key": "G12472.score", "value": 0.0429025, "item_id": "r13:G12472"}
+{"type": "update", "step": 13, "key": "G12472.tested", "value": true}
+{"type": "observe", "step": 13, "key": "G12108.score", "value": -0.0101445, "item_id": "r13:G12108"}
+{"type": "update", "step": 13, "key": "G12108.tested", "value": true}
+{"type": "observe", "step": 13, "key": "G03247.score", "value": -0.21622, "item_id": "r13:G03247"}
+{"type": "update", "step": 13, "key": "G03247.tested", "value": true}
+{"type": "observe", "step": 13, "key": "G07736.score", "value": -0.157795, "item_id": "r13:G07736"}
+{"type": "update", "step": 13, "key": "G07736.tested", "value": true}
+{"type": "observe", "step": 13, "key": "G05063.score", "value": 0.69451, "item_id": "r13:G05063"}
+{"type": "update", "step": 13, "key": "G05063.tested", "value": true}
+{"type": "observe", "step": 13, "key": "G04221.score", "value": -0.21041, "item_id": "r13:G04221"}
+{"type": "update", "step": 13, "key": "G04221.tested", "value": true}
+{"type": "use", "step": 14, "key": "G15387.tested", "value": false, "entity": "G15387.tested"}
+{"type": "use", "step": 14, "key": "G05217.tested", "value": false, "entity": "G05217.tested"}
+{"type": "use", "step": 14, "key": "G04966.tested", "value": false, "entity": "G04966.tested"}
+{"type": "use", "step": 14, "key": "G07948.tested", "value": false, "entity": "G07948.tested"}
+{"type": "use", "step": 14, "key": "G16043.tested", "value": false, "entity": "G16043.tested"}
+{"type": "use", "step": 14, "key": "G01029.tested", "value": false, "entity": "G01029.tested"}
+{"type": "use", "step": 14, "key": "G11745.tested", "value": false, "entity": "G11745.tested"}
+{"type": "use", "step": 14, "key": "G07014.tested", "value": false, "entity": "G07014.tested"}
+{"type": "use", "step": 14, "key": "G18403.tested", "value": false, "entity": "G18403.tested"}
+{"type": "use", "step": 14, "key": "G09764.tested", "value": false, "entity": "G09764.tested"}
+{"type": "use", "step": 14, "key": "G16381.tested", "value": false, "entity": "G16381.tested"}
+{"type": "use", "step": 14, "key": "G00287.tested", "value": false, "entity": "G00287.tested"}
+{"type": "use", "step": 14, "key": "G04372.tested", "value": false, "entity": "G04372.tested"}
+{"type": "use", "step": 14, "key": "G18183.tested", "value": false, "entity": "G18183.tested"}
+{"type": "use", "step": 14, "key": "G09645.tested", "value": false, "entity": "G09645.tested"}
+{"type": "use", "step": 14, "key": "G03064.tested", "value": false, "entity": "G03064.tested"}
+{"type": "observe", "step": 14, "key": "G15387.score", "value": -0.005555, "item_id": "r14:G15387"}
+{"type": "update", "step": 14, "key": "G15387.tested", "value": true}
+{"type": "observe", "step": 14, "key": "G05217.score", "value": -0.231385, "item_id": "r14:G05217"}
+{"type": "update", "step": 14, "key": "G05217.tested", "value": true}
+{"type": "observe", "step": 14, "key": "G04966.score", "value": -0.987885, "item_id": "r14:G04966"}
+{"type": "update", "step": 14, "key": "G04966.tested", "value": true}
+{"type": "observe", "step": 14, "key": "G07948.score", "value": 0.26008, "item_id": "r14:G07948"}
+{"type": "update", "step": 14, "key": "G07948.tested", "value": true}
+{"type": "observe", "step": 14, "key": "G16043.score", "value": 0.0947515, "item_id": "r14:G16043"}
+{"type": "update", "step": 14, "key": "G16043.tested", "value": true}
+{"type": "observe", "step": 14, "key": "G01029.score", "value": 0.242201, "item_id": "r14:G01029"}
+{"type": "update", "step": 14, "key": "G01029.tested", "value": true}
+{"type": "observe", "step": 14, "key": "G11745.score", "value": 0.09594, "item_id": "r14:G11745"}
+{"type": "update", "step": 14, "key": "G11745.tested", "value": true}
+{"type": "observe", "step": 14, "key": "G07014.score", "value": -0.200925, "item_id": "r14:G07014"}
+{"type": "update", "step": 14, "key": "G07014.tested", "value": true}
+{"type": "observe", "step": 14, "key": "G18403.score", "value": -0.1146365, "item_id": "r14:G18403"}
+{"type": "update", "step": 14, "key": "G18403.tested", "value": true}
+{"type": "observe", "step": 14, "key": "G09764.score", "value": -0.051435, "item_id": "r14:G09764"}
+{"type": "update", "step": 14, "key": "G09764.tested", "value": true}
+{"type": "observe", "step": 14, "key": "G16381.score", "value": -0.38235, "item_id": "r14:G16381"}
+{"type": "update", "step": 14, "key": "G16381.tested", "value": true}
+{"type": "observe", "step": 14, "key": "G00287.score", "value": 0.0529385, "item_id": "r14:G00287"}
+{"type": "update", "step": 14, "key": "G00287.tested", "value": true}
+{"type": "observe", "step": 14, "key": "G04372.score", "value": -0.21537, "item_id": "r14:G04372"}
+{"type": "update", "step": 14, "key": "G04372.tested", "value": true}
+{"type": "observe", "step": 14, "key": "G18183.score", "value": -0.034621, "item_id": "r14:G18183"}
+{"type": "update", "step": 14, "key": "G18183.tested", "value": true}
+{"type": "observe", "step": 14, "key": "G09645.score", "value": -0.17389, "item_id": "r14:G09645"}
+{"type": "update", "step": 14, "key": "G09645.tested", "value": true}
+{"type": "observe", "step": 14, "key": "G03064.score", "value": 0.14722, "item_id": "r14:G03064"}
+{"type": "update", "step": 14, "key": "G03064.tested", "value": true}
+{"type": "use", "step": 15, "key": "G04885.tested", "value": false, "entity": "G04885.tested"}
+{"type": "use", "step": 15, "key": "G05373.tested", "value": false, "entity": "G05373.tested"}
+{"type": "use", "step": 15, "key": "G00338.tested", "value": false, "entity": "G00338.tested"}
+{"type": "use", "step": 15, "key": "G08639.tested", "value": false, "entity": "G08639.tested"}
+{"type": "use", "step": 15, "key": "G14725.tested", "value": false, "entity": "G14725.tested"}
+{"type": "use", "step": 15, "key": "G09188.tested", "value": false, "entity": "G09188.tested"}
+{"type": "use", "step": 15, "key": "G18296.tested", "value": false, "entity": "G18296.tested"}
+{"type": "use", "step": 15, "key": "G11929.tested", "value": false, "entity": "G11929.tested"}
+{"type": "use", "step": 15, "key": "G03028.tested", "value": false, "entity": "G03028.tested"}
+{"type": "use", "step": 15, "key": "G06929.tested", "value": false, "entity": "G06929.tested"}
+{"type": "use", "step": 15, "key": "G17862.tested", "value": false, "entity": "G17862.tested"}
+{"type": "use", "step": 15, "key": "G13827.tested", "value": false, "entity": "G13827.tested"}
+{"type": "use", "step": 15, "key": "G02615.tested", "value": false, "entity": "G02615.tested"}
+{"type": "use", "step": 15, "key": "G03225.tested", "value": false, "entity": "G03225.tested"}
+{"type": "use", "step": 15, "key": "G02490.tested", "value": false, "entity": "G02490.tested"}
+{"type": "use", "step": 15, "key": "G04383.tested", "value": false, "entity": "G04383.tested"}
+{"type": "observe", "step": 15, "key": "G04885.score", "value": -0.053456, "item_id": "r15:G04885"}
+{"type": "update", "step": 15, "key": "G04885.tested", "value": true}
+{"type": "observe", "step": 15, "key": "G05373.score", "value": 0.05102, "item_id": "r15:G05373"}
+{"type": "update", "step": 15, "key": "G05373.tested", "value": true}
+{"type": "observe", "step": 15, "key": "G00338.score", "value": 0.272799, "item_id": "r15:G00338"}
+{"type": "update", "step": 15, "key": "G00338.tested", "value": true}
+{"type": "observe", "step": 15, "key": "G08639.score", "value": -0.0844905, "item_id": "r15:G08639"}
+{"type": "update", "step": 15, "key": "G08639.tested", "value": true}
+{"type": "observe", "step": 15, "key": "G14725.score", "value": -0.0584675, "item_id": "r15:G14725"}
+{"type": "update", "step": 15, "key": "G14725.tested", "value": true}
+{"type": "observe", "step": 15, "key": "G09188.score", "value": 0.297845, "item_id": "r15:G09188"}
+{"type": "update", "step": 15, "key": "G09188.tested", "value": true}
+{"type": "observe", "step": 15, "key": "G18296.score", "value": -0.0598858, "item_id": "r15:G18296"}
+{"type": "update", "step": 15, "key": "G18296.tested", "value": true}
+{"type": "observe", "step": 15, "key": "G11929.score", "value": 0.2651, "item_id": "r15:G11929"}
+{"type": "update", "step": 15, "key": "G11929.tested", "value": true}
+{"type": "observe", "step": 15, "key": "G03028.score", "value": 0.221745, "item_id": "r15:G03028"}
+{"type": "update", "step": 15, "key": "G03028.tested", "value": true}
+{"type": "observe", "step": 15, "key": "G06929.score", "value": 0.037163, "item_id": "r15:G06929"}
+{"type": "update", "step": 15, "key": "G06929.tested", "value": true}
+{"type": "observe", "step": 15, "key": "G17862.score", "value": 0.220668, "item_id": "r15:G17862"}
+{"type": "update", "step": 15, "key": "G17862.tested", "value": true}
+{"type": "observe", "step": 15, "key": "G13827.score", "value": 0.0925985, "item_id": "r15:G13827"}
+{"type": "update", "step": 15, "key": "G13827.tested", "value": true}
+{"type": "observe", "step": 15, "key": "G02615.score", "value": -0.17709, "item_id": "r15:G02615"}
+{"type": "update", "step": 15, "key": "G02615.tested", "value": true}
+{"type": "observe", "step": 15, "key": "G03225.score", "value": 0.135045, "item_id": "r15:G03225"}
+{"type": "update", "step": 15, "key": "G03225.tested", "value": true}
+{"type": "observe", "step": 15, "key": "G02490.score", "value": -0.015665, "item_id": "r15:G02490"}
+{"type": "update", "step": 15, "key": "G02490.tested", "value": true}
+{"type": "observe", "step": 15, "key": "G04383.score", "value": -0.0382845, "item_id": "r15:G04383"}
+{"type": "update", "step": 15, "key": "G04383.tested", "value": true}
+{"type": "use", "step": 16, "key": "G09421.tested", "value": false, "entity": "G09421.tested"}
+{"type": "use", "step": 16, "key": "G03865.tested", "value": false, "entity": "G03865.tested"}
+{"type": "use", "step": 16, "key": "G11384.tested", "value": false, "entity": "G11384.tested"}
+{"type": "use", "step": 16, "key": "G12038.tested", "value": false, "entity": "G12038.tested"}
+{"type": "use", "step": 16, "key": "G01753.tested", "value": false, "entity": "G01753.tested"}
+{"type": "use", "step": 16, "key": "G07487.tested", "value": false, "entity": "G07487.tested"}
+{"type": "use", "step": 16, "key": "G12669.tested", "value": false, "entity": "G12669.tested"}
+{"type": "use", "step": 16, "key": "G01200.tested", "value": false, "entity": "G01200.tested"}
+{"type": "use", "step": 16, "key": "G00026.tested", "value": false, "entity": "G00026.tested"}
+{"type": "use", "step": 16, "key": "G14530.tested", "value": false, "entity": "G14530.tested"}
+{"type": "use", "step": 16, "key": "G16463.tested", "value": false, "entity": "G16463.tested"}
+{"type": "use", "step": 16, "key": "G00741.tested", "value": false, "entity": "G00741.tested"}
+{"type": "use", "step": 16, "key": "G16421.tested", "value": false, "entity": "G16421.tested"}
+{"type": "use", "step": 16, "key": "G17898.tested", "value": false, "entity": "G17898.tested"}
+{"type": "use", "step": 16, "key": "G12225.tested", "value": false, "entity": "G12225.tested"}
+{"type": "use", "step": 16, "key": "G08389.tested", "value": false, "entity": "G08389.tested"}
+{"type": "observe", "step": 16, "key": "G09421.score", "value": -0.1553275, "item_id": "r16:G09421"}
+{"type": "update", "step": 16, "key": "G09421.tested", "value": true}
+{"type": "observe", "step": 16, "key": "G03865.score", "value": 0.27042, "item_id": "r16:G03865"}
+{"type": "update", "step": 16, "key": "G03865.tested", "value": true}
+{"type": "observe", "step": 16, "key": "G11384.score", "value": 0.36661, "item_id": "r16:G11384"}
+{"type": "update", "step": 16, "key": "G11384.tested", "value": true}
+{"type": "observe", "step": 16, "key": "G12038.score", "value": 0.093561, "item_id": "r16:G12038"}
+{"type": "update", "step": 16, "key": "G12038.tested", "value": true}
+{"type": "observe", "step": 16, "key": "G01753.score", "value": -0.099994, "item_id": "r16:G01753"}
+{"type": "update", "step": 16, "key": "G01753.tested", "value": true}
+{"type": "observe", "step": 16, "key": "G07487.score", "value": -0.30478, "item_id": "r16:G07487"}
+{"type": "update", "step": 16, "key": "G07487.tested", "value": true}
+{"type": "observe", "step": 16, "key": "G12669.score", "value": -0.01072, "item_id": "r16:G12669"}
+{"type": "update", "step": 16, "key": "G12669.tested", "value": true}
+{"type": "observe", "step": 16, "key": "G01200.score", "value": 0.142904, "item_id": "r16:G01200"}
+{"type": "update", "step": 16, "key": "G01200.tested", "value": true}
+{"type": "observe", "step": 16, "key": "G00026.score", "value": -0.0112775, "item_id": "r16:G00026"}
+{"type": "update", "step": 16, "key": "G00026.tested", "value": true}
+{"type": "observe", "step": 16, "key": "G14530.score", "value": 0.026791, "item_id": "r16:G14530"}
+{"type": "update", "step": 16, "key": "G14530.tested", "value": true}
+{"type": "observe", "step": 16, "key": "G16463.score", "value": 0.00496, "item_id": "r16:G16463"}
+{"type": "update", "step": 16, "key": "G16463.tested", "value": true}
+{"type": "observe", "step": 16, "key": "G00741.score", "value": 0.48755, "item_id": "r16:G00741"}
+{"type": "update", "step": 16, "key": "G00741.tested", "value": true}
+{"type": "observe", "step": 16, "key": "G16421.score", "value": 0.017013, "item_id": "r16:G16421"}
+{"type": "update", "step": 16, "key": "G16421.tested", "value": true}
+{"type": "observe", "step": 16, "key": "G17898.score", "value": 0.337625, "item_id": "r16:G17898"}
+{"type": "update", "step": 16, "key": "G17898.tested", "value": true}
+{"type": "observe", "step": 16, "key": "G12225.score", "value": 0.29058, "item_id": "r16:G12225"}
+{"type": "update", "step": 16, "key": "G12225.tested", "value": true}
+{"type": "observe", "step": 16, "key": "G08389.score", "value": 0.41566, "item_id": "r16:G08389"}
+{"type": "update", "step": 16, "key": "G08389.tested", "value": true}
+{"type": "use", "step": 17, "key": "G05891.tested", "value": false, "entity": "G05891.tested"}
+{"type": "use", "step": 17, "key": "G14272.tested", "value": false, "entity": "G14272.tested"}
+{"type": "use", "step": 17, "key": "G09479.tested", "value": false, "entity": "G09479.tested"}
+{"type": "use", "step": 17, "key": "G13056.tested", "value": false, "entity": "G13056.tested"}
+{"type": "use", "step": 17, "key": "G18368.tested", "value": false, "entity": "G18368.tested"}
+{"type": "use", "step": 17, "key": "G05872.tested", "value": false, "entity": "G05872.tested"}
+{"type": "use", "step": 17, "key": "G07300.tested", "value": false, "entity": "G07300.tested"}
+{"type": "use", "step": 17, "key": "G16621.tested", "value": false, "entity": "G16621.tested"}
+{"type": "use", "step": 17, "key": "G14346.tested", "value": false, "entity": "G14346.tested"}
+{"type": "use", "step": 17, "key": "G00104.tested", "value": false, "entity": "G00104.tested"}
+{"type": "use", "step": 17, "key": "G18129.tested", "value": false, "entity": "G18129.tested"}
+{"type": "use", "step": 17, "key": "G11529.tested", "value": false, "entity": "G11529.tested"}
+{"type": "use", "step": 17, "key": "G14505.tested", "value": false, "entity": "G14505.tested"}
+{"type": "use", "step": 17, "key": "G00033.tested", "value": false, "entity": "G00033.tested"}
+{"type": "use", "step": 17, "key": "G09589.tested", "value": false, "entity": "G09589.tested"}
+{"type": "use", "step": 17, "key": "G09155.tested", "value": false, "entity": "G09155.tested"}
+{"type": "observe", "step": 17, "key": "G05891.score", "value": -0.1166215, "item_id": "r17:G05891"}
+{"type": "update", "step": 17, "key": "G05891.tested", "value": true}
+{"type": "observe", "step": 17, "key": "G14272.score", "value": 0.1439715, "item_id": "r17:G14272"}
+{"type": "update", "step": 17, "key": "G14272.tested", "value": true}
+{"type": "observe", "step": 17, "key": "G09479.score", "value": 0.124565, "item_id": "r17:G09479"}
+{"type": "update", "step": 17, "key": "G09479.tested", "value": true}
+{"type": "observe", "step": 17, "key": "G13056.score", "value": 0.04518, "item_id": "r17:G13056"}
+{"type": "update", "step": 17, "key": "G13056.tested", "value": true}
+{"type": "observe", "step": 17, "key": "G18368.score", "value": 0.17027, "item_id": "r17:G18368"}
+{"type": "update", "step": 17, "key": "G18368.tested", "value": true}
+{"type": "observe", "step": 17, "key": "G05872.score", "value": 0.025193, "item_id": "r17:G05872"}
+{"type": "update", "step": 17, "key": "G05872.tested", "value": true}
+{"type": "observe", "step": 17, "key": "G07300.score", "value": -0.570125, "item_id": "r17:G07300"}
+{"type": "update", "step": 17, "key": "G07300.tested", "value": true}
+{"type": "observe", "step": 17, "key": "G16621.score", "value": -0.218745, "item_id": "r17:G16621"}
+{"type": "update", "step": 17, "key": "G16621.tested", "value": true}
+{"type": "observe", "step": 17, "key": "G14346.score", "value": -0.0486415, "item_id": "r17:G14346"}
+{"type": "update", "step": 17, "key": "G14346.tested", "value": true}
+{"type": "observe", "step": 17, "key": "G00104.score", "value": 0.232235, "item_id": "r17:G00104"}
+{"type": "update", "step": 17, "key": "G00104.tested", "value": true}
+{"type": "observe", "step": 17, "key": "G18129.score", "value": 0.057890426, "item_id": "r17:G18129"}
+{"type": "update", "step": 17, "key": "G18129.tested", "value": true}
+{"type": "observe", "step": 17, "key": "G11529.score", "value": 0.059705, "item_id": "r17:G11529"}
+{"type": "update", "step": 17, "key": "G11529.tested", "value": true}
+{"type": "observe", "step": 17, "key": "G14505.score", "value": 0.3130955, "item_id": "r17:G14505"}
+{"type": "update", "step": 17, "key": "G14505.tested", "value": true}
+{"type": "observe", "step": 17, "key": "G00033.score", "value": 0.08589, "item_id": "r17:G00033"}
+{"type": "update", "step": 17, "key": "G00033.tested", "value": true}
+{"type": "observe", "step": 17, "key": "G09589.score", "value": 0.022335, "item_id": "r17:G09589"}
+{"type": "update", "step": 17, "key": "G09589.tested", "value": true}
+{"type": "observe", "step": 17, "key": "G09155.score", "value": 0.0015315, "item_id": "r17:G09155"}
+{"type": "update", "step": 17, "key": "G09155.tested", "value": true}
+{"type": "use", "step": 18, "key": "G04885.tested", "value": false, "entity": "G04885.tested", "belief": true}
+{"type": "use", "step": 18, "key": "G17485.tested", "value": false, "entity": "G17485.tested", "belief": true}
+{"type": "use", "step": 18, "key": "G05373.tested", "value": false, "entity": "G05373.tested", "belief": true}
+{"type": "use", "step": 18, "key": "G11929.tested", "value": false, "entity": "G11929.tested", "belief": false}
+{"type": "use", "step": 18, "key": "G17280.tested", "value": false, "entity": "G17280.tested"}
+{"type": "use", "step": 18, "key": "G10020.tested", "value": false, "entity": "G10020.tested"}
+{"type": "use", "step": 18, "key": "G12857.tested", "value": false, "entity": "G12857.tested"}
+{"type": "use", "step": 18, "key": "G14179.tested", "value": false, "entity": "G14179.tested"}
+{"type": "use", "step": 18, "key": "G01831.tested", "value": false, "entity": "G01831.tested"}
+{"type": "use", "step": 18, "key": "G12285.tested", "value": false, "entity": "G12285.tested"}
+{"type": "use", "step": 18, "key": "G14491.tested", "value": false, "entity": "G14491.tested"}
+{"type": "use", "step": 18, "key": "G07646.tested", "value": false, "entity": "G07646.tested"}
+{"type": "use", "step": 18, "key": "G03151.tested", "value": false, "entity": "G03151.tested"}
+{"type": "use", "step": 18, "key": "G10943.tested", "value": false, "entity": "G10943.tested"}
+{"type": "use", "step": 18, "key": "G08402.tested", "value": false, "entity": "G08402.tested"}
+{"type": "use", "step": 18, "key": "G01287.tested", "value": false, "entity": "G01287.tested"}
+{"type": "use", "step": 18, "key": "G13096.tested", "value": false, "entity": "G13096.tested"}
+{"type": "use", "step": 18, "key": "G16855.tested", "value": false, "entity": "G16855.tested"}
+{"type": "use", "step": 18, "key": "G02832.tested", "value": false, "entity": "G02832.tested"}
+{"type": "use", "step": 18, "key": "G16056.tested", "value": false, "entity": "G16056.tested"}
+{"type": "observe", "step": 18, "key": "G17280.score", "value": -0.189132, "item_id": "r18:G17280"}
+{"type": "update", "step": 18, "key": "G17280.tested", "value": true}
+{"type": "observe", "step": 18, "key": "G10020.score", "value": -0.048079, "item_id": "r18:G10020"}
+{"type": "update", "step": 18, "key": "G10020.tested", "value": true}
+{"type": "observe", "step": 18, "key": "G12857.score", "value": -0.314805, "item_id": "r18:G12857"}
+{"type": "update", "step": 18, "key": "G12857.tested", "value": true}
+{"type": "observe", "step": 18, "key": "G14179.score", "value": 0.1262145, "item_id": "r18:G14179"}
+{"type": "update", "step": 18, "key": "G14179.tested", "value": true}
+{"type": "observe", "step": 18, "key": "G01831.score", "value": 0.41042, "item_id": "r18:G01831"}
+{"type": "update", "step": 18, "key": "G01831.tested", "value": true}
+{"type": "observe", "step": 18, "key": "G12285.score", "value": 0.012322, "item_id": "r18:G12285"}
+{"type": "update", "step": 18, "key": "G12285.tested", "value": true}
+{"type": "observe", "step": 18, "key": "G14491.score", "value": 0.096355, "item_id": "r18:G14491"}
+{"type": "update", "step": 18, "key": "G14491.tested", "value": true}
+{"type": "observe", "step": 18, "key": "G07646.score", "value": 0.103393, "item_id": "r18:G07646"}
+{"type": "update", "step": 18, "key": "G07646.tested", "value": true}
+{"type": "observe", "step": 18, "key": "G03151.score", "value": 0.0076775, "item_id": "r18:G03151"}
+{"type": "update", "step": 18, "key": "G03151.tested", "value": true}
+{"type": "observe", "step": 18, "key": "G10943.score", "value": 0.067965, "item_id": "r18:G10943"}
+{"type": "update", "step": 18, "key": "G10943.tested", "value": true}
+{"type": "observe", "step": 18, "key": "G08402.score", "value": -0.128055, "item_id": "r18:G08402"}
+{"type": "update", "step": 18, "key": "G08402.tested", "value": true}
+{"type": "observe", "step": 18, "key": "G01287.score", "value": 0.1292915, "item_id": "r18:G01287"}
+{"type": "update", "step": 18, "key": "G01287.tested", "value": true}
+{"type": "observe", "step": 18, "key": "G13096.score", "value": -0.12436, "item_id": "r18:G13096"}
+{"type": "update", "step": 18, "key": "G13096.tested", "value": true}
+{"type": "observe", "step": 18, "key": "G16855.score", "value": -0.168295, "item_id": "r18:G16855"}
+{"type": "update", "step": 18, "key": "G16855.tested", "value": true}
+{"type": "observe", "step": 18, "key": "G02832.score", "value": -0.22126696, "item_id": "r18:G02832"}
+{"type": "update", "step": 18, "key": "G02832.tested", "value": true}
+{"type": "observe", "step": 18, "key": "G16056.score", "value": -0.047566, "item_id": "r18:G16056"}
+{"type": "update", "step": 18, "key": "G16056.tested", "value": true}
+{"type": "use", "step": 19, "key": "G04885.tested", "value": false, "entity": "G04885.tested", "belief": false}
+{"type": "use", "step": 19, "key": "G17280.tested", "value": false, "entity": "G17280.tested", "belief": false}
+{"type": "use", "step": 19, "key": "G17485.tested", "value": false, "entity": "G17485.tested", "belief": false}
+{"type": "use", "step": 19, "key": "G10020.tested", "value": false, "entity": "G10020.tested", "belief": false}
+{"type": "use", "step": 19, "key": "G12857.tested", "value": false, "entity": "G12857.tested", "belief": false}
+{"type": "use", "step": 19, "key": "G14179.tested", "value": false, "entity": "G14179.tested"}
+{"type": "use", "step": 19, "key": "G01831.tested", "value": false, "entity": "G01831.tested"}
+{"type": "use", "step": 19, "key": "G07646.tested", "value": false, "entity": "G07646.tested", "belief": false}
+{"type": "use", "step": 19, "key": "G03151.tested", "value": false, "entity": "G03151.tested"}
+{"type": "use", "step": 19, "key": "G10943.tested", "value": false, "entity": "G10943.tested", "belief": false}
+{"type": "use", "step": 19, "key": "G08402.tested", "value": false, "entity": "G08402.tested", "belief": false}
+{"type": "use", "step": 19, "key": "G01287.tested", "value": false, "entity": "G01287.tested", "belief": false}
+{"type": "use", "step": 19, "key": "G13096.tested", "value": false, "entity": "G13096.tested", "belief": false}
+{"type": "use", "step": 19, "key": "G16855.tested", "value": false, "entity": "G16855.tested"}
+{"type": "use", "step": 19, "key": "G16855.tested", "value": false, "entity": "G16855.tested"}
+{"type": "use", "step": 19, "key": "G02832.tested", "value": false, "entity": "G02832.tested", "belief": false}
+{"type": "use", "step": 19, "key": "G16056.tested", "value": false, "entity": "G16056.tested"}
+{"type": "use", "step": 19, "key": "G11929.tested", "value": false, "entity": "G11929.tested", "belief": false}
+{"type": "use", "step": 19, "key": "G18263.tested", "value": false, "entity": "G18263.tested"}
+{"type": "use", "step": 19, "key": "G15264.tested", "value": false, "entity": "G15264.tested"}
+{"type": "use", "step": 19, "key": "G05206.tested", "value": false, "entity": "G05206.tested"}
+{"type": "use", "step": 19, "key": "G03663.tested", "value": false, "entity": "G03663.tested"}
+{"type": "use", "step": 19, "key": "G06231.tested", "value": false, "entity": "G06231.tested"}
+{"type": "use", "step": 19, "key": "G03393.tested", "value": false, "entity": "G03393.tested"}
+{"type": "use", "step": 19, "key": "G16811.tested", "value": false, "entity": "G16811.tested"}
+{"type": "use", "step": 19, "key": "G09083.tested", "value": false, "entity": "G09083.tested"}
+{"type": "use", "step": 19, "key": "G15254.tested", "value": false, "entity": "G15254.tested"}
+{"type": "use", "step": 19, "key": "G09898.tested", "value": false, "entity": "G09898.tested"}
+{"type": "use", "step": 19, "key": "G12341.tested", "value": false, "entity": "G12341.tested"}
+{"type": "use", "step": 19, "key": "G12609.tested", "value": false, "entity": "G12609.tested"}
+{"type": "use", "step": 19, "key": "G13357.tested", "value": false, "entity": "G13357.tested"}
+{"type": "use", "step": 19, "key": "G13933.tested", "value": false, "entity": "G13933.tested"}
+{"type": "observe", "step": 19, "key": "G18263.score", "value": 0.29676, "item_id": "r19:G18263"}
+{"type": "update", "step": 19, "key": "G18263.tested", "value": true}
+{"type": "observe", "step": 19, "key": "G15264.score", "value": 0.0074185, "item_id": "r19:G15264"}
+{"type": "update", "step": 19, "key": "G15264.tested", "value": true}
+{"type": "observe", "step": 19, "key": "G05206.score", "value": -0.0126, "item_id": "r19:G05206"}
+{"type": "update", "step": 19, "key": "G05206.tested", "value": true}
+{"type": "observe", "step": 19, "key": "G03663.score", "value": 0.072995, "item_id": "r19:G03663"}
+{"type": "update", "step": 19, "key": "G03663.tested", "value": true}
+{"type": "observe", "step": 19, "key": "G06231.score", "value": -0.2879, "item_id": "r19:G06231"}
+{"type": "update", "step": 19, "key": "G06231.tested", "value": true}
+{"type": "observe", "step": 19, "key": "G03393.score", "value": -0.0966035, "item_id": "r19:G03393"}
+{"type": "update", "step": 19, "key": "G03393.tested", "value": true}
+{"type": "observe", "step": 19, "key": "G16811.score", "value": -0.0742405, "item_id": "r19:G16811"}
+{"type": "update", "step": 19, "key": "G16811.tested", "value": true}
+{"type": "observe", "step": 19, "key": "G09083.score", "value": 0.05100675, "item_id": "r19:G09083"}
+{"type": "update", "step": 19, "key": "G09083.tested", "value": true}
+{"type": "observe", "step": 19, "key": "G15254.score", "value": -0.01386, "item_id": "r19:G15254"}
+{"type": "update", "step": 19, "key": "G15254.tested", "value": true}
+{"type": "observe", "step": 19, "key": "G09898.score", "value": 0.104474, "item_id": "r19:G09898"}
+{"type": "update", "step": 19, "key": "G09898.tested", "value": true}
+{"type": "observe", "step": 19, "key": "G12341.score", "value": -0.0985955, "item_id": "r19:G12341"}
+{"type": "update", "step": 19, "key": "G12341.tested", "value": true}
+{"type": "observe", "step": 19, "key": "G12609.score", "value": 0.072995, "item_id": "r19:G12609"}
+{"type": "update", "step": 19, "key": "G12609.tested", "value": true}
+{"type": "observe", "step": 19, "key": "G13357.score", "value": -0.1036065, "item_id": "r19:G13357"}
+{"type": "update", "step": 19, "key": "G13357.tested", "value": true}
+{"type": "observe", "step": 19, "key": "G13933.score", "value": -0.01779, "item_id": "r19:G13933"}
+{"type": "update", "step": 19, "key": "G13933.tested", "value": true}
+{"type": "use", "step": 20, "key": "G09083.tested", "value": false, "entity": "G09083.tested", "belief": false}
+{"type": "use", "step": 20, "key": "G11929.tested", "value": false, "entity": "G11929.tested", "belief": false}
+{"type": "use", "step": 20, "key": "G15254.tested", "value": false, "entity": "G15254.tested", "belief": false}
+{"type": "use", "step": 20, "key": "G09898.tested", "value": false, "entity": "G09898.tested", "belief": false}
+{"type": "use", "step": 20, "key": "G09543.tested", "value": false, "entity": "G09543.tested"}
+{"type": "use", "step": 20, "key": "G17887.tested", "value": false, "entity": "G17887.tested"}
+{"type": "use", "step": 20, "key": "G15755.tested", "value": false, "entity": "G15755.tested"}
+{"type": "use", "step": 20, "key": "G00197.tested", "value": false, "entity": "G00197.tested"}
+{"type": "use", "step": 20, "key": "G01676.tested", "value": false, "entity": "G01676.tested"}
+{"type": "use", "step": 20, "key": "G01609.tested", "value": false, "entity": "G01609.tested"}
+{"type": "use", "step": 20, "key": "G00695.tested", "value": false, "entity": "G00695.tested"}
+{"type": "use", "step": 20, "key": "G09761.tested", "value": false, "entity": "G09761.tested"}
+{"type": "use", "step": 20, "key": "G13853.tested", "value": false, "entity": "G13853.tested"}
+{"type": "use", "step": 20, "key": "G14587.tested", "value": false, "entity": "G14587.tested"}
+{"type": "use", "step": 20, "key": "G07674.tested", "value": false, "entity": "G07674.tested"}
+{"type": "use", "step": 20, "key": "G15361.tested", "value": false, "entity": "G15361.tested"}
+{"type": "use", "step": 20, "key": "G05407.tested", "value": false, "entity": "G05407.tested"}
+{"type": "use", "step": 20, "key": "G06106.tested", "value": false, "entity": "G06106.tested"}
+{"type": "use", "step": 20, "key": "G18267.tested", "value": false, "entity": "G18267.tested"}
+{"type": "use", "step": 20, "key": "G04106.tested", "value": false, "entity": "G04106.tested"}
+{"type": "observe", "step": 20, "key": "G09543.score", "value": -0.225455, "item_id": "r20:G09543"}
+{"type": "update", "step": 20, "key": "G09543.tested", "value": true}
+{"type": "observe", "step": 20, "key": "G17887.score", "value": -0.029993, "item_id": "r20:G17887"}
+{"type": "update", "step": 20, "key": "G17887.tested", "value": true}
+{"type": "observe", "step": 20, "key": "G15755.score", "value": -0.008135, "item_id": "r20:G15755"}
+{"type": "update", "step": 20, "key": "G15755.tested", "value": true}
+{"type": "observe", "step": 20, "key": "G00197.score", "value": 0.029185, "item_id": "r20:G00197"}
+{"type": "update", "step": 20, "key": "G00197.tested", "value": true}
+{"type": "observe", "step": 20, "key": "G01676.score", "value": 0.286925, "item_id": "r20:G01676"}
+{"type": "update", "step": 20, "key": "G01676.tested", "value": true}
+{"type": "observe", "step": 20, "key": "G01609.score", "value": -0.1550925, "item_id": "r20:G01609"}
+{"type": "update", "step": 20, "key": "G01609.tested", "value": true}
+{"type": "observe", "step": 20, "key": "G00695.score", "value": -0.189895, "item_id": "r20:G00695"}
+{"type": "update", "step": 20, "key": "G00695.tested", "value": true}
+{"type": "observe", "step": 20, "key": "G09761.score", "value": -0.2818, "item_id": "r20:G09761"}
+{"type": "update", "step": 20, "key": "G09761.tested", "value": true}
+{"type": "observe", "step": 20, "key": "G13853.score", "value": 0.383965, "item_id": "r20:G13853"}
+{"type": "update", "step": 20, "key": "G13853.tested", "value": true}
+{"type": "observe", "step": 20, "key": "G14587.score", "value": -0.044635, "item_id": "r20:G14587"}
+{"type": "update", "step": 20, "key": "G14587.tested", "value": true}
+{"type": "observe", "step": 20, "key": "G07674.score", "value": -0.0603295, "item_id": "r20:G07674"}
+{"type": "update", "step": 20, "key": "G07674.tested", "value": true}
+{"type": "observe", "step": 20, "key": "G15361.score", "value": 0.135115, "item_id": "r20:G15361"}
+{"type": "update", "step": 20, "key": "G15361.tested", "value": true}
+{"type": "observe", "step": 20, "key": "G05407.score", "value": 0.266075, "item_id": "r20:G05407"}
+{"type": "update", "step": 20, "key": "G05407.tested", "value": true}
+{"type": "observe", "step": 20, "key": "G06106.score", "value": 0.0795015, "item_id": "r20:G06106"}
+{"type": "update", "step": 20, "key": "G06106.tested", "value": true}
+{"type": "observe", "step": 20, "key": "G18267.score", "value": -0.0654765, "item_id": "r20:G18267"}
+{"type": "update", "step": 20, "key": "G18267.tested", "value": true}
+{"type": "observe", "step": 20, "key": "G04106.score", "value": 0.077844, "item_id": "r20:G04106"}
+{"type": "update", "step": 20, "key": "G04106.tested", "value": true}
+{"type": "use", "step": 21, "key": "G13933.tested", "value": false, "entity": "G13933.tested", "belief": true}
+{"type": "use", "step": 21, "key": "G08639.tested", "value": false, "entity": "G08639.tested", "belief": true}
+{"type": "use", "step": 21, "key": "G12341.tested", "value": false, "entity": "G12341.tested", "belief": false}
+{"type": "use", "step": 21, "key": "G12609.tested", "value": false, "entity": "G12609.tested", "belief": false}
+{"type": "use", "step": 21, "key": "G11929.tested", "value": false, "entity": "G11929.tested", "belief": true}
+{"type": "use", "step": 21, "key": "G13888.tested", "value": false, "entity": "G13888.tested"}
+{"type": "use", "step": 21, "key": "G14627.tested", "value": false, "entity": "G14627.tested"}
+{"type": "use", "step": 21, "key": "G12974.tested", "value": false, "entity": "G12974.tested"}
+{"type": "use", "step": 21, "key": "G16186.tested", "value": false, "entity": "G16186.tested"}
+{"type": "use", "step": 21, "key": "G16078.tested", "value": false, "entity": "G16078.tested"}
+{"type": "use", "step": 21, "key": "G03134.tested", "value": false, "entity": "G03134.tested"}
+{"type": "use", "step": 21, "key": "G16706.tested", "value": false, "entity": "G16706.tested"}
+{"type": "use", "step": 21, "key": "G06733.tested", "value": false, "entity": "G06733.tested"}
+{"type": "use", "step": 21, "key": "G13758.tested", "value": false, "entity": "G13758.tested"}
+{"type": "use", "step": 21, "key": "G16226.tested", "value": false, "entity": "G16226.tested"}
+{"type": "use", "step": 21, "key": "G08294.tested", "value": false, "entity": "G08294.tested"}
+{"type": "use", "step": 21, "key": "G13964.tested", "value": false, "entity": "G13964.tested"}
+{"type": "use", "step": 21, "key": "G16311.tested", "value": false, "entity": "G16311.tested"}
+{"type": "use", "step": 21, "key": "G14661.tested", "value": false, "entity": "G14661.tested"}
+{"type": "use", "step": 21, "key": "G04455.tested", "value": false, "entity": "G04455.tested"}
+{"type": "use", "step": 21, "key": "G04249.tested", "value": false, "entity": "G04249.tested"}
+{"type": "observe", "step": 21, "key": "G13888.score", "value": -0.0458805, "item_id": "r21:G13888"}
+{"type": "update", "step": 21, "key": "G13888.tested", "value": true}
+{"type": "observe", "step": 21, "key": "G14627.score", "value": 0.256065, "item_id": "r21:G14627"}
+{"type": "update", "step": 21, "key": "G14627.tested", "value": true}
+{"type": "observe", "step": 21, "key": "G12974.score", "value": 0.283635, "item_id": "r21:G12974"}
+{"type": "update", "step": 21, "key": "G12974.tested", "value": true}
+{"type": "observe", "step": 21, "key": "G16186.score", "value": -0.15948, "item_id": "r21:G16186"}
+{"type": "update", "step": 21, "key": "G16186.tested", "value": true}
+{"type": "observe", "step": 21, "key": "G16078.score", "value": 0.096681, "item_id": "r21:G16078"}
+{"type": "update", "step": 21, "key": "G16078.tested", "value": true}
+{"type": "observe", "step": 21, "key": "G03134.score", "value": 0.174089, "item_id": "r21:G03134"}
+{"type": "update", "step": 21, "key": "G03134.tested", "value": true}
+{"type": "observe", "step": 21, "key": "G16706.score", "value": 0.09989, "item_id": "r21:G16706"}
+{"type": "update", "step": 21, "key": "G16706.tested", "value": true}
+{"type": "observe", "step": 21, "key": "G06733.score", "value": 0.04985, "item_id": "r21:G06733"}
+{"type": "update", "step": 21, "key": "G06733.tested", "value": true}
+{"type": "observe", "step": 21, "key": "G13758.score", "value": -0.172695, "item_id": "r21:G13758"}
+{"type": "update", "step": 21, "key": "G13758.tested", "value": true}
+{"type": "observe", "step": 21, "key": "G16226.score", "value": -0.43613, "item_id": "r21:G16226"}
+{"type": "update", "step": 21, "key": "G16226.tested", "value": true}
+{"type": "observe", "step": 21, "key": "G08294.score", "value": -0.10876, "item_id": "r21:G08294"}
+{"type": "update", "step": 21, "key": "G08294.tested", "value": true}
+{"type": "observe", "step": 21, "key": "G13964.score", "value": -0.047035, "item_id": "r21:G13964"}
+{"type": "update", "step": 21, "key": "G13964.tested", "value": true}
+{"type": "observe", "step": 21, "key": "G16311.score", "value": -0.124541, "item_id": "r21:G16311"}
+{"type": "update", "step": 21, "key": "G16311.tested", "value": true}
+{"type": "observe", "step": 21, "key": "G14661.score", "value": -0.087555, "item_id": "r21:G14661"}
+{"type": "update", "step": 21, "key": "G14661.tested", "value": true}
+{"type": "observe", "step": 21, "key": "G04455.score", "value": -0.2012, "item_id": "r21:G04455"}
+{"type": "update", "step": 21, "key": "G04455.tested", "value": true}
+{"type": "observe", "step": 21, "key": "G04249.score", "value": 0.000595, "item_id": "r21:G04249"}
+{"type": "update", "step": 21, "key": "G04249.tested", "value": true}
+{"type": "use", "step": 22, "key": "G13933.tested", "value": false, "entity": "G13933.tested", "belief": false}
+{"type": "use", "step": 22, "key": "G13888.tested", "value": false, "entity": "G13888.tested", "belief": false}
+{"type": "use", "step": 22, "key": "G14627.tested", "value": false, "entity": "G14627.tested", "belief": false}
+{"type": "use", "step": 22, "key": "G12341.tested", "value": false, "entity": "G12341.tested", "belief": false}
+{"type": "use", "step": 22, "key": "G12609.tested", "value": false, "entity": "G12609.tested"}
+{"type": "use", "step": 22, "key": "G16706.tested", "value": false, "entity": "G16706.tested", "belief": false}
+{"type": "use", "step": 22, "key": "G06733.tested", "value": false, "entity": "G06733.tested", "belief": false}
+{"type": "use", "step": 22, "key": "G11929.tested", "value": false, "entity": "G11929.tested", "belief": false}
+{"type": "use", "step": 22, "key": "G12974.tested", "value": false, "entity": "G12974.tested", "belief": false}
+{"type": "use", "step": 22, "key": "G13758.tested", "value": false, "entity": "G13758.tested", "belief": false}
+{"type": "use", "step": 22, "key": "G16186.tested", "value": false, "entity": "G16186.tested", "belief": false}
+{"type": "use", "step": 22, "key": "G03134.tested", "value": false, "entity": "G03134.tested", "belief": false}
+{"type": "use", "step": 22, "key": "G16078.tested", "value": false, "entity": "G16078.tested", "belief": false}
+{"type": "use", "step": 22, "key": "G03134.tested", "value": false, "entity": "G03134.tested", "belief": false}
+{"type": "use", "step": 22, "key": "G12974.tested", "value": false, "entity": "G12974.tested", "belief": false}
+{"type": "use", "step": 22, "key": "G13758.tested", "value": false, "entity": "G13758.tested", "belief": false}
+{"type": "use", "step": 22, "key": "G16186.tested", "value": false, "entity": "G16186.tested", "belief": false}
+{"type": "use", "step": 22, "key": "G03134.tested", "value": false, "entity": "G03134.tested", "belief": false}
+{"type": "use", "step": 22, "key": "G16078.tested", "value": false, "entity": "G16078.tested", "belief": false}
+{"type": "use", "step": 22, "key": "G13933.tested", "value": false, "entity": "G13933.tested", "belief": false}
+{"type": "use", "step": 22, "key": "G13888.tested", "value": false, "entity": "G13888.tested", "belief": false}
+{"type": "use", "step": 22, "key": "G14627.tested", "value": false, "entity": "G14627.tested", "belief": false}
+{"type": "use", "step": 22, "key": "G12341.tested", "value": false, "entity": "G12341.tested", "belief": false}
+{"type": "use", "step": 22, "key": "G12609.tested", "value": false, "entity": "G12609.tested"}
+{"type": "use", "step": 22, "key": "G16706.tested", "value": false, "entity": "G16706.tested", "belief": false}
+{"type": "use", "step": 22, "key": "G06733.tested", "value": false, "entity": "G06733.tested", "belief": false}
+{"type": "use", "step": 22, "key": "G11929.tested", "value": false, "entity": "G11929.tested", "belief": false}
+{"type": "use", "step": 22, "key": "G15346.tested", "value": false, "entity": "G15346.tested"}
+{"type": "use", "step": 22, "key": "G15801.tested", "value": false, "entity": "G15801.tested"}
+{"type": "use", "step": 22, "key": "G13905.tested", "value": false, "entity": "G13905.tested"}
+{"type": "observe", "step": 22, "key": "G15346.score", "value": -0.13333, "item_id": "r22:G15346"}
+{"type": "update", "step": 22, "key": "G15346.tested", "value": true}
+{"type": "observe", "step": 22, "key": "G15801.score", "value": -0.1400855, "item_id": "r22:G15801"}
+{"type": "update", "step": 22, "key": "G15801.tested", "value": true}
+{"type": "observe", "step": 22, "key": "G13905.score", "value": 0.118175, "item_id": "r22:G13905"}
+{"type": "update", "step": 22, "key": "G13905.tested", "value": true}
+{"type": "use", "step": 23, "key": "G13933.tested", "value": false, "entity": "G13933.tested"}
+{"type": "use", "step": 23, "key": "G13888.tested", "value": false, "entity": "G13888.tested", "belief": false}
+{"type": "use", "step": 23, "key": "G12341.tested", "value": false, "entity": "G12341.tested"}
+{"type": "use", "step": 23, "key": "G14627.tested", "value": false, "entity": "G14627.tested", "belief": false}
+{"type": "use", "step": 23, "key": "G12609.tested", "value": false, "entity": "G12609.tested"}
+{"type": "use", "step": 23, "key": "G16706.tested", "value": false, "entity": "G16706.tested", "belief": false}
+{"type": "use", "step": 23, "key": "G06733.tested", "value": false, "entity": "G06733.tested", "belief": false}
+{"type": "use", "step": 23, "key": "G11929.tested", "value": false, "entity": "G11929.tested", "belief": true}
+{"type": "use", "step": 23, "key": "G12974.tested", "value": false, "entity": "G12974.tested", "belief": false}
+{"type": "use", "step": 23, "key": "G13758.tested", "value": false, "entity": "G13758.tested", "belief": false}
+{"type": "use", "step": 23, "key": "G16186.tested", "value": false, "entity": "G16186.tested", "belief": false}
+{"type": "use", "step": 23, "key": "G16078.tested", "value": false, "entity": "G16078.tested", "belief": false}
+{"type": "use", "step": 23, "key": "G03134.tested", "value": false, "entity": "G03134.tested", "belief": false}
+{"type": "use", "step": 23, "key": "G15346.tested", "value": false, "entity": "G15346.tested", "belief": false}
+{"type": "use", "step": 23, "key": "G08639.tested", "value": false, "entity": "G08639.tested", "belief": false}
+{"type": "use", "step": 23, "key": "G14110.tested", "value": false, "entity": "G14110.tested"}
+{"type": "use", "step": 23, "key": "G08806.tested", "value": false, "entity": "G08806.tested"}
+{"type": "use", "step": 23, "key": "G18333.tested", "value": false, "entity": "G18333.tested"}
+{"type": "use", "step": 23, "key": "G06496.tested", "value": false, "entity": "G06496.tested"}
+{"type": "use", "step": 23, "key": "G08540.tested", "value": false, "entity": "G08540.tested"}
+{"type": "use", "step": 23, "key": "G06644.tested", "value": false, "entity": "G06644.tested"}
+{"type": "use", "step": 23, "key": "G04272.tested", "value": false, "entity": "G04272.tested"}
+{"type": "use", "step": 23, "key": "G11966.tested", "value": false, "entity": "G11966.tested"}
+{"type": "use", "step": 23, "key": "G12489.tested", "value": false, "entity": "G12489.tested"}
+{"type": "use", "step": 23, "key": "G09556.tested", "value": false, "entity": "G09556.tested"}
+{"type": "use", "step": 23, "key": "G03798.tested", "value": false, "entity": "G03798.tested"}
+{"type": "use", "step": 23, "key": "G06815.tested", "value": false, "entity": "G06815.tested"}
+{"type": "use", "step": 23, "key": "G08478.tested", "value": false, "entity": "G08478.tested"}
+{"type": "use", "step": 23, "key": "G07481.tested", "value": false, "entity": "G07481.tested"}
+{"type": "use", "step": 23, "key": "G01971.tested", "value": false, "entity": "G01971.tested"}
+{"type": "use", "step": 23, "key": "G02021.tested", "value": false, "entity": "G02021.tested"}
+{"type": "observe", "step": 23, "key": "G14110.score", "value": 0.130804, "item_id": "r23:G14110"}
+{"type": "update", "step": 23, "key": "G14110.tested", "value": true}
+{"type": "observe", "step": 23, "key": "G08806.score", "value": -0.0904325, "item_id": "r23:G08806"}
+{"type": "update", "step": 23, "key": "G08806.tested", "value": true}
+{"type": "observe", "step": 23, "key": "G18333.score", "value": 0.2194, "item_id": "r23:G18333"}
+{"type": "update", "step": 23, "key": "G18333.tested", "value": true}
+{"type": "observe", "step": 23, "key": "G06496.score", "value": 0.197224, "item_id": "r23:G06496"}
+{"type": "update", "step": 23, "key": "G06496.tested", "value": true}
+{"type": "observe", "step": 23, "key": "G08540.score", "value": 0.4493115, "item_id": "r23:G08540"}
+{"type": "update", "step": 23, "key": "G08540.tested", "value": true}
+{"type": "observe", "step": 23, "key": "G06644.score", "value": -0.1472, "item_id": "r23:G06644"}
+{"type": "update", "step": 23, "key": "G06644.tested", "value": true}
+{"type": "observe", "step": 23, "key": "G04272.score", "value": 0.0366355, "item_id": "r23:G04272"}
+{"type": "update", "step": 23, "key": "G04272.tested", "value": true}
+{"type": "observe", "step": 23, "key": "G11966.score", "value": 0.109235, "item_id": "r23:G11966"}
+{"type": "update", "step": 23, "key": "G11966.tested", "value": true}
+{"type": "observe", "step": 23, "key": "G12489.score", "value": -0.0913815, "item_id": "r23:G12489"}
+{"type": "update", "step": 23, "key": "G12489.tested", "value": true}
+{"type": "observe", "step": 23, "key": "G09556.score", "value": -0.3137, "item_id": "r23:G09556"}
+{"type": "update", "step": 23, "key": "G09556.tested", "value": true}
+{"type": "observe", "step": 23, "key": "G03798.score", "value": -0.007087, "item_id": "r23:G03798"}
+{"type": "update", "step": 23, "key": "G03798.tested", "value": true}
+{"type": "observe", "step": 23, "key": "G06815.score", "value": -0.100425, "item_id": "r23:G06815"}
+{"type": "update", "step": 23, "key": "G06815.tested", "value": true}
+{"type": "observe", "step": 23, "key": "G08478.score", "value": -0.1464435, "item_id": "r23:G08478"}
+{"type": "update", "step": 23, "key": "G08478.tested", "value": true}
+{"type": "observe", "step": 23, "key": "G07481.score", "value": 0.0752125, "item_id": "r23:G07481"}
+{"type": "update", "step": 23, "key": "G07481.tested", "value": true}
+{"type": "observe", "step": 23, "key": "G01971.score", "value": -0.148392, "item_id": "r23:G01971"}
+{"type": "update", "step": 23, "key": "G01971.tested", "value": true}
+{"type": "observe", "step": 23, "key": "G02021.score", "value": -0.0685685, "item_id": "r23:G02021"}
+{"type": "update", "step": 23, "key": "G02021.tested", "value": true}
+{"type": "use", "step": 24, "key": "G15346.tested", "value": false, "entity": "G15346.tested", "belief": true}
+{"type": "use", "step": 24, "key": "G13888.tested", "value": false, "entity": "G13888.tested", "belief": true}
+{"type": "use", "step": 24, "key": "G14627.tested", "value": false, "entity": "G14627.tested", "belief": true}
+{"type": "use", "step": 24, "key": "G12341.tested", "value": false, "entity": "G12341.tested"}
+{"type": "use", "step": 24, "key": "G12609.tested", "value": false, "entity": "G12609.tested", "belief": true}
+{"type": "use", "step": 24, "key": "G16706.tested", "value": false, "entity": "G16706.tested", "belief": true}
+{"type": "use", "step": 24, "key": "G06733.tested", "value": false, "entity": "G06733.tested", "belief": true}
+{"type": "use", "step": 24, "key": "G12974.tested", "value": false, "entity": "G12974.tested"}
+{"type": "use", "step": 24, "key": "G13758.tested", "value": false, "entity": "G13758.tested", "belief": true}
+{"type": "use", "step": 24, "key": "G16186.tested", "value": false, "entity": "G16186.tested", "belief": true}
+{"type": "use", "step": 24, "key": "G03134.tested", "value": false, "entity": "G03134.tested", "belief": true}
+{"type": "use", "step": 24, "key": "G16078.tested", "value": false, "entity": "G16078.tested", "belief": true}
+{"type": "use", "step": 24, "key": "G08639.tested", "value": false, "entity": "G08639.tested", "belief": true}
+{"type": "use", "step": 24, "key": "G14110.tested", "value": false, "entity": "G14110.tested", "belief": false}
+{"type": "use", "step": 24, "key": "G13888.tested", "value": false, "entity": "G13888.tested", "belief": true}
+{"type": "use", "step": 24, "key": "G02531.tested", "value": false, "entity": "G02531.tested"}
+{"type": "use", "step": 24, "key": "G05544.tested", "value": false, "entity": "G05544.tested"}
+{"type": "use", "step": 24, "key": "G00965.tested", "value": false, "entity": "G00965.tested"}
+{"type": "use", "step": 24, "key": "G16689.tested", "value": false, "entity": "G16689.tested"}
+{"type": "use", "step": 24, "key": "G14116.tested", "value": false, "entity": "G14116.tested"}
+{"type": "use", "step": 24, "key": "G12410.tested", "value": false, "entity": "G12410.tested"}
+{"type": "use", "step": 24, "key": "G05497.tested", "value": false, "entity": "G05497.tested"}
+{"type": "use", "step": 24, "key": "G01174.tested", "value": false, "entity": "G01174.tested"}
+{"type": "use", "step": 24, "key": "G08582.tested", "value": false, "entity": "G08582.tested"}
+{"type": "use", "step": 24, "key": "G03909.tested", "value": false, "entity": "G03909.tested"}
+{"type": "use", "step": 24, "key": "G01208.tested", "value": false, "entity": "G01208.tested"}
+{"type": "use", "step": 24, "key": "G00717.tested", "value": false, "entity": "G00717.tested"}
+{"type": "use", "step": 24, "key": "G01242.tested", "value": false, "entity": "G01242.tested"}
+{"type": "use", "step": 24, "key": "G15739.tested", "value": false, "entity": "G15739.tested"}
+{"type": "use", "step": 24, "key": "G15783.tested", "value": false, "entity": "G15783.tested"}
+{"type": "use", "step": 24, "key": "G14623.tested", "value": false, "entity": "G14623.tested"}
+{"type": "observe", "step": 24, "key": "G02531.score", "value": -0.188321, "item_id": "r24:G02531"}
+{"type": "update", "step": 24, "key": "G02531.tested", "value": true}
+{"type": "observe", "step": 24, "key": "G05544.score", "value": -0.0369305, "item_id": "r24:G05544"}
+{"type": "update", "step": 24, "key": "G05544.tested", "value": true}
+{"type": "observe", "step": 24, "key": "G00965.score", "value": -0.1134135, "item_id": "r24:G00965"}
+{"type": "update", "step": 24, "key": "G00965.tested", "value": true}
+{"type": "observe", "step": 24, "key": "G16689.score", "value": -0.2126915, "item_id": "r24:G16689"}
+{"type": "update", "step": 24, "key": "G16689.tested", "value": true}
+{"type": "observe", "step": 24, "key": "G14116.score", "value": -0.122504, "item_id": "r24:G14116"}
+{"type": "update", "step": 24, "key": "G14116.tested", "value": true}
+{"type": "observe", "step": 24, "key": "G12410.score", "value": -0.1252855, "item_id": "r24:G12410"}
+{"type": "update", "step": 24, "key": "G12410.tested", "value": true}
+{"type": "observe", "step": 24, "key": "G05497.score", "value": 0.145334, "item_id": "r24:G05497"}
+{"type": "update", "step": 24, "key": "G05497.tested", "value": true}
+{"type": "observe", "step": 24, "key": "G01174.score", "value": -0.0501745, "item_id": "r24:G01174"}
+{"type": "update", "step": 24, "key": "G01174.tested", "value": true}
+{"type": "observe", "step": 24, "key": "G08582.score", "value": -0.361125, "item_id": "r24:G08582"}
+{"type": "update", "step": 24, "key": "G08582.tested", "value": true}
+{"type": "observe", "step": 24, "key": "G03909.score", "value": 0.0166385, "item_id": "r24:G03909"}
+{"type": "update", "step": 24, "key": "G03909.tested", "value": true}
+{"type": "observe", "step": 24, "key": "G01208.score", "value": 0.18574, "item_id": "r24:G01208"}
+{"type": "update", "step": 24, "key": "G01208.tested", "value": true}
+{"type": "observe", "step": 24, "key": "G00717.score", "value": -0.030227, "item_id": "r24:G00717"}
+{"type": "update", "step": 24, "key": "G00717.tested", "value": true}
+{"type": "observe", "step": 24, "key": "G01242.score", "value": -0.385385, "item_id": "r24:G01242"}
+{"type": "update", "step": 24, "key": "G01242.tested", "value": true}
+{"type": "observe", "step": 24, "key": "G15739.score", "value": -0.125361, "item_id": "r24:G15739"}
+{"type": "update", "step": 24, "key": "G15739.tested", "value": true}
+{"type": "observe", "step": 24, "key": "G15783.score", "value": -0.216335, "item_id": "r24:G15783"}
+{"type": "update", "step": 24, "key": "G15783.tested", "value": true}
+{"type": "observe", "step": 24, "key": "G14623.score", "value": 0.2270195, "item_id": "r24:G14623"}
+{"type": "update", "step": 24, "key": "G14623.tested", "value": true}
+{"type": "use", "step": 25, "key": "G13933.tested", "value": false, "entity": "G13933.tested", "belief": true}
+{"type": "use", "step": 25, "key": "G13888.tested", "value": false, "entity": "G13888.tested", "belief": true}
+{"type": "use", "step": 25, "key": "G14627.tested", "value": false, "entity": "G14627.tested"}
+{"type": "use", "step": 25, "key": "G12341.tested", "value": false, "entity": "G12341.tested", "belief": false}
+{"type": "use", "step": 25, "key": "G12609.tested", "value": false, "entity": "G12609.tested", "belief": false}
+{"type": "use", "step": 25, "key": "G06733.tested", "value": false, "entity": "G06733.tested", "belief": false}
+{"type": "use", "step": 25, "key": "G11929.tested", "value": false, "entity": "G11929.tested", "belief": true}
+{"type": "use", "step": 25, "key": "G12974.tested", "value": false, "entity": "G12974.tested", "belief": false}
+{"type": "use", "step": 25, "key": "G13758.tested", "value": false, "entity": "G13758.tested", "belief": false}
+{"type": "use", "step": 25, "key": "G16186.tested", "value": false, "entity": "G16186.tested", "belief": false}
+{"type": "use", "step": 25, "key": "G16078.tested", "value": false, "entity": "G16078.tested", "belief": false}
+{"type": "use", "step": 25, "key": "G03134.tested", "value": false, "entity": "G03134.tested", "belief": false}
+{"type": "use", "step": 25, "key": "G12388.tested", "value": false, "entity": "G12388.tested"}
+{"type": "use", "step": 25, "key": "G16182.tested", "value": false, "entity": "G16182.tested"}
+{"type": "use", "step": 25, "key": "G12127.tested", "value": false, "entity": "G12127.tested"}
+{"type": "use", "step": 25, "key": "G07327.tested", "value": false, "entity": "G07327.tested"}
+{"type": "use", "step": 25, "key": "G01920.tested", "value": false, "entity": "G01920.tested"}
+{"type": "use", "step": 25, "key": "G10168.tested", "value": false, "entity": "G10168.tested"}
+{"type": "use", "step": 25, "key": "G11405.tested", "value": false, "entity": "G11405.tested"}
+{"type": "use", "step": 25, "key": "G12044.tested", "value": false, "entity": "G12044.tested"}
+{"type": "use", "step": 25, "key": "G11286.tested", "value": false, "entity": "G11286.tested"}
+{"type": "use", "step": 25, "key": "G01271.tested", "value": false, "entity": "G01271.tested"}
+{"type": "use", "step": 25, "key": "G07020.tested", "value": false, "entity": "G07020.tested"}
+{"type": "use", "step": 25, "key": "G12217.tested", "value": false, "entity": "G12217.tested"}
+{"type": "use", "step": 25, "key": "G02343.tested", "value": false, "entity": "G02343.tested"}
+{"type": "use", "step": 25, "key": "G00376.tested", "value": false, "entity": "G00376.tested"}
+{"type": "use", "step": 25, "key": "G03557.tested", "value": false, "entity": "G03557.tested"}
+{"type": "use", "step": 25, "key": "G08289.tested", "value": false, "entity": "G08289.tested"}
+{"type": "observe", "step": 25, "key": "G12388.score", "value": -0.29502, "item_id": "r25:G12388"}
+{"type": "update", "step": 25, "key": "G12388.tested", "value": true}
+{"type": "observe", "step": 25, "key": "G16182.score", "value": 0.00122, "item_id": "r25:G16182"}
+{"type": "update", "step": 25, "key": "G16182.tested", "value": true}
+{"type": "observe", "step": 25, "key": "G12127.score", "value": -0.1904305, "item_id": "r25:G12127"}
+{"type": "update", "step": 25, "key": "G12127.tested", "value": true}
+{"type": "observe", "step": 25, "key": "G07327.score", "value": -0.155745, "item_id": "r25:G07327"}
+{"type": "update", "step": 25, "key": "G07327.tested", "value": true}
+{"type": "observe", "step": 25, "key": "G01920.score", "value": -0.012455, "item_id": "r25:G01920"}
+{"type": "update", "step": 25, "key": "G01920.tested", "value": true}
+{"type": "observe", "step": 25, "key": "G10168.score", "value": 0.029225, "item_id": "r25:G10168"}
+{"type": "update", "step": 25, "key": "G10168.tested", "value": true}
+{"type": "observe", "step": 25, "key": "G11405.score", "value": 0.2751295, "item_id": "r25:G11405"}
+{"type": "update", "step": 25, "key": "G11405.tested", "value": true}
+{"type": "observe", "step": 25, "key": "G12044.score", "value": -0.308675, "item_id": "r25:G12044"}
+{"type": "update", "step": 25, "key": "G12044.tested", "value": true}
+{"type": "observe", "step": 25, "key": "G11286.score", "value": -0.0415315, "item_id": "r25:G11286"}
+{"type": "update", "step": 25, "key": "G11286.tested", "value": true}
+{"type": "observe", "step": 25, "key": "G01271.score", "value": 0.10337265, "item_id": "r25:G01271"}
+{"type": "update", "step": 25, "key": "G01271.tested", "value": true}
+{"type": "observe", "step": 25, "key": "G07020.score", "value": 0.126145, "item_id": "r25:G07020"}
+{"type": "update", "step": 25, "key": "G07020.tested", "value": true}
+{"type": "observe", "step": 25, "key": "G12217.score", "value": 0.101617, "item_id": "r25:G12217"}
+{"type": "update", "step": 25, "key": "G12217.tested", "value": true}
+{"type": "observe", "step": 25, "key": "G02343.score", "value": 0.1454135, "item_id": "r25:G02343"}
+{"type": "update", "step": 25, "key": "G02343.tested", "value": true}
+{"type": "observe", "step": 25, "key": "G00376.score", "value": -0.220925, "item_id": "r25:G00376"}
+{"type": "update", "step": 25, "key": "G00376.tested", "value": true}
+{"type": "observe", "step": 25, "key": "G03557.score", "value": -0.401945, "item_id": "r25:G03557"}
+{"type": "update", "step": 25, "key": "G03557.tested", "value": true}
+{"type": "observe", "step": 25, "key": "G08289.score", "value": 0.0023795, "item_id": "r25:G08289"}
+{"type": "update", "step": 25, "key": "G08289.tested", "value": true}
+{"type": "use", "step": 26, "key": "G11840.tested", "value": false, "entity": "G11840.tested"}
+{"type": "use", "step": 26, "key": "G07935.tested", "value": false, "entity": "G07935.tested"}
+{"type": "use", "step": 26, "key": "G14253.tested", "value": false, "entity": "G14253.tested"}
+{"type": "use", "step": 26, "key": "G11212.tested", "value": false, "entity": "G11212.tested"}
+{"type": "use", "step": 26, "key": "G01727.tested", "value": false, "entity": "G01727.tested"}
+{"type": "use", "step": 26, "key": "G08758.tested", "value": false, "entity": "G08758.tested"}
+{"type": "use", "step": 26, "key": "G12750.tested", "value": false, "entity": "G12750.tested"}
+{"type": "use", "step": 26, "key": "G02562.tested", "value": false, "entity": "G02562.tested"}
+{"type": "use", "step": 26, "key": "G11739.tested", "value": false, "entity": "G11739.tested"}
+{"type": "use", "step": 26, "key": "G17611.tested", "value": false, "entity": "G17611.tested"}
+{"type": "use", "step": 26, "key": "G07573.tested", "value": false, "entity": "G07573.tested"}
+{"type": "use", "step": 26, "key": "G02304.tested", "value": false, "entity": "G02304.tested"}
+{"type": "use", "step": 26, "key": "G00102.tested", "value": false, "entity": "G00102.tested"}
+{"type": "use", "step": 26, "key": "G09700.tested", "value": false, "entity": "G09700.tested"}
+{"type": "use", "step": 26, "key": "G11868.tested", "value": false, "entity": "G11868.tested"}
+{"type": "use", "step": 26, "key": "G01344.tested", "value": false, "entity": "G01344.tested"}
+{"type": "observe", "step": 26, "key": "G11840.score", "value": 0.211195, "item_id": "r26:G11840"}
+{"type": "update", "step": 26, "key": "G11840.tested", "value": true}
+{"type": "observe", "step": 26, "key": "G07935.score", "value": -0.0891445, "item_id": "r26:G07935"}
+{"type": "update", "step": 26, "key": "G07935.tested", "value": true}
+{"type": "observe", "step": 26, "key": "G14253.score", "value": 0.0414149, "item_id": "r26:G14253"}
+{"type": "update", "step": 26, "key": "G14253.tested", "value": true}
+{"type": "observe", "step": 26, "key": "G11212.score", "value": 0.239125, "item_id": "r26:G11212"}
+{"type": "update", "step": 26, "key": "G11212.tested", "value": true}
+{"type": "observe", "step": 26, "key": "G01727.score", "value": -0.046696, "item_id": "r26:G01727"}
+{"type": "update", "step": 26, "key": "G01727.tested", "value": true}
+{"type": "observe", "step": 26, "key": "G08758.score", "value": -0.440435, "item_id": "r26:G08758"}
+{"type": "update", "step": 26, "key": "G08758.tested", "value": true}
+{"type": "observe", "step": 26, "key": "G12750.score", "value": -0.148585, "item_id": "r26:G12750"}
+{"type": "update", "step": 26, "key": "G12750.tested", "value": true}
+{"type": "observe", "step": 26, "key": "G02562.score", "value": 0.053105, "item_id": "r26:G02562"}
+{"type": "update", "step": 26, "key": "G02562.tested", "value": true}
+{"type": "observe", "step": 26, "key": "G11739.score", "value": 0.6272965, "item_id": "r26:G11739"}
+{"type": "update", "step": 26, "key": "G11739.tested", "value": true}
+{"type": "observe", "step": 26, "key": "G17611.score", "value": -0.127265, "item_id": "r26:G17611"}
+{"type": "update", "step": 26, "key": "G17611.tested", "value": true}
+{"type": "observe", "step": 26, "key": "G07573.score", "value": 0.036735, "item_id": "r26:G07573"}
+{"type": "update", "step": 26, "key": "G07573.tested", "value": true}
+{"type": "observe", "step": 26, "key": "G02304.score", "value": 0.0417095, "item_id": "r26:G02304"}
+{"type": "update", "step": 26, "key": "G02304.tested", "value": true}
+{"type": "observe", "step": 26, "key": "G00102.score", "value": 0.0948435, "item_id": "r26:G00102"}
+{"type": "update", "step": 26, "key": "G00102.tested", "value": true}
+{"type": "observe", "step": 26, "key": "G09700.score", "value": 0.0831685, "item_id": "r26:G09700"}
+{"type": "update", "step": 26, "key": "G09700.tested", "value": true}
+{"type": "observe", "step": 26, "key": "G11868.score", "value": 0.061845, "item_id": "r26:G11868"}
+{"type": "update", "step": 26, "key": "G11868.tested", "value": true}
+{"type": "observe", "step": 26, "key": "G01344.score", "value": -0.35193, "item_id": "r26:G01344"}
+{"type": "update", "step": 26, "key": "G01344.tested", "value": true}
+{"type": "use", "step": 27, "key": "G11606.tested", "value": false, "entity": "G11606.tested"}
+{"type": "use", "step": 27, "key": "G10744.tested", "value": false, "entity": "G10744.tested"}
+{"type": "use", "step": 27, "key": "G15672.tested", "value": false, "entity": "G15672.tested"}
+{"type": "use", "step": 27, "key": "G05976.tested", "value": false, "entity": "G05976.tested"}
+{"type": "use", "step": 27, "key": "G12111.tested", "value": false, "entity": "G12111.tested"}
+{"type": "use", "step": 27, "key": "G00100.tested", "value": false, "entity": "G00100.tested"}
+{"type": "use", "step": 27, "key": "G12197.tested", "value": false, "entity": "G12197.tested"}
+{"type": "use", "step": 27, "key": "G15753.tested", "value": false, "entity": "G15753.tested"}
+{"type": "use", "step": 27, "key": "G01656.tested", "value": false, "entity": "G01656.tested"}
+{"type": "use", "step": 27, "key": "G15111.tested", "value": false, "entity": "G15111.tested"}
+{"type": "use", "step": 27, "key": "G00508.tested", "value": false, "entity": "G00508.tested"}
+{"type": "use", "step": 27, "key": "G09422.tested", "value": false, "entity": "G09422.tested"}
+{"type": "use", "step": 27, "key": "G12966.tested", "value": false, "entity": "G12966.tested"}
+{"type": "use", "step": 27, "key": "G14718.tested", "value": false, "entity": "G14718.tested"}
+{"type": "use", "step": 27, "key": "G17130.tested", "value": false, "entity": "G17130.tested"}
+{"type": "use", "step": 27, "key": "G06171.tested", "value": false, "entity": "G06171.tested"}
+{"type": "observe", "step": 27, "key": "G11606.score", "value": 0.130945, "item_id": "r27:G11606"}
+{"type": "update", "step": 27, "key": "G11606.tested", "value": true}
+{"type": "observe", "step": 27, "key": "G10744.score", "value": 0.1621045, "item_id": "r27:G10744"}
+{"type": "update", "step": 27, "key": "G10744.tested", "value": true}
+{"type": "observe", "step": 27, "key": "G15672.score", "value": 0.013535, "item_id": "r27:G15672"}
+{"type": "update", "step": 27, "key": "G15672.tested", "value": true}
+{"type": "observe", "step": 27, "key": "G05976.score", "value": -0.0814065, "item_id": "r27:G05976"}
+{"type": "update", "step": 27, "key": "G05976.tested", "value": true}
+{"type": "observe", "step": 27, "key": "G12111.score", "value": -0.1964415, "item_id": "r27:G12111"}
+{"type": "update", "step": 27, "key": "G12111.tested", "value": true}
+{"type": "observe", "step": 27, "key": "G00100.score", "value": -0.14857, "item_id": "r27:G00100"}
+{"type": "update", "step": 27, "key": "G00100.tested", "value": true}
+{"type": "observe", "step": 27, "key": "G12197.score", "value": -0.114904, "item_id": "r27:G12197"}
+{"type": "update", "step": 27, "key": "G12197.tested", "value": true}
+{"type": "observe", "step": 27, "key": "G15753.score", "value": -0.3622275, "item_id": "r27:G15753"}
+{"type": "update", "step": 27, "key": "G15753.tested", "value": true}
+{"type": "observe", "step": 27, "key": "G01656.score", "value": -0.059345, "item_id": "r27:G01656"}
+{"type": "update", "step": 27, "key": "G01656.tested", "value": true}
+{"type": "observe", "step": 27, "key": "G15111.score", "value": 0.08135, "item_id": "r27:G15111"}
+{"type": "update", "step": 27, "key": "G15111.tested", "value": true}
+{"type": "observe", "step": 27, "key": "G00508.score", "value": -0.105855, "item_id": "r27:G00508"}
+{"type": "update", "step": 27, "key": "G00508.tested", "value": true}
+{"type": "observe", "step": 27, "key": "G09422.score", "value": -0.1384725, "item_id": "r27:G09422"}
+{"type": "update", "step": 27, "key": "G09422.tested", "value": true}
+{"type": "observe", "step": 27, "key": "G12966.score", "value": -0.203585, "item_id": "r27:G12966"}
+{"type": "update", "step": 27, "key": "G12966.tested", "value": true}
+{"type": "observe", "step": 27, "key": "G14718.score", "value": 0.09746, "item_id": "r27:G14718"}
+{"type": "update", "step": 27, "key": "G14718.tested", "value": true}
+{"type": "observe", "step": 27, "key": "G17130.score", "value": 0.133345, "item_id": "r27:G17130"}
+{"type": "update", "step": 27, "key": "G17130.tested", "value": true}
+{"type": "observe", "step": 27, "key": "G06171.score", "value": 0.100285, "item_id": "r27:G06171"}
+{"type": "update", "step": 27, "key": "G06171.tested", "value": true}
+{"type": "use", "step": 28, "key": "G10530.tested", "value": false, "entity": "G10530.tested", "belief": true}
+{"type": "use", "step": 28, "key": "G03772.tested", "value": false, "entity": "G03772.tested"}
+{"type": "use", "step": 28, "key": "G12401.tested", "value": false, "entity": "G12401.tested"}
+{"type": "use", "step": 28, "key": "G12815.tested", "value": false, "entity": "G12815.tested"}
+{"type": "use", "step": 28, "key": "G02950.tested", "value": false, "entity": "G02950.tested"}
+{"type": "use", "step": 28, "key": "G04557.tested", "value": false, "entity": "G04557.tested"}
+{"type": "use", "step": 28, "key": "G10701.tested", "value": false, "entity": "G10701.tested"}
+{"type": "use", "step": 28, "key": "G14967.tested", "value": false, "entity": "G14967.tested"}
+{"type": "use", "step": 28, "key": "G03335.tested", "value": false, "entity": "G03335.tested"}
+{"type": "use", "step": 28, "key": "G02766.tested", "value": false, "entity": "G02766.tested"}
+{"type": "use", "step": 28, "key": "G11381.tested", "value": false, "entity": "G11381.tested"}
+{"type": "use", "step": 28, "key": "G16824.tested", "value": false, "entity": "G16824.tested"}
+{"type": "use", "step": 28, "key": "G02847.tested", "value": false, "entity": "G02847.tested"}
+{"type": "use", "step": 28, "key": "G15936.tested", "value": false, "entity": "G15936.tested"}
+{"type": "use", "step": 28, "key": "G13274.tested", "value": false, "entity": "G13274.tested"}
+{"type": "use", "step": 28, "key": "G05969.tested", "value": false, "entity": "G05969.tested"}
+{"type": "use", "step": 28, "key": "G14242.tested", "value": false, "entity": "G14242.tested"}
+{"type": "observe", "step": 28, "key": "G03772.score", "value": -0.196905, "item_id": "r28:G03772"}
+{"type": "update", "step": 28, "key": "G03772.tested", "value": true}
+{"type": "observe", "step": 28, "key": "G12401.score", "value": 0.075535, "item_id": "r28:G12401"}
+{"type": "update", "step": 28, "key": "G12401.tested", "value": true}
+{"type": "observe", "step": 28, "key": "G12815.score", "value": -0.162948, "item_id": "r28:G12815"}
+{"type": "update", "step": 28, "key": "G12815.tested", "value": true}
+{"type": "observe", "step": 28, "key": "G02950.score", "value": 0.171145, "item_id": "r28:G02950"}
+{"type": "update", "step": 28, "key": "G02950.tested", "value": true}
+{"type": "observe", "step": 28, "key": "G04557.score", "value": -0.1281045, "item_id": "r28:G04557"}
+{"type": "update", "step": 28, "key": "G04557.tested", "value": true}
+{"type": "observe", "step": 28, "key": "G10701.score", "value": -0.191851, "item_id": "r28:G10701"}
+{"type": "update", "step": 28, "key": "G10701.tested", "value": true}
+{"type": "observe", "step": 28, "key": "G14967.score", "value": 0.00318, "item_id": "r28:G14967"}
+{"type": "update", "step": 28, "key": "G14967.tested", "value": true}
+{"type": "observe", "step": 28, "key": "G03335.score", "value": 0.211955, "item_id": "r28:G03335"}
+{"type": "update", "step": 28, "key": "G03335.tested", "value": true}
+{"type": "observe", "step": 28, "key": "G02766.score", "value": 0.067289, "item_id": "r28:G02766"}
+{"type": "update", "step": 28, "key": "G02766.tested", "value": true}
+{"type": "observe", "step": 28, "key": "G11381.score", "value": 0.0978615, "item_id": "r28:G11381"}
+{"type": "update", "step": 28, "key": "G11381.tested", "value": true}
+{"type": "observe", "step": 28, "key": "G16824.score", "value": -0.091899, "item_id": "r28:G16824"}
+{"type": "update", "step": 28, "key": "G16824.tested", "value": true}
+{"type": "observe", "step": 28, "key": "G02847.score", "value": 0.34471, "item_id": "r28:G02847"}
+{"type": "update", "step": 28, "key": "G02847.tested", "value": true}
+{"type": "observe", "step": 28, "key": "G15936.score", "value": 0.0999465, "item_id": "r28:G15936"}
+{"type": "update", "step": 28, "key": "G15936.tested", "value": true}
+{"type": "observe", "step": 28, "key": "G13274.score", "value": 0.09096, "item_id": "r28:G13274"}
+{"type": "update", "step": 28, "key": "G13274.tested", "value": true}
+{"type": "observe", "step": 28, "key": "G05969.score", "value": -0.21855, "item_id": "r28:G05969"}
+{"type": "update", "step": 28, "key": "G05969.tested", "value": true}
+{"type": "observe", "step": 28, "key": "G14242.score", "value": 0.124315, "item_id": "r28:G14242"}
+{"type": "update", "step": 28, "key": "G14242.tested", "value": true}
+{"type": "use", "step": 29, "key": "G09358.tested", "value": false, "entity": "G09358.tested"}
+{"type": "use", "step": 29, "key": "G06114.tested", "value": false, "entity": "G06114.tested"}
+{"type": "use", "step": 29, "key": "G06522.tested", "value": false, "entity": "G06522.tested"}
+{"type": "use", "step": 29, "key": "G15575.tested", "value": false, "entity": "G15575.tested"}
+{"type": "use", "step": 29, "key": "G16166.tested", "value": false, "entity": "G16166.tested"}
+{"type": "use", "step": 29, "key": "G07840.tested", "value": false, "entity": "G07840.tested"}
+{"type": "use", "step": 29, "key": "G14941.tested", "value": false, "entity": "G14941.tested"}
+{"type": "use", "step": 29, "key": "G01561.tested", "value": false, "entity": "G01561.tested"}
+{"type": "use", "step": 29, "key": "G15551.tested", "value": false, "entity": "G15551.tested"}
+{"type": "use", "step": 29, "key": "G17318.tested", "value": false, "entity": "G17318.tested"}
+{"type": "use", "step": 29, "key": "G10803.tested", "value": false, "entity": "G10803.tested"}
+{"type": "use", "step": 29, "key": "G16126.tested", "value": false, "entity": "G16126.tested"}
+{"type": "use", "step": 29, "key": "G14410.tested", "value": false, "entity": "G14410.tested"}
+{"type": "use", "step": 29, "key": "G05673.tested", "value": false, "entity": "G05673.tested"}
+{"type": "use", "step": 29, "key": "G02236.tested", "value": false, "entity": "G02236.tested"}
+{"type": "use", "step": 29, "key": "G15585.tested", "value": false, "entity": "G15585.tested"}
+{"type": "observe", "step": 29, "key": "G09358.score", "value": -0.0154945, "item_id": "r29:G09358"}
+{"type": "update", "step": 29, "key": "G09358.tested", "value": true}
+{"type": "observe", "step": 29, "key": "G06114.score", "value": -0.0390755, "item_id": "r29:G06114"}
+{"type": "update", "step": 29, "key": "G06114.tested", "value": true}
+{"type": "observe", "step": 29, "key": "G06522.score", "value": -0.23659, "item_id": "r29:G06522"}
+{"type": "update", "step": 29, "key": "G06522.tested", "value": true}
+{"type": "observe", "step": 29, "key": "G15575.score", "value": -0.1444645, "item_id": "r29:G15575"}
+{"type": "update", "step": 29, "key": "G15575.tested", "value": true}
+{"type": "observe", "step": 29, "key": "G16166.score", "value": -0.2117065, "item_id": "r29:G16166"}
+{"type": "update", "step": 29, "key": "G16166.tested", "value": true}
+{"type": "observe", "step": 29, "key": "G07840.score", "value": -0.199955, "item_id": "r29:G07840"}
+{"type": "update", "step": 29, "key": "G07840.tested", "value": true}
+{"type": "observe", "step": 29, "key": "G14941.score", "value": -0.0016569, "item_id": "r29:G14941"}
+{"type": "update", "step": 29, "key": "G14941.tested", "value": true}
+{"type": "observe", "step": 29, "key": "G01561.score", "value": 0.08045, "item_id": "r29:G01561"}
+{"type": "update", "step": 29, "key": "G01561.tested", "value": true}
+{"type": "observe", "step": 29, "key": "G15551.score", "value": 0.2446405, "item_id": "r29:G15551"}
+{"type": "update", "step": 29, "key": "G15551.tested", "value": true}
+{"type": "observe", "step": 29, "key": "G17318.score", "value": 0.18839, "item_id": "r29:G17318"}
+{"type": "update", "step": 29, "key": "G17318.tested", "value": true}
+{"type": "observe", "step": 29, "key": "G10803.score", "value": 0.031235, "item_id": "r29:G10803"}
+{"type": "update", "step": 29, "key": "G10803.tested", "value": true}
+{"type": "observe", "step": 29, "key": "G16126.score", "value": -0.1659595, "item_id": "r29:G16126"}
+{"type": "update", "step": 29, "key": "G16126.tested", "value": true}
+{"type": "observe", "step": 29, "key": "G14410.score", "value": -0.1703298, "item_id": "r29:G14410"}
+{"type": "update", "step": 29, "key": "G14410.tested", "value": true}
+{"type": "observe", "step": 29, "key": "G05673.score", "value": 0.180025, "item_id": "r29:G05673"}
+{"type": "update", "step": 29, "key": "G05673.tested", "value": true}
+{"type": "observe", "step": 29, "key": "G02236.score", "value": 0.09149565, "item_id": "r29:G02236"}
+{"type": "update", "step": 29, "key": "G02236.tested", "value": true}
+{"type": "observe", "step": 29, "key": "G15585.score", "value": -0.1133915, "item_id": "r29:G15585"}
+{"type": "update", "step": 29, "key": "G15585.tested", "value": true}
+{"type": "probe", "step": 1, "key": "G03012.score", "answer": null}
+{"type": "probe", "step": 2, "key": "G07522.score", "answer": null}
+{"type": "probe", "step": 2, "key": "G04903.score", "answer": null}
+{"type": "probe", "step": 3, "key": "G02456.score", "answer": null}
+{"type": "probe", "step": 3, "key": "G14996.score", "answer": null}
+{"type": "probe", "step": 4, "key": "G14714.score", "answer": null}
+{"type": "probe", "step": 4, "key": "G09729.score", "answer": null}
+{"type": "probe", "step": 4, "key": "G09451.score", "answer": null}
+{"type": "probe", "step": 5, "key": "G14431.score", "answer": null}
+{"type": "probe", "step": 5, "key": "G11737.score", "answer": null}
+{"type": "probe", "step": 5, "key": "G04903.score", "answer": null}
+{"type": "probe", "step": 6, "key": "G11470.score", "answer": -0.458085}
+{"type": "probe", "step": 6, "key": "G09001.score", "answer": null}
+{"type": "probe", "step": 6, "key": "G18018.score", "answer": null}
+{"type": "probe", "step": 7, "key": "G14431.score", "answer": null}
+{"type": "probe", "step": 7, "key": "G12896.score", "answer": null}
+{"type": "probe", "step": 7, "key": "G01417.score", "answer": null}
+{"type": "probe", "step": 8, "key": "G15200.score", "answer": null}
+{"type": "probe", "step": 8, "key": "G01231.score", "answer": null}
+{"type": "probe", "step": 8, "key": "G02823.score", "answer": null}
+{"type": "probe", "step": 8, "key": "G13746.score", "answer": null}
+{"type": "probe", "step": 9, "key": "G14921.score", "answer": null}
+{"type": "probe", "step": 9, "key": "G12541.score", "answer": null}
+{"type": "probe", "step": 9, "key": "G02600.score", "answer": null}
+{"type": "probe", "step": 9, "key": "G06305.score", "answer": null}
+{"type": "probe", "step": 10, "key": "G15921.score", "answer": null}
+{"type": "probe", "step": 10, "key": "G08546.score", "answer": null}
+{"type": "probe", "step": 10, "key": "G16742.score", "answer": null}
+{"type": "probe", "step": 10, "key": "G10487.score", "answer": null}
+{"type": "probe", "step": 11, "key": "G02924.score", "answer": null}
+{"type": "probe", "step": 11, "key": "G07797.score", "answer": null}
+{"type": "probe", "step": 11, "key": "G17263.score", "answer": null}
+{"type": "probe", "step": 11, "key": "G13276.score", "answer": null}
+{"type": "probe", "step": 12, "key": "G16998.score", "answer": null}
+{"type": "probe", "step": 12, "key": "G17870.score", "answer": null}
+{"type": "probe", "step": 12, "key": "G15711.score", "answer": null}
+{"type": "probe", "step": 12, "key": "G17694.score", "answer": null}
+{"type": "probe", "step": 13, "key": "G09842.score", "answer": null}
+{"type": "probe", "step": 13, "key": "G10551.score", "answer": null}
+{"type": "probe", "step": 13, "key": "G04767.score", "answer": null}
+{"type": "probe", "step": 13, "key": "G05245.score", "answer": null}
+{"type": "probe", "step": 14, "key": "G11712.score", "answer": null}
+{"type": "probe", "step": 14, "key": "G05784.score", "answer": null}
+{"type": "probe", "step": 14, "key": "G15921.score", "answer": null}
+{"type": "probe", "step": 14, "key": "G05927.score", "answer": null}
+{"type": "probe", "step": 15, "key": "G05063.score", "answer": -0.9879}
+{"type": "probe", "step": 15, "key": "G10574.score", "answer": null}
+{"type": "probe", "step": 15, "key": "G10608.score", "answer": null}
+{"type": "probe", "step": 15, "key": "G07948.score", "answer": null}
+{"type": "probe", "step": 16, "key": "G08678.score", "answer": null}
+{"type": "probe", "step": 16, "key": "G14610.score", "answer": null}
+{"type": "probe", "step": 16, "key": "G17862.score", "answer": null}
+{"type": "probe", "step": 16, "key": "G07948.score", "answer": null}
+{"type": "probe", "step": 17, "key": "G14530.score", "answer": null}
+{"type": "probe", "step": 17, "key": "G15005.score", "answer": null}
+{"type": "probe", "step": 17, "key": "G00796.score", "answer": null}
+{"type": "probe", "step": 17, "key": "G14725.score", "answer": null}
+{"type": "probe", "step": 18, "key": "G00741.score", "answer": 0.48755}
+{"type": "probe", "step": 18, "key": "G13276.score", "answer": null}
+{"type": "probe", "step": 18, "key": "G03064.score", "answer": null}
+{"type": "probe", "step": 18, "key": "G14346.score", "answer": null}
+{"type": "probe", "step": 19, "key": "G04885.score", "answer": null}
+{"type": "probe", "step": 19, "key": "G14179.score", "answer": null}
+{"type": "probe", "step": 19, "key": "G01972.score", "answer": null}
+{"type": "probe", "step": 19, "key": "G14346.score", "answer": null}
+{"type": "probe", "step": 20, "key": "G17898.score", "answer": null}
+{"type": "probe", "step": 20, "key": "G13357.score", "answer": null}
+{"type": "probe", "step": 20, "key": "G14491.score", "answer": null}
+{"type": "probe", "step": 20, "key": "G00827.score", "answer": 0.665965}
+{"type": "probe", "step": 21, "key": "G09761.score", "answer": null}
+{"type": "probe", "step": 21, "key": "G14272.score", "answer": null}
+{"type": "probe", "step": 21, "key": "G14189.score", "answer": null}
+{"type": "probe", "step": 21, "key": "G06231.score", "answer": null}
+{"type": "probe", "step": 22, "key": "G15387.score", "answer": null}
+{"type": "probe", "step": 22, "key": "G13888.score", "answer": null}
+{"type": "probe", "step": 22, "key": "G00197.score", "answer": null}
+{"type": "probe", "step": 22, "key": "G10020.score", "answer": null}
+{"type": "probe", "step": 23, "key": "G03028.score", "answer": null}
+{"type": "probe", "step": 23, "key": "G12609.score", "answer": null}
+{"type": "probe", "step": 23, "key": "G13905.score", "answer": null}
+{"type": "probe", "step": 23, "key": "G16186.score", "answer": null}
+{"type": "probe", "step": 24, "key": "G00741.score", "answer": 0.48755}
+{"type": "probe", "step": 24, "key": "G15346.score", "answer": null}
+{"type": "probe", "step": 24, "key": "G07481.score", "answer": null}
+{"type": "probe", "step": 24, "key": "G00197.score", "answer": null}
+{"type": "probe", "step": 25, "key": "G14272.score", "answer": null}
+{"type": "probe", "step": 25, "key": "G16226.score", "answer": -0.43613}
+{"type": "probe", "step": 25, "key": "G12410.score", "answer": null}
+{"type": "probe", "step": 25, "key": "G08540.score", "answer": 0.4493115}
+{"type": "probe", "step": 26, "key": "G11286.score", "answer": null}
+{"type": "probe", "step": 26, "key": "G10020.score", "answer": null}
+{"type": "probe", "step": 26, "key": "G15346.score", "answer": null}
+{"type": "probe", "step": 26, "key": "G15739.score", "answer": null}
+{"type": "probe", "step": 27, "key": "G15254.score", "answer": null}
+{"type": "probe", "step": 27, "key": "G12750.score", "answer": null}
+{"type": "probe", "step": 27, "key": "G12217.score", "answer": null}
+{"type": "probe", "step": 27, "key": "G06815.score", "answer": null}
+{"type": "probe", "step": 28, "key": "G12197.score", "answer": null}
+{"type": "probe", "step": 28, "key": "G07573.score", "answer": null}
+{"type": "probe", "step": 28, "key": "G17887.score", "answer": null}
+{"type": "probe", "step": 28, "key": "G14623.score", "answer": null}
+{"type": "probe", "step": 29, "key": "G02343.score", "answer": null}
+{"type": "probe", "step": 29, "key": "G06171.score", "answer": null}
+{"type": "probe", "step": 29, "key": "G10701.score", "answer": null}
+{"type": "probe", "step": 29, "key": "G13888.score", "answer": null}

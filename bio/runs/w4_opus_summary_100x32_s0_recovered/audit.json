@@ -1,0 +1,246 @@
+{
+  "uses": 4595,
+  "accuracy": 0.6707290533188248,
+  "error_mix": {
+    "stale_value": 0.3290533188248096,
+    "ignored_known": 0.0002176278563656148
+  },
+  "probe_decay": {
+    "<=1": 0.02040816326530612,
+    "<=2": 0.010309278350515464,
+    "<=4": 0.010526315789473684,
+    "<=8": 0.0
+  },
+  "probe_accuracy_overall": 0.010498687664041995,
+  "decoys": {
+    "n_probes": 381,
+    "parsed": 349,
+    "said_tested_rate": 0.031496062992125984,
+    "n_decoys": 98,
+    "decoy_false_yes": 0
+  },
+  "repeat_diagnosis": {
+    "n": 1001,
+    "labels": {
+      "forgot": 1000,
+      "knew_but_repeated": 1
+    },
+    "by_age": {
+      "1": {
+        "forgot": 40
+      },
+      "2": {
+        "forgot": 65
+      },
+      "3": {
+        "forgot": 30
+      },
+      "4": {
+        "forgot": 52
+      },
+      "5": {
+        "forgot": 39
+      },
+      "6": {
+        "forgot": 39
+      },
+      "7": {
+        "forgot": 30
+      },
+      "8": {
+        "forgot": 38
+      },
+      "9": {
+        "forgot": 10
+      },
+      "10": {
+        "forgot": 32
+      },
+      "11": {
+        "forgot": 16
+      },
+      "12": {
+        "forgot": 33
+      },
+      "13": {
+        "forgot": 12
+      },
+      "14": {
+        "forgot": 30
+      },
+      "15": {
+        "forgot": 12
+      },
+      "16": {
+        "forgot": 28
+      },
+      "17": {
+        "forgot": 8
+      },
+      "18": {
+        "forgot": 24,
+        "knew_but_repeated": 1
+      },
+      "19": {
+        "forgot": 17
+      },
+      "20": {
+        "forgot": 27
+      },
+      "21": {
+        "forgot": 12
+      },
+      "22": {
+        "forgot": 20
+      },
+      "23": {
+        "forgot": 21
+      },
+      "24": {
+        "forgot": 26
+      },
+      "25": {
+        "forgot": 13
+      },
+      "26": {
+        "forgot": 25
+      },
+      "27": {
+        "forgot": 13
+      },
+      "28": {
+        "forgot": 21
+      },
+      "29": {
+        "forgot": 10
+      },
+      "30": {
+        "forgot": 11
+      },
+      "31": {
+        "forgot": 10
+      },
+      "32": {
+        "forgot": 9
+      },
+      "33": {
+        "forgot": 10
+      },
+      "34": {
+        "forgot": 14
+      },
+      "35": {
+        "forgot": 7
+      },
+      "36": {
+        "forgot": 10
+      },
+      "37": {
+        "forgot": 15
+      },
+      "38": {
+        "forgot": 14
+      },
+      "39": {
+        "forgot": 8
+      },
+      "40": {
+        "forgot": 9
+      },
+      "41": {
+        "forgot": 4
+      },
+      "42": {
+        "forgot": 6
+      },
+      "43": {
+        "forgot": 5
+      },
+      "44": {
+        "forgot": 5
+      },
+      "45": {
+        "forgot": 2
+      },
+      "46": {
+        "forgot": 10
+      },
+      "47": {
+        "forgot": 5
+      },
+      "48": {
+        "forgot": 4
+      },
+      "49": {
+        "forgot": 8
+      },
+      "50": {
+        "forgot": 9
+      },
+      "51": {
+        "forgot": 4
+      },
+      "52": {
+        "forgot": 6
+      },
+      "53": {
+        "forgot": 6
+      },
+      "54": {
+        "forgot": 4
+      },
+      "55": {
+        "forgot": 5
+      },
+      "56": {
+        "forgot": 7
+      },
+      "57": {
+        "forgot": 2
+      },
+      "58": {
+        "forgot": 7
+      },
+      "59": {
+        "forgot": 4
+      },
+      "60": {
+        "forgot": 4
+      },
+      "61": {
+        "forgot": 6
+      },
+      "62": {
+        "forgot": 7
+      },
+      "63": {
+        "forgot": 5
+      },
+      "64": {
+        "forgot": 6
+      },
+      "66": {
+        "forgot": 1
+      },
+      "68": {
+        "forgot": 2
+      },
+      "69": {
+        "forgot": 1
+      },
+      "70": {
+        "forgot": 1
+      },
+      "71": {
+        "forgot": 1
+      },
+      "72": {
+        "forgot": 2
+      },
+      "76": {
+        "forgot": 1
+      }
+    }
+  },
+  "events_file": "cs224v-ctx/bio/runs/w4_opus_summary_100x32_s0_recovered/audit_events.jsonl"
+}

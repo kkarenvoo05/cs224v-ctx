@@ -1,0 +1,49 @@
+round 1/8 tested=0
+  [propose r0] 44.6s in=259 out=126
+  [retry r0] 26.1s in=560 out=103
+  accepted=16 hits+=0 cum=0 ratio=0.0000 invalid=0 repeats=0 dup=16
+  [probe r1] 30.6s in=508 out=31
+round 2/8 tested=16
+  [propose r1] 31.3s in=801 out=126
+  accepted=16 hits+=0 cum=0 ratio=0.0000 invalid=0 repeats=0 dup=0
+  [probe r2] 40.3s in=755 out=49
+round 3/8 tested=32
+  [propose r2] 72.6s in=1041 out=126
+  [retry r2] 64.4s in=1343 out=126
+  accepted=16 hits+=0 cum=0 ratio=0.0000 invalid=0 repeats=16 dup=0
+  [sum_neg r3] 61.7s in=931 out=213
+  [sum_pos r3] 37.3s in=213 out=93
+  [probe r3] 43.5s in=622 out=39
+round 4/8 tested=48
+  [propose r3] 58.5s in=908 out=126
+  [retry r3] 43.1s in=1210 out=126
+  accepted=0 hits+=0 cum=0 ratio=0.0000 invalid=0 repeats=32 dup=0
+  [sum_neg r4] 67.1s in=931 out=136
+  [sum_pos r4] 52.5s in=213 out=66
+  [probe r4] 56.3s in=521 out=39
+round 5/8 tested=48
+  [propose r4] 56.7s in=807 out=126
+  [retry r4] 42.8s in=1109 out=126
+  accepted=0 hits+=0 cum=0 ratio=0.0000 invalid=0 repeats=32 dup=0
+  [sum_neg r5] 26.5s in=931 out=235
+  [sum_pos r5] 22.2s in=213 out=93
+  [probe r5] 35.6s in=643 out=26
+round 6/8 tested=48
+  [propose r5] 42.4s in=936 out=126
+  [retry r5] 86.4s in=1238 out=126
+  accepted=0 hits+=0 cum=0 ratio=0.0000 invalid=0 repeats=32 dup=0
+  [sum_neg r6] 64.6s in=931 out=171
+  [sum_pos r6] 16.3s in=213 out=67
+  [probe r6] 38.4s in=556 out=26
+round 7/8 tested=48
+  [propose r6] 21.8s in=849 out=126
+  [retry r6] 52.6s in=1151 out=126
+  accepted=0 hits+=0 cum=0 ratio=0.0000 invalid=0 repeats=32 dup=0
+  [sum_neg r7] 57.1s in=931 out=220
+  [sum_pos r7] 6.2s in=213 out=93
+  [probe r7] 3.2s in=627 out=13
+round 8/8 tested=48
+  [propose r7] 13.3s in=927 out=126
+  [retry r7] 10.9s in=1229 out=126
+  accepted=0 hits+=0 cum=0 ratio=0.0000 invalid=0 repeats=32 dup=0
+{"wall_s": 1326.9, "n_calls": 32, "totals": {"rounds": 8, "tested": 48, "cum_hits": 0, "hit_ratio": 0.0, "invalid": 0, "repeats": 176, "dup_in_batch": 16, "overflow": 1, "short_batches": 5}}

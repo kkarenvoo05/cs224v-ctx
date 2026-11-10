@@ -1,0 +1,39 @@
+round 1/8 tested=0
+  [propose r0] 19.2s in=259 out=126
+  [retry r0] 27.0s in=560 out=103
+  accepted=14 hits+=0 cum=0 ratio=0.0000 invalid=0 repeats=0 dup=19
+  [probe r1] 4.3s in=478 out=31
+round 2/8 tested=14
+  [propose r1] 12.5s in=771 out=126
+  accepted=16 hits+=0 cum=0 ratio=0.0000 invalid=0 repeats=0 dup=0
+  [probe r2] 5.1s in=725 out=49
+round 3/8 tested=30
+  [propose r2] 29.2s in=1011 out=126
+  [retry r2] 10.6s in=1313 out=126
+  accepted=16 hits+=0 cum=0 ratio=0.0000 invalid=0 repeats=16 dup=0
+  [probe r3] 5.5s in=965 out=49
+round 4/8 tested=46
+  [propose r3] 15.2s in=1251 out=126
+  [retry r3] 18.8s in=1553 out=126
+  accepted=0 hits+=0 cum=0 ratio=0.0000 invalid=0 repeats=32 dup=0
+  [probe r4] 3.8s in=965 out=49
+round 5/8 tested=46
+  [propose r4] 15.5s in=1251 out=126
+  [retry r4] 19.4s in=1553 out=126
+  accepted=0 hits+=0 cum=0 ratio=0.0000 invalid=0 repeats=32 dup=0
+  [probe r5] 2.4s in=958 out=31
+round 6/8 tested=46
+  [propose r5] 15.5s in=1251 out=126
+  [retry r5] 10.6s in=1553 out=126
+  accepted=0 hits+=0 cum=0 ratio=0.0000 invalid=0 repeats=32 dup=0
+  [probe r6] 7.5s in=958 out=31
+round 7/8 tested=46
+  [propose r6] 18.3s in=1251 out=126
+  [retry r6] 10.6s in=1553 out=126
+  accepted=0 hits+=0 cum=0 ratio=0.0000 invalid=0 repeats=32 dup=0
+  [probe r7] 12.6s in=951 out=13
+round 8/8 tested=46
+  [propose r7] 34.0s in=1251 out=126
+  [retry r7] 28.7s in=1553 out=126
+  accepted=0 hits+=0 cum=0 ratio=0.0000 invalid=0 repeats=32 dup=0
+{"wall_s": 326.6, "n_calls": 22, "totals": {"rounds": 8, "tested": 46, "cum_hits": 0, "hit_ratio": 0.0, "invalid": 0, "repeats": 176, "dup_in_batch": 19, "overflow": 0, "short_batches": 6}}

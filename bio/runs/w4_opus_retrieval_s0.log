@@ -1,0 +1,149 @@
+round 1/30 tested=0
+  [propose r0] 3.4s in=1246 out=90
+  accepted=16 hits+=1 cum=1 ratio=0.0011 invalid=0 repeats=0 dup=0
+  [probe r1] 6.2s in=956 out=317
+round 2/30 tested=16
+  [check r1] 3.9s in=1380 out=132
+  [propose r1] 4.6s in=1782 out=232
+  accepted=16 hits+=0 cum=1 ratio=0.0011 invalid=0 repeats=0 dup=0
+  [probe r2] 6.7s in=962 out=403
+round 3/30 tested=32
+  [check r2] 4.0s in=1379 out=198
+  [propose r2] 3.7s in=1853 out=90
+  accepted=16 hits+=2 cum=3 ratio=0.0033 invalid=0 repeats=0 dup=0
+  [probe r3] 7.1s in=979 out=414
+round 4/30 tested=48
+  [check r3] 4.9s in=1399 out=132
+  [propose r3] 3.5s in=1885 out=90
+  accepted=16 hits+=0 cum=3 ratio=0.0033 invalid=0 repeats=0 dup=0
+  [probe r4] 8.0s in=983 out=484
+round 5/30 tested=64
+  [check r4] 3.9s in=1397 out=132
+  [propose r4] 3.3s in=1914 out=90
+  accepted=16 hits+=1 cum=4 ratio=0.0043 invalid=0 repeats=0 dup=0
+  [probe r5] 7.4s in=992 out=485
+round 6/30 tested=80
+  [check r5] 5.7s in=1407 out=342
+  [propose r5] 4.3s in=1931 out=250
+  accepted=16 hits+=1 cum=5 ratio=0.0054 invalid=0 repeats=0 dup=0
+  [probe r6] 6.5s in=1003 out=400
+round 7/30 tested=96
+  [check r6] 5.5s in=1416 out=374
+  [propose r6] 3.7s in=1990 out=90
+  accepted=16 hits+=1 cum=6 ratio=0.0065 invalid=0 repeats=0 dup=0
+  [probe r7] 5.8s in=1012 out=332
+round 8/30 tested=112
+  [check r7] 3.7s in=1425 out=132
+  [propose r7] 4.5s in=1980 out=228
+  accepted=16 hits+=0 cum=6 ratio=0.0065 invalid=0 repeats=0 dup=0
+  [probe r8] 6.2s in=1015 out=359
+round 9/30 tested=128
+  [check r8] 5.4s in=1426 out=389
+  [propose r8] 6.0s in=1955 out=263
+  accepted=16 hits+=2 cum=8 ratio=0.0087 invalid=0 repeats=0 dup=0
+  [probe r9] 7.5s in=1036 out=438
+round 10/30 tested=144
+  [check r9] 4.8s in=1447 out=323
+  [propose r9] 4.1s in=2036 out=90
+  accepted=16 hits+=2 cum=10 ratio=0.0109 invalid=0 repeats=0 dup=0
+  [probe r10] 6.5s in=1056 out=413
+round 11/30 tested=160
+  [check r10] 3.7s in=1467 out=132
+  [propose r10] 3.7s in=2049 out=90
+  accepted=16 hits+=2 cum=12 ratio=0.0130 invalid=0 repeats=0 dup=0
+  [probe r11] 6.1s in=1076 out=374
+round 12/30 tested=176
+  [check r11] 4.9s in=1486 out=355
+  [propose r11] 3.7s in=2049 out=183
+  accepted=16 hits+=3 cum=15 ratio=0.0163 invalid=0 repeats=0 dup=0
+  [probe r12] 8.6s in=1105 out=573
+round 13/30 tested=192
+  [check r12] 5.7s in=1516 out=397
+  [propose r12] 4.4s in=2030 out=226
+  accepted=16 hits+=0 cum=15 ratio=0.0163 invalid=0 repeats=0 dup=0
+  [probe r13] 7.3s in=1104 out=462
+round 14/30 tested=208
+  [check r13] 4.4s in=1514 out=208
+  [propose r13] 3.7s in=2035 out=148
+  accepted=16 hits+=1 cum=16 ratio=0.0174 invalid=0 repeats=0 dup=0
+  [probe r14] 9.3s in=1115 out=563
+round 15/30 tested=224
+  [check r14] 5.6s in=1524 out=402
+  [propose r14] 4.7s in=2091 out=232
+  accepted=16 hits+=1 cum=17 ratio=0.0185 invalid=0 repeats=0 dup=0
+  [probe r15] 6.8s in=1125 out=454
+round 16/30 tested=240
+  [check r15] 3.5s in=1535 out=132
+  [propose r15] 4.2s in=2173 out=192
+  accepted=16 hits+=0 cum=17 ratio=0.0185 invalid=0 repeats=0 dup=0
+  [probe r16] 6.1s in=1123 out=353
+round 17/30 tested=256
+  [check r16] 5.1s in=1535 out=345
+  [propose r16] 3.8s in=2058 out=90
+  accepted=16 hits+=0 cum=17 ratio=0.0185 invalid=0 repeats=0 dup=0
+  [probe r17] 6.3s in=1125 out=382
+round 18/30 tested=272
+  [check r17] 4.2s in=1535 out=213
+  [propose r17] 4.4s in=2170 out=206
+  accepted=16 hits+=1 cum=18 ratio=0.0196 invalid=0 repeats=0 dup=0
+  [probe r18] 6.5s in=1134 out=433
+round 19/30 tested=288
+  [check r18] 4.3s in=1546 out=268
+  [propose r18] 5.5s in=2121 out=347
+  accepted=16 hits+=1 cum=19 ratio=0.0207 invalid=0 repeats=0 dup=0
+  [probe r19] 7.9s in=1144 out=533
+round 20/30 tested=304
+  [check r19] 3.4s in=1553 out=132
+  [propose r19] 3.9s in=2182 out=183
+  accepted=16 hits+=2 cum=21 ratio=0.0228 invalid=0 repeats=0 dup=0
+  [probe r20] 6.8s in=1164 out=435
+round 21/30 tested=320
+  [check r20] 4.7s in=1574 out=299
+  [propose r20] 5.3s in=2150 out=275
+  accepted=16 hits+=2 cum=23 ratio=0.0250 invalid=0 repeats=0 dup=0
+  [probe r21] 6.4s in=1181 out=433
+round 22/30 tested=336
+  [check r21] 3.5s in=1594 out=132
+  [propose r21] 3.4s in=2184 out=90
+  accepted=16 hits+=1 cum=24 ratio=0.0261 invalid=0 repeats=0 dup=0
+  [probe r22] 6.2s in=1192 out=382
+round 23/30 tested=352
+  [check r22] 6.1s in=1602 out=486
+  [propose r22] 4.4s in=2117 out=90
+  accepted=16 hits+=1 cum=25 ratio=0.0272 invalid=0 repeats=0 dup=0
+  [probe r23] 6.0s in=1200 out=347
+round 24/30 tested=368
+  [check r23] 3.7s in=1612 out=170
+  [propose r23] 3.5s in=2188 out=90
+  accepted=16 hits+=1 cum=26 ratio=0.0283 invalid=0 repeats=0 dup=0
+  [probe r24] 6.5s in=1211 out=400
+round 25/30 tested=384
+  [check r24] 5.1s in=1621 out=292
+  [propose r24] 5.1s in=2192 out=243
+  accepted=16 hits+=1 cum=27 ratio=0.0293 invalid=0 repeats=0 dup=0
+  [probe r25] 6.6s in=1220 out=451
+round 26/30 tested=400
+  [check r25] 3.9s in=1632 out=132
+  [propose r25] 6.4s in=2258 out=90
+  accepted=16 hits+=2 cum=29 ratio=0.0315 invalid=0 repeats=0 dup=0
+  [probe r26] 6.5s in=1239 out=381
+round 27/30 tested=416
+  [check r26] 4.6s in=1649 out=303
+  [propose r26] 4.2s in=2218 out=200
+  accepted=16 hits+=1 cum=30 ratio=0.0326 invalid=0 repeats=0 dup=0
+  [probe r27] 7.5s in=1248 out=458
+round 28/30 tested=432
+  [check r27] 3.7s in=1660 out=132
+  [propose r27] 3.4s in=2225 out=90
+  accepted=16 hits+=1 cum=31 ratio=0.0337 invalid=0 repeats=0 dup=0
+  [probe r28] 6.7s in=1258 out=418
+round 29/30 tested=448
+  [check r28] 3.6s in=1669 out=132
+  [propose r28] 4.3s in=2186 out=90
+  accepted=16 hits+=0 cum=31 ratio=0.0337 invalid=0 repeats=0 dup=0
+  [probe r29] 8.0s in=1258 out=533
+round 30/30 tested=464
+  [check r29] 5.6s in=1670 out=371
+  [propose r29] 3.4s in=2284 out=90
+  accepted=16 hits+=0 cum=31 ratio=0.0337 invalid=0 repeats=0 dup=0
+{"wall_s": 458.3, "n_calls": 88, "totals": {"rounds": 30, "tested": 480, "cum_hits": 31, "hit_ratio": 0.03369565217391304, "invalid": 0, "repeats": 0, "dup_in_batch": 0, "overflow": 0, "short_batches": 0}}

@@ -1,0 +1,28 @@
+round 1/6 tested=0
+  [propose r0] 12.7s in=734 out=144
+  accepted=16 hits+=1 cum=1 ratio=0.0011 invalid=0 repeats=0 dup=0
+  [probe r1] 3.6s in=505 out=31
+round 2/6 tested=16
+  [propose r1] 13.6s in=1273 out=129
+  accepted=16 hits+=0 cum=1 ratio=0.0011 invalid=0 repeats=0 dup=0
+  [probe r2] 5.1s in=752 out=49
+round 3/6 tested=32
+  [propose r2] 15.2s in=1513 out=129
+  [retry r2] 9.1s in=1817 out=129
+  accepted=16 hits+=1 cum=2 ratio=0.0022 invalid=0 repeats=12 dup=0
+  [probe r3] 4.8s in=992 out=49
+round 4/6 tested=48
+  [propose r3] 16.5s in=1753 out=129
+  [retry r3] 9.1s in=2058 out=129
+  accepted=8 hits+=0 cum=2 ratio=0.0022 invalid=0 repeats=24 dup=0
+  [probe r4] 6.1s in=1119 out=67
+round 5/6 tested=56
+  [propose r4] 17.1s in=1873 out=129
+  [retry r4] 9.2s in=2178 out=129
+  accepted=7 hits+=0 cum=2 ratio=0.0022 invalid=0 repeats=25 dup=0
+  [probe r5] 5.1s in=1224 out=67
+round 6/6 tested=63
+  [propose r5] 16.9s in=1978 out=126
+  [retry r5] 8.9s in=2280 out=126
+  accepted=0 hits+=0 cum=2 ratio=0.0022 invalid=0 repeats=32 dup=0
+{"wall_s": 153.0, "n_calls": 15, "totals": {"rounds": 6, "tested": 63, "cum_hits": 2, "hit_ratio": 0.002173913043478261, "invalid": 0, "repeats": 93, "dup_in_batch": 0, "overflow": 4, "short_batches": 3}}
