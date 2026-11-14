@@ -9,3 +9,10 @@ bio/.venv/
 data/depmap/*.csv
 .pre_karen_*/
 *.zip
+# prototype runs: request bodies, Codex state and account rate limits; keep local
+ours/runs/
+ours/evals/
+ours/mcp/
+ours/model_info/
+ours/*.log
+ours/seed_empty/

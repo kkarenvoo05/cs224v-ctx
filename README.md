@@ -110,3 +110,36 @@ Example: compaction at ~16K tokens on a 100x32 run (fires around round 50):
 ```
 ... --policy summary --threshold-tokens 16000 ...
 ```
+
+## Running the prototype (`ours`) on the BDA task
+
+Mac with Apple silicon only. Needs read access to Yucheng's release repo and a ChatGPT plan with Codex
+(runs use that plan's quota, not Claude's).
+
+1. Install and pin a version so runs match:
+   ```
+   gh release download --repo Yucheng-Jiang/context-management-codex-integration-release --pattern install.sh --output - | sh
+   ~/.ours/bin/ours use 2026.11.09-166c433f
+   ~/.ours/bin/ours login            # skip if `~/.ours/current/codex/bin/codex login status` says logged in
+   cd ours && ~/.ours/bin/ours fetch-model gpt-6.1-terra --out model_info/gpt-6.1-terra.json
+   ```
+2. Run: `ours/run_bda.sh NAME HARNESS CONTEXT_WINDOW ROUNDS BATCH [WALL_S]`.
+   - `HARNESS=codex` is the prototype (structured memory under `data_structures/`).
+   - `HARNESS=codex-shipped` is plain Codex 0.159, the matched baseline.
+   - The task's tools come from `bio/bda_mcp.py`, an MCP server that holds the screen, scores and
+     gene mapping in its own process. It scrambles gene IDs with a random seed it keeps in memory, and
+     writes only the seed's hash until the episode ends. The scoring goes to `ours/evals/NAME/`.
+   ```
+   ours/run_bda.sh pilot_ours_30x16 codex 16000 30 16
+   ours/run_bda.sh pilot_base_30x16 codex-shipped 16000 30 16
+   ```
+3. Audit: `python3 -I ours/audit_trace.py ours/runs/<run>` gives tool calls, input tokens per request,
+   each compaction (tokens before and after), and isolation flags. macOS's sandbox lets the agent
+   *read* the whole disk, so isolation here is detection: any shell or JavaScript command that touches
+   project files or paths outside the workspace is flagged. Check every flag by hand.
+
+Notes from the smoke tests (Nov 13):
+- `--context-window 16000` gives an effective window of 15,200 tokens. The first prompt is about
+  8K tokens.
+- At 4 genes a round, the prototype grows about 600-900 tokens per request (it also writes its data
+  files), and the baseline about 200. The prototype compacted once in 8 rounds (15.5K → 9.2K).
