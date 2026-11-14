@@ -1,4 +1,4 @@
-"""Token-threshold compaction, its trace, and the summary_ids control, with no model calls."""
+"""Token-threshold compaction, its trace, and the summary_set control, with no model calls."""
 import json
 from types import SimpleNamespace
 import llm_agent
@@ -45,10 +45,10 @@ def test_token_threshold_triggers_and_is_traced(tmp_path, monkeypatch):
     assert sum(k.startswith("sum_") for k, _ in stub.prompts) == 4  # two summaries per compacted round
 
 
-def test_summary_ids_lists_exact_tested_ids_without_scores(tmp_path, monkeypatch):
-    r, stub = run(tmp_path, monkeypatch, "summary_ids", threshold=0)
+def test_summary_set_lists_exact_tested_ids_without_scores(tmp_path, monkeypatch):
+    r, stub = run(tmp_path, monkeypatch, "summary_set", threshold=0)
     last = [p for k, p in stub.prompts if k == "propose"][-1]
     tested = sorted(r["tested"])
-    listed = last.split("do not re-test these):\n")[1].split("\n")[0].split(", ")
+    listed = last.split("do not propose these again):\n")[1].split("\n")[0].split(", ")
     assert sorted(listed) == [g for g in tested if r["tested"][g] < 3]
     assert "short summary" in last and "measured score:\n" not in last

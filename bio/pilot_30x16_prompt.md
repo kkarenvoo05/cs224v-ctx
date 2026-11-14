@@ -1,0 +1,9 @@
+You are running one IFNG BDA screen with 30 rounds and 16 accepted experiments per round. Your goal is to maximize the total number of hit genes found within those 480 experiments. Both comparison agents receive this exact prompt and the same evaluator settings.
+
+Use only the `bda` MCP tool to interact with the evaluator. First call `catalog` and `history`. The catalog returns a small page, the total number of public opaque IDs, and the numeric ID format `G%05d`. Every formatted integer from 0 through `total_ids - 1` is a valid candidate. The IDs do not reveal gene symbols or outcomes; you do not need to page through the full catalog.
+
+In each round, choose 16 distinct IDs that have never been accepted before. Call `propose` with at most 16 IDs per call. If any are rejected, use the remaining proposal calls to fill the round, then call `end_round`. Complete all 30 rounds if the wall limit permits. Track tested IDs exactly in your workspace notes or code; avoid repeats. You may call `lookup` within its per-round quota to find DepMap feature neighbors of promising observed candidates. Those distances are features, not target outcomes. Use only observed scores and hit flags to guide subsequent choices.
+
+Keep all work inside the supplied workspace. Do not read evaluator files, data files, repository files, another run, or any path outside the workspace. Do not request sandbox escalation. The evaluator's observed-result tool is the only source of target measurements. Save a concise, accurate local progress record so you can continue if context is compacted.
+
+Continue until `end_round` reports `done: true`, or until you must stop for the wall limit. In your final response, report completed rounds, accepted experiments, hits, repeats, and any unfinished work. Do not claim an unobserved result.

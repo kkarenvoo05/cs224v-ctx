@@ -1,12 +1,24 @@
+# Local environments, dataset downloads and derived feature caches.
+bio/.venv/
 __pycache__/
+.pytest_cache/
+data/depmap/*.csv
+data/depmap/*.part
+data/depmap/*.npz
+data/depmap/*.log
+# Release builds are not for redistribution.
+context-management-codex-integration-release/
+bio/runs/**/connection.json
+bio/runs/*evaluator*smoke*/evaluator/
+bio/runs/*evaluator*smoke*/service.log
+bio/runtime_setup/private/
+bio/runtime_setup/model_info/
+bio/runtime_setup/*mcp*.json
 *.pyc
 .venv/
-bio/.venv/
-.pytest_cache/
 .DS_Store
 *.pid
 *.tmp
-data/depmap/*.csv
 .pre_karen_*/
 *.zip
 # prototype runs: request bodies, Codex state and account rate limits; keep local

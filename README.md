@@ -80,7 +80,8 @@ bio/.venv/bin/python -I bio/baselines.py --screens IFNG --policies random prior 
 2. If it does: summary and retrieval at 100x32 on that same model.
 3. Codex with the context-policies library from Yucheng's group, once it arrives (not wired in yet).
 
-Local integration review and revised priorities: [notes/week4_integration_review.md](notes/week4_integration_review.md).
+Local integration review and revised priorities: [notes/week3_integration_review.md](notes/week3_integration_review.md).
+Evaluator API, smoke checks, and remaining prototype gates: [bio/EVALUATOR.md](bio/EVALUATOR.md).
 # cs224v-ctx
 
 ## Added in week 5 (Nov 13)
@@ -91,7 +92,7 @@ Local integration review and revised priorities: [notes/week4_integration_review
   event go to `run.json["context"]` and `run.json["compactions"]`, and the log prints `COMPACTION r<N>`.
   Estimate: 1.65 characters per token, calibrated on the Opus runs (30.3K estimated vs 31.5K counted at
   round 99).
-- **`--policy summary_ids`**: the summary view plus the exact list of tested IDs, without scores. It
+- **`--policy summary_set`** (Karen's, same idea as my earlier summary_ids): the summary view plus the exact set of tested IDs, without scores. It
   separates forgetting *which* genes were tested from losing their scores.
 - **Evaluator service** for code-capable agents such as the prototype: `bio/evaluator.py` holds the
   screen, scores and ID mapping in its own process; the agent only gets `bio/eval_client.py` (standard

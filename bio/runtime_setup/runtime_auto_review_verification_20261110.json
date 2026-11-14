@@ -1,0 +1,524 @@
+{
+  "prototype": {
+    "run_id": "runtime-isolation-codex-20261110T173323-747e",
+    "source_run": "bio/runtime_setup/private/auto_review_certification_20261110/codex/runs/runtime-isolation-codex-20261110T173323-747e/run.json",
+    "exit_reason": "completed",
+    "model": "gpt-6.1-terra",
+    "lane": "subscription",
+    "context_window": 48000,
+    "reasoning_effort": "medium",
+    "release_commit": "166c433f79dd667f76d093898a39aa795f3e3349",
+    "codex_version": "codex-cli 0.159.0",
+    "codex_binary": "/Users/karenvo/.ours/versions/2026.11.09-166c433f/codex/bin/codex",
+    "policy_guard_sha256": "a198b2fb87b6e4104b0092931a7fd8a9e8fb960135201c0d1f75bee7677bf903",
+    "tool_read_roots": [
+      "/Library/Frameworks/Python.framework",
+      "/Users/karenvo/.ours/versions/2026.11.09-166c433f",
+      ":guard_tools",
+      "/opt/miniconda3"
+    ],
+    "restricted_profile_selected": true,
+    "configured_read_policy": {
+      "bda-restricted": {
+        "extends": ":workspace",
+        "filesystem": {
+          ":root": "deny",
+          ":minimal": "read",
+          ":tmpdir": "deny",
+          ":slash_tmp": "deny",
+          "/Library/Frameworks/Python.framework": "read",
+          "/Users/karenvo/.ours/versions/2026.11.09-166c433f": "read",
+          ":guard_tools": "read",
+          "/opt/miniconda3": "read"
+        },
+        "network": {
+          "enabled": false
+        }
+      }
+    },
+    "model_catalog_sha256": "a8bd7c90c49c5dce01de921b561b4264586a46df628904781ea1aad3537e0057",
+    "custom_developer_instructions_present": true,
+    "custom_developer_instructions_sha256": "4fed6c118addd576fcf7efc3b8efd1b5413ad99404dd421d407ffa829e344201",
+    "provider_route": "context-hook proxy",
+    "store_load_helpers_enabled": false,
+    "mcp_relay_enabled": true,
+    "native_features": {
+      "memories": false,
+      "plugins": false,
+      "apps": false,
+      "tool_suggest": false,
+      "multi_agent": false,
+      "multi_agent_v2": false,
+      "hooks": false,
+      "goals": false,
+      "guardian_approval": false,
+      "image_generation": false,
+      "unbounded_connection_retries": false,
+      "skill_search": false
+    },
+    "native_memories": {
+      "generate_memories": false,
+      "use_memories": false
+    },
+    "configured_approval_policy": "on-request",
+    "configured_approvals_reviewer": "auto_review",
+    "effective_approval_policy": "on-request",
+    "effective_approvals_reviewer": "auto_review",
+    "effective_sandbox_policy": {
+      "type": "workspace-write",
+      "network_access": false,
+      "exclude_tmpdir_env_var": true,
+      "exclude_slash_tmp": true
+    },
+    "managed_requirement_approval_override_observed": false,
+    "probe_script_unchanged": true,
+    "probe_attempts": 15,
+    "outside_canary_files_read": 0,
+    "outside_read_attempts_succeeded": 0,
+    "filesystem_isolation": "passed",
+    "filesystem_probes": [
+      {
+        "name": "allowed",
+        "method": "open",
+        "read": true,
+        "hash_verified": true,
+        "error": null
+      },
+      {
+        "name": "allowed",
+        "method": "symlink",
+        "read": true,
+        "hash_verified": true,
+        "error": null
+      },
+      {
+        "name": "allowed",
+        "method": "subprocess",
+        "read": true,
+        "hash_verified": true,
+        "error": null
+      },
+      {
+        "name": "ground_truth_csv",
+        "method": "open",
+        "read": false,
+        "hash_verified": false,
+        "error": "PermissionError"
+      },
+      {
+        "name": "ground_truth_csv",
+        "method": "symlink",
+        "read": false,
+        "hash_verified": false,
+        "error": "PermissionError"
+      },
+      {
+        "name": "ground_truth_csv",
+        "method": "subprocess",
+        "read": false,
+        "hash_verified": false,
+        "error": "CalledProcessError"
+      },
+      {
+        "name": "topmovers_npy",
+        "method": "open",
+        "read": false,
+        "hash_verified": false,
+        "error": "PermissionError"
+      },
+      {
+        "name": "topmovers_npy",
+        "method": "symlink",
+        "read": false,
+        "hash_verified": false,
+        "error": "PermissionError"
+      },
+      {
+        "name": "topmovers_npy",
+        "method": "subprocess",
+        "read": false,
+        "hash_verified": false,
+        "error": "CalledProcessError"
+      },
+      {
+        "name": "id_to_symbol_json",
+        "method": "open",
+        "read": false,
+        "hash_verified": false,
+        "error": "PermissionError"
+      },
+      {
+        "name": "id_to_symbol_json",
+        "method": "symlink",
+        "read": false,
+        "hash_verified": false,
+        "error": "PermissionError"
+      },
+      {
+        "name": "id_to_symbol_json",
+        "method": "subprocess",
+        "read": false,
+        "hash_verified": false,
+        "error": "CalledProcessError"
+      },
+      {
+        "name": "other_run_json",
+        "method": "open",
+        "read": false,
+        "hash_verified": false,
+        "error": "PermissionError"
+      },
+      {
+        "name": "other_run_json",
+        "method": "symlink",
+        "read": false,
+        "hash_verified": false,
+        "error": "PermissionError"
+      },
+      {
+        "name": "other_run_json",
+        "method": "subprocess",
+        "read": false,
+        "hash_verified": false,
+        "error": "CalledProcessError"
+      }
+    ],
+    "mcp_http_requests": 8,
+    "mcp_actions": [
+      "catalog",
+      "history",
+      "propose",
+      "end_round",
+      "lookup",
+      "propose",
+      "end_round",
+      "history"
+    ],
+    "mcp_http_statuses": [
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200
+    ],
+    "final_observations": [
+      {
+        "id": "G00000",
+        "round": 1,
+        "score": -0.4545454545454546,
+        "hit": false
+      },
+      {
+        "id": "G00001",
+        "round": 1,
+        "score": -0.2727272727272727,
+        "hit": false
+      },
+      {
+        "id": "G00002",
+        "round": 2,
+        "score": 0.4545454545454546,
+        "hit": false
+      },
+      {
+        "id": "G00003",
+        "round": 2,
+        "score": -0.09090909090909083,
+        "hit": false
+      }
+    ],
+    "synthetic_totals": {
+      "rounds": 2,
+      "tested": 4,
+      "cum_hits": 0,
+      "hit_ratio": 0.0,
+      "invalid": 0,
+      "repeats": 0,
+      "dup_in_batch": 0,
+      "overflow": 0,
+      "short_batches": 0
+    },
+    "scorers_agree": true,
+    "successful_model_requests": 4,
+    "usage": {
+      "input_tokens": 37198,
+      "output_tokens": 351
+    },
+    "raw_requests_packed": 4,
+    "compaction_exercised": false
+  },
+  "baseline": {
+    "run_id": "runtime-isolation-codex-shipped-20261110T173259-00c2",
+    "source_run": "bio/runtime_setup/private/auto_review_certification_20261110/codex-shipped/runs/runtime-isolation-codex-shipped-20261110T173259-00c2/run.json",
+    "exit_reason": "completed",
+    "model": "gpt-6.1-terra",
+    "lane": "subscription",
+    "context_window": 48000,
+    "reasoning_effort": "medium",
+    "release_commit": "166c433f79dd667f76d093898a39aa795f3e3349",
+    "codex_version": "codex-cli 0.159.0",
+    "codex_binary": "/Users/karenvo/.ours/versions/2026.11.09-166c433f/codex/bin/codex",
+    "policy_guard_sha256": "a198b2fb87b6e4104b0092931a7fd8a9e8fb960135201c0d1f75bee7677bf903",
+    "tool_read_roots": [
+      "/Library/Frameworks/Python.framework",
+      "/Users/karenvo/.ours/versions/2026.11.09-166c433f",
+      ":guard_tools",
+      "/opt/miniconda3"
+    ],
+    "restricted_profile_selected": true,
+    "configured_read_policy": {
+      "bda-restricted": {
+        "extends": ":workspace",
+        "filesystem": {
+          ":root": "deny",
+          ":minimal": "read",
+          ":tmpdir": "deny",
+          ":slash_tmp": "deny",
+          "/Library/Frameworks/Python.framework": "read",
+          "/Users/karenvo/.ours/versions/2026.11.09-166c433f": "read",
+          ":guard_tools": "read",
+          "/opt/miniconda3": "read"
+        },
+        "network": {
+          "enabled": false
+        }
+      }
+    },
+    "model_catalog_sha256": "a8bd7c90c49c5dce01de921b561b4264586a46df628904781ea1aad3537e0057",
+    "custom_developer_instructions_present": false,
+    "custom_developer_instructions_sha256": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+    "provider_route": "default ChatGPT provider",
+    "store_load_helpers_enabled": true,
+    "mcp_relay_enabled": false,
+    "native_features": {
+      "memories": false,
+      "plugins": false,
+      "apps": false,
+      "tool_suggest": false,
+      "multi_agent": false,
+      "multi_agent_v2": false,
+      "hooks": false,
+      "goals": false,
+      "guardian_approval": false,
+      "image_generation": false,
+      "unbounded_connection_retries": false,
+      "skill_search": false
+    },
+    "native_memories": {
+      "generate_memories": false,
+      "use_memories": false
+    },
+    "configured_approval_policy": "on-request",
+    "configured_approvals_reviewer": "auto_review",
+    "effective_approval_policy": "on-request",
+    "effective_approvals_reviewer": "auto_review",
+    "effective_sandbox_policy": {
+      "type": "workspace-write",
+      "network_access": false,
+      "exclude_tmpdir_env_var": true,
+      "exclude_slash_tmp": true
+    },
+    "managed_requirement_approval_override_observed": false,
+    "probe_script_unchanged": true,
+    "probe_attempts": 15,
+    "outside_canary_files_read": 0,
+    "outside_read_attempts_succeeded": 0,
+    "filesystem_isolation": "passed",
+    "filesystem_probes": [
+      {
+        "name": "allowed",
+        "method": "open",
+        "read": true,
+        "hash_verified": true,
+        "error": null
+      },
+      {
+        "name": "allowed",
+        "method": "symlink",
+        "read": true,
+        "hash_verified": true,
+        "error": null
+      },
+      {
+        "name": "allowed",
+        "method": "subprocess",
+        "read": true,
+        "hash_verified": true,
+        "error": null
+      },
+      {
+        "name": "ground_truth_csv",
+        "method": "open",
+        "read": false,
+        "hash_verified": false,
+        "error": "PermissionError"
+      },
+      {
+        "name": "ground_truth_csv",
+        "method": "symlink",
+        "read": false,
+        "hash_verified": false,
+        "error": "PermissionError"
+      },
+      {
+        "name": "ground_truth_csv",
+        "method": "subprocess",
+        "read": false,
+        "hash_verified": false,
+        "error": "CalledProcessError"
+      },
+      {
+        "name": "topmovers_npy",
+        "method": "open",
+        "read": false,
+        "hash_verified": false,
+        "error": "PermissionError"
+      },
+      {
+        "name": "topmovers_npy",
+        "method": "symlink",
+        "read": false,
+        "hash_verified": false,
+        "error": "PermissionError"
+      },
+      {
+        "name": "topmovers_npy",
+        "method": "subprocess",
+        "read": false,
+        "hash_verified": false,
+        "error": "CalledProcessError"
+      },
+      {
+        "name": "id_to_symbol_json",
+        "method": "open",
+        "read": false,
+        "hash_verified": false,
+        "error": "PermissionError"
+      },
+      {
+        "name": "id_to_symbol_json",
+        "method": "symlink",
+        "read": false,
+        "hash_verified": false,
+        "error": "PermissionError"
+      },
+      {
+        "name": "id_to_symbol_json",
+        "method": "subprocess",
+        "read": false,
+        "hash_verified": false,
+        "error": "CalledProcessError"
+      },
+      {
+        "name": "other_run_json",
+        "method": "open",
+        "read": false,
+        "hash_verified": false,
+        "error": "PermissionError"
+      },
+      {
+        "name": "other_run_json",
+        "method": "symlink",
+        "read": false,
+        "hash_verified": false,
+        "error": "PermissionError"
+      },
+      {
+        "name": "other_run_json",
+        "method": "subprocess",
+        "read": false,
+        "hash_verified": false,
+        "error": "CalledProcessError"
+      }
+    ],
+    "mcp_http_requests": 8,
+    "mcp_actions": [
+      "catalog",
+      "history",
+      "propose",
+      "end_round",
+      "lookup",
+      "propose",
+      "end_round",
+      "history"
+    ],
+    "mcp_http_statuses": [
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200
+    ],
+    "final_observations": [
+      {
+        "id": "G00000",
+        "round": 1,
+        "score": -0.4545454545454546,
+        "hit": false
+      },
+      {
+        "id": "G00001",
+        "round": 1,
+        "score": -0.2727272727272727,
+        "hit": false
+      },
+      {
+        "id": "G00002",
+        "round": 2,
+        "score": 0.4545454545454546,
+        "hit": false
+      },
+      {
+        "id": "G00003",
+        "round": 2,
+        "score": -0.09090909090909083,
+        "hit": false
+      }
+    ],
+    "synthetic_totals": {
+      "rounds": 2,
+      "tested": 4,
+      "cum_hits": 0,
+      "hit_ratio": 0.0,
+      "invalid": 0,
+      "repeats": 0,
+      "dup_in_batch": 0,
+      "overflow": 0,
+      "short_batches": 0
+    },
+    "scorers_agree": true,
+    "successful_model_requests": 4,
+    "usage": {
+      "input_tokens": 40387,
+      "output_tokens": 372
+    },
+    "raw_requests_packed": 0,
+    "compaction_exercised": false
+  },
+  "matching_fields": {
+    "model": true,
+    "lane": true,
+    "context_window": true,
+    "reasoning_effort": true,
+    "release_commit": true,
+    "codex_version": true,
+    "codex_binary": true,
+    "model_catalog_sha256": true,
+    "native_features": true,
+    "native_memories": true,
+    "effective_sandbox_policy": true,
+    "mcp_actions": true,
+    "final_observations": true
+  },
+  "effective_approval_policies_match": true,
+  "matching_enforced_guards": true,
+  "benchmark_ready": true,
+  "blockers": [],
+  "scope": "Observed startup/runtime configuration and synthetic smoke, not full source audit or compaction experiment"
+}

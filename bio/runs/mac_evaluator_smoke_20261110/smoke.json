@@ -1,0 +1,11 @@
+{
+  "api_smoke": "passed",
+  "rounds": 2,
+  "tested": 32,
+  "hidden_actions_denied": true,
+  "observations_match": true,
+  "scorers_agree": true,
+  "model_calls": 0,
+  "prototype_adapter_tested": false,
+  "agent_filesystem_isolation_tested": false
+}

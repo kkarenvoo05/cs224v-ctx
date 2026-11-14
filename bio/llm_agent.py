@@ -1,4 +1,4 @@
-"""LLM agent (qwen3:8b via local Ollama) for BioEnv with two memory policies.
+"""LLM agent for BioEnv via local Ollama or Claude, with memory controls.
 
     full     every round the prompt re-presents the full results table (tested
              non-hits + hits with scores), mirroring BDA's stateless rebuild.
@@ -6,10 +6,8 @@
              replaced by two LLM summaries (non-hits, hits) produced each round
              from the full table, plus the cumulative-hit history and the BDA
              line "You will not be shown the results until the end".
-    summary_ids  control: the summary view plus the exact list of tested IDs (no
-             scores). Separates losing membership (which genes were tested) from
-             losing the scores themselves.
-    --threshold-tokens N  (summary / summary_ids) compact only once the full-table
+    summary_set  same summaries plus the exact set of tested IDs, without scores.
+    --threshold-tokens N  (summary / summary_set) compact only once the full-table
              prompt would exceed ~N tokens, like a harness's auto-compaction, instead
              of the BDA gene-count rule (--threshold). Every round's context size and
              each compaction event are traced in run.json["context"].
@@ -169,9 +167,9 @@ def memory_view(env: BioEnv, policy: str, threshold: int, llm: LLM, task: str, h
                  f"experiment cycles! The results for the hits are:\n{table(env, hits)}\n")
     full_tok = est_tokens(full_view) + round(base_chars / CHARS_PER_TOKEN)
     if threshold_tokens:
-        compact = policy in ("summary", "summary_ids") and full_tok > threshold_tokens
+        compact = policy in ("summary", "summary_set") and full_tok > threshold_tokens
     else:
-        compact = policy in ("summary", "summary_ids") and len(env.tested) > threshold
+        compact = policy in ("summary", "summary_set") and len(env.tested) > threshold
     if not compact:
         if trace is not None:
             trace.append({"round": env.round, "full_prompt_tokens_est": full_tok, "view_tokens_est": full_tok,
@@ -188,9 +186,9 @@ def memory_view(env: BioEnv, policy: str, threshold: int, llm: LLM, task: str, h
             f"Till now, the progression of the number of cumulative hits is: {', '.join(map(str, hits_hist))}\n"
             f"You have successfully identified {len(hits)} hits so far over all experiment cycles! You will not be "
             f"shown the results until the end of all the rounds, so design your strategy accordingly.\n")
-    if policy == "summary_ids":
-        view += (f"Exact list of all {len(env.tested)} gene IDs already tested (scores omitted; do not re-test "
-                 f"these):\n{', '.join(env.tested)}\n")
+    if policy == "summary_set":
+        view += ("\nExact set of all previously tested IDs (membership only; do not propose these again):\n"
+                 + ", ".join(sorted(env.tested)) + "\n")
     if trace is not None:
         trace.append({"round": env.round, "full_prompt_tokens_est": full_tok,
                       "view_tokens_est": est_tokens(view) + round(base_chars / CHARS_PER_TOKEN), "compacted": True})
@@ -310,7 +308,7 @@ def run(a) -> None:
         # ---- recall probe, same memory view the agent sees next round ----
         if a.probes:
             qs = []
-            for d in PROBE_DELAYS:
+            for d in getattr(a, "probe_delays", PROBE_DELAYS):
                 src = env.round - d  # round index (0-based) tested d rounds ago
                 if src >= 0 and env.log[src].accepted:
                     qs.append((rng.choice(env.log[src].accepted), src, d))
@@ -336,7 +334,7 @@ def run(a) -> None:
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
-    ap.add_argument("--policy", choices=["full", "summary", "summary_ids", "retrieval"], required=True)
+    ap.add_argument("--policy", choices=["full", "summary", "summary_set", "retrieval"], required=True)
     ap.add_argument("--screen", default="IFNG")
     ap.add_argument("--rounds", type=int, default=12)
     ap.add_argument("--batch", type=int, default=32)
@@ -345,6 +343,8 @@ if __name__ == "__main__":
                     help="summary policies: compact once the full-table prompt exceeds ~N tokens (0 = use --threshold)")
     ap.add_argument("--retries", type=int, default=1)
     ap.add_argument("--probes", type=int, default=1)
+    ap.add_argument("--probe-delays", type=int, nargs="+", default=list(PROBE_DELAYS),
+                    help="Closed-book probe delays; use 1 2 4 8 16 32 64 for extended runs")
     ap.add_argument("--menu", type=int, default=0, help="show N random untested IDs each round (BDA gene_choices)")
     ap.add_argument("--diagnose", type=int, default=1, help="ask back each re-proposed gene (forgot vs knew)")
     ap.add_argument("--diagnose-max", type=int, default=12, help="cap on genes diagnosed per round")
@@ -355,6 +355,8 @@ if __name__ == "__main__":
     ap.add_argument("--seed", type=int, default=0)
     ap.add_argument("--out", required=True)
     args = ap.parse_args()
+    if any(d < 1 for d in args.probe_delays) or len(set(args.probe_delays)) != len(args.probe_delays):
+        ap.error("--probe-delays must be distinct positive integers")
     if args.backend == "claude" and not args.model:
         ap.error("--backend claude needs an explicit --model, so every run records its model")
     run(args)
