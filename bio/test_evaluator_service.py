@@ -178,3 +178,27 @@ def test_http_transport_auth_and_hidden_actions(tmp_path):
         thread.join(timeout=3)
         server.server_close()
         e.trace.close()
+
+
+def test_round_gate_requires_each_rounds_token(tmp_path):
+    import hashlib
+    from env import BioEnv
+    from evaluator_service import Evaluator
+    from test_env import toy_screen
+    env = BioEnv(toy_screen(), rounds=2, batch=1, anonymize=True, features=False)
+    e = Evaluator(env, tmp_path / "ev", round_token_hashes=[hashlib.sha256(t.encode()).hexdigest() for t in ("a1", "b2")])
+    g = env.ids
+
+    def call(rid, action, args):
+        return e.request({"request_id": rid, "action": action, "args": args})
+
+    assert call("1", "propose", {"ids": [g[0]]})[0] == 400
+    assert call("2", "propose", {"ids": [g[0]], "round_token": "b2"})[0] == 400
+    status, r = call("3", "propose", {"ids": [g[0]], "round_token": "a1"})
+    assert status == 200 and r["accepted"] == [g[0]]
+    status, r = call("4", "end_round", {})
+    assert status == 200 and "next" in r
+    assert call("5", "propose", {"ids": [g[1]], "round_token": "a1"})[0] == 400
+    assert call("6", "propose", {"ids": [g[1]], "round_token": "b2"})[0] == 200
+    status, r = call("7", "end_round", {})
+    assert r["done"] and "next" not in r

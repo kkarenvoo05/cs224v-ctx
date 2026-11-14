@@ -22,7 +22,8 @@ TOOL = {"name": "bda", "description": (
         "action": {"type": "string", "enum": list(ACTIONS)},
         "args": {"type": "object", "description": (
             "catalog: {offset:0,limit:256} (both optional); history/end_round: {}; "
-            "propose: {ids:[...]}; lookup: {id:...,k:8}")}},
+            "propose: {ids:[...], round_token:'...'} (round_token when the round's message gives one); "
+            "lookup: {id:...,k:8}")}},
         "required": ["action", "args"], "additionalProperties": False}}
 
 

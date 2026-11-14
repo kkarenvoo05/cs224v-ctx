@@ -26,6 +26,8 @@ def main():
     p.add_argument("--mcp-servers", type=Path, required=True)
     p.add_argument("--task", default="bda-pilot")
     p.add_argument("--wall-clock-s", type=int, default=1800)
+    p.add_argument("--follow-ups-file", type=Path,
+                   help="JSON list of later user messages (one per gated round), passed as --follow-up")
     p.add_argument("--execute", action="store_true")
     a = p.parse_args()
     bio = Path(__file__).resolve().parent
@@ -82,6 +84,12 @@ def main():
                "--prompt", a.prompt_file.read_text(), "--task", a.task, "--seed", str(seed),
                "--mcp-servers", str(private_registry), "--wall-clock-s", str(a.wall_clock_s),
                "--runs-root", str(out / "runs"), "--codex-bin", str(guard)]
+    if a.follow_ups_file:
+        follow = json.loads(a.follow_ups_file.read_text())
+        if not isinstance(follow, list) or not all(isinstance(x, str) for x in follow):
+            p.error("--follow-ups-file must be a JSON list of strings")
+        for msg in follow:
+            command.extend(["--follow-up", msg])
     if a.harness == "codex":
         info = out / "model_info"
         shutil.copytree(bio / "runtime_setup/model_info", info)
