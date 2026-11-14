@@ -45,5 +45,5 @@ fi
 echo "$(date) ours run $NAME harness=$HARNESS cw=$CW ${R}x${B} gate=$GATE" | tee -a "$HERE/runs.log"
 MI=(); [ "$HARNESS" = codex ] && MI=(--model-info-dir "$HERE/model_info")
 ~/.ours/bin/ours run --harness "$HARNESS" --model gpt-6.1-terra --context-window "$CW" --lane subscription \
-  "${MI[@]}" --prompt "$PROMPT" ${FOLLOW[@]+"${FOLLOW[@]}"} --task "$NAME" --seed "$HERE/seed_empty" \
+  ${MI[@]+"${MI[@]}"} --prompt "$PROMPT" ${FOLLOW[@]+"${FOLLOW[@]}"} --task "$NAME" --seed "$HERE/seed_empty" \
   --mcp-servers "$HERE/mcp/$NAME.json" --wall-clock-s "$WALL" --runs-root "$HERE/runs"
