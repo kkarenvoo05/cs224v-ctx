@@ -1,4 +1,4 @@
-"""LLM agent (qwen3:8b via local Ollama) for BioEnv with two memory policies.
+"""LLM agent for BioEnv via local Ollama or Claude, with memory controls.
 
     full     every round the prompt re-presents the full results table (tested
              non-hits + hits with scores), mirroring BDA's stateless rebuild.
@@ -6,6 +6,7 @@
              replaced by two LLM summaries (non-hits, hits) produced each round
              from the full table, plus the cumulative-hit history and the BDA
              line "You will not be shown the results until the end".
+    summary_set  same summaries plus the exact set of tested IDs, without scores.
     retrieval  compact state plus lookup: the prompt shows only the hits table and
              counts; before proposing, the agent lists candidate IDs after
              'Check:' and the experiment log answers tested/score for each (one
@@ -159,11 +160,15 @@ def memory_view(env: BioEnv, policy: str, threshold: int, llm: LLM, task: str, h
     pos = llm(f"{task}\nTill now, you have identified the following genes as hits along with their scores:\n"
               f"{table(env, hits)}\nSummarize this in a few lines to find some common pattern in these which will "
               f"aid in the next steps of experimental design to maximize your cumulative hits.", "sum_pos", env.round)
-    return (f"\nThis is not your first round. The summary of all tested genes and their measured scores is:\n{neg}\n"
+    summary = (f"\nThis is not your first round. The summary of all tested genes and their measured scores is:\n{neg}\n"
             f"The summary of these hits is the following: {pos}\n"
             f"Till now, the progression of the number of cumulative hits is: {', '.join(map(str, hits_hist))}\n"
             f"You have successfully identified {len(hits)} hits so far over all experiment cycles! You will not be "
             f"shown the results until the end of all the rounds, so design your strategy accordingly.\n")
+    if policy == "summary_set":
+        summary += ("\nExact set of all previously tested IDs (membership only; do not propose these again):\n"
+                    + ", ".join(sorted(env.tested)) + "\n")
+    return summary
 
 
 def run(a) -> None:
@@ -270,7 +275,7 @@ def run(a) -> None:
         # ---- recall probe, same memory view the agent sees next round ----
         if a.probes:
             qs = []
-            for d in PROBE_DELAYS:
+            for d in getattr(a, "probe_delays", PROBE_DELAYS):
                 src = env.round - d  # round index (0-based) tested d rounds ago
                 if src >= 0 and env.log[src].accepted:
                     qs.append((rng.choice(env.log[src].accepted), src, d))
@@ -296,13 +301,15 @@ def run(a) -> None:
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
-    ap.add_argument("--policy", choices=["full", "summary", "retrieval"], required=True)
+    ap.add_argument("--policy", choices=["full", "summary", "summary_set", "retrieval"], required=True)
     ap.add_argument("--screen", default="IFNG")
     ap.add_argument("--rounds", type=int, default=12)
     ap.add_argument("--batch", type=int, default=32)
     ap.add_argument("--threshold", type=int, default=96, help="summary policy: n_tested above which table -> summary")
     ap.add_argument("--retries", type=int, default=1)
     ap.add_argument("--probes", type=int, default=1)
+    ap.add_argument("--probe-delays", type=int, nargs="+", default=list(PROBE_DELAYS),
+                    help="Closed-book probe delays; use 1 2 4 8 16 32 64 for extended runs")
     ap.add_argument("--menu", type=int, default=0, help="show N random untested IDs each round (BDA gene_choices)")
     ap.add_argument("--diagnose", type=int, default=1, help="ask back each re-proposed gene (forgot vs knew)")
     ap.add_argument("--diagnose-max", type=int, default=12, help="cap on genes diagnosed per round")
@@ -313,6 +320,8 @@ if __name__ == "__main__":
     ap.add_argument("--seed", type=int, default=0)
     ap.add_argument("--out", required=True)
     args = ap.parse_args()
+    if any(d < 1 for d in args.probe_delays) or len(set(args.probe_delays)) != len(args.probe_delays):
+        ap.error("--probe-delays must be distinct positive integers")
     if args.backend == "claude" and not args.model:
         ap.error("--backend claude needs an explicit --model, so every run records its model")
     run(args)

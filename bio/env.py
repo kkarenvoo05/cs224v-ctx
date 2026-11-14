@@ -22,6 +22,7 @@ external BDA repo is imported or executed.
 from __future__ import annotations
 
 from dataclasses import dataclass, field
+import hashlib
 from pathlib import Path
 
 import numpy as np
@@ -94,8 +95,8 @@ class DepMapFeatureTool:
     """Per-gene profile = DepMap Achilles CRISPR gene effect across cell lines (co-essentiality).
 
     Same file BDA's gene_search tool uses (figshare 49843176): rows are cell lines (DepMap_ID),
-    columns "SYMBOL (EntrezID)". It contains no information from any of our target screens, so
-    it fixes the week-2 sibling-screen leak. Columns are centered across cell lines and reduced
+    columns "SYMBOL (EntrezID)". This replaces the explicit sibling-screen feature source;
+    it does not establish the absence of all contamination. Columns are centered across cell lines and reduced
     to `dim` principal components; X rows keep magnitude (prior baseline = how variable a gene's
     effect is), neighbours use cosine like BDA. Genes absent from DepMap get a zero row and no
     neighbours.
@@ -104,22 +105,34 @@ class DepMapFeatureTool:
     def __init__(self, symbols: list[str], csv_path: Path = DEPMAP_CSV, dim: int = 50):
         csv_path = Path(csv_path)
         cache = csv_path.with_suffix(f".pca{dim}.npz")
+        digest = hashlib.sha256()
+        with csv_path.open("rb") as f:
+            for chunk in iter(lambda: f.read(1024 * 1024), b""):
+                digest.update(chunk)
+        source_hash = digest.hexdigest()
+        genes = E = None
         if cache.exists():
-            z = np.load(cache, allow_pickle=False)
-            genes, E = list(z["genes"]), z["E"]
-        else:
-            df = pd.read_csv(csv_path, on_bad_lines="skip")
+            with np.load(cache, allow_pickle=False) as z:
+                if "source_sha256" in z and str(z["source_sha256"]) == source_hash:
+                    genes, E = list(z["genes"]), z["E"]
+        if E is None:
+            df = pd.read_csv(csv_path)  # malformed records must fail validation
             df = df.drop(columns=[c for c in df.columns if c.lower() in ("depmap_id", "modelid")] +
                          ([df.columns[0]] if df.columns[0].startswith("Unnamed") else []))
             df.columns = [c.split(" (")[0] for c in df.columns]
             df = df.loc[:, ~df.columns.duplicated()].dropna(axis=0, how="any")
             M = df.to_numpy(np.float32)  # cell lines x genes
+            if len(M) < 2 or not np.isfinite(M).all():
+                raise ValueError("DepMap needs at least two complete, finite rows")
             M = M - M.mean(0, keepdims=True)
             U, S, Vt = np.linalg.svd(M, full_matrices=False)
             k = min(dim, len(S))
             E = (Vt[:k].T * S[:k]).astype(np.float32)  # genes x k
             genes = list(df.columns)
-            np.savez(cache, genes=np.array(genes), E=E)
+            tmp = cache.with_suffix(".npz.tmp")
+            with tmp.open("wb") as f:
+                np.savez(f, genes=np.array(genes), E=E, source_sha256=source_hash)
+            tmp.replace(cache)
         pos = {g: i for i, g in enumerate(genes)}
         self.screens = [f"DepMap Achilles ({E.shape[1]} PCs)"]
         self.X = np.zeros((len(symbols), E.shape[1]), np.float32)
@@ -137,7 +150,10 @@ class DepMapFeatureTool:
         sim = self._U @ self._U[idx]
         sim[idx] = -np.inf
         sim[~self.present] = -np.inf
-        nn = np.argpartition(-sim, k)[:k]
+        k = min(k, int(self.present.sum()) - 1)
+        if k <= 0:
+            return []
+        nn = np.argpartition(-sim, k - 1)[:k]
         nn = nn[np.argsort(-sim[nn])]
         return [(int(j), float(1 - sim[j])) for j in nn]  # cosine distance
 

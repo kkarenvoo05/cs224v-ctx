@@ -80,5 +80,6 @@ bio/.venv/bin/python -I bio/baselines.py --screens IFNG --policies random prior 
 2. If it does: summary and retrieval at 100x32 on that same model.
 3. Codex with the context-policies library from Yucheng's group, once it arrives (not wired in yet).
 
-Local integration review and revised priorities: [notes/week4_integration_review.md](notes/week4_integration_review.md).
+Local integration review and revised priorities: [notes/week3_integration_review.md](notes/week3_integration_review.md).
+Evaluator API, smoke checks, and remaining prototype gates: [bio/EVALUATOR.md](bio/EVALUATOR.md).
 # cs224v-ctx

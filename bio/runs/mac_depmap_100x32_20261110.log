@@ -1,0 +1,26 @@
+IFNG                         random  seed=0 R5=0.007 R10=0.021 R100=0.165 repeats=0
+IFNG                         random  seed=1 R5=0.009 R10=0.020 R100=0.161 repeats=0
+IFNG                         random  seed=2 R5=0.007 R10=0.016 R100=0.175 repeats=0
+IFNG                         random  seed=3 R5=0.011 R10=0.028 R100=0.161 repeats=0
+IFNG                         random  seed=4 R5=0.009 R10=0.016 R100=0.171 repeats=0
+IFNG                         prior   seed=0 R5=0.028 R10=0.043 R100=0.382 repeats=0
+IFNG                         prior   seed=1 R5=0.028 R10=0.043 R100=0.382 repeats=0
+IFNG                         prior   seed=2 R5=0.028 R10=0.043 R100=0.382 repeats=0
+IFNG                         prior   seed=3 R5=0.028 R10=0.043 R100=0.382 repeats=0
+IFNG                         prior   seed=4 R5=0.028 R10=0.043 R100=0.382 repeats=0
+IFNG                         knn     seed=0 R5=0.014 R10=0.057 R100=0.334 repeats=0
+IFNG                         knn     seed=1 R5=0.024 R10=0.045 R100=0.286 repeats=0
+IFNG                         knn     seed=2 R5=0.005 R10=0.021 R100=0.272 repeats=0
+IFNG                         knn     seed=3 R5=0.008 R10=0.039 R100=0.342 repeats=0
+IFNG                         knn     seed=4 R5=0.023 R10=0.041 R100=0.320 repeats=0
+IFNG                         ucb     seed=0 R5=0.028 R10=0.075 R100=0.372 repeats=0
+IFNG                         ucb     seed=1 R5=0.032 R10=0.080 R100=0.393 repeats=0
+IFNG                         ucb     seed=2 R5=0.032 R10=0.077 R100=0.368 repeats=0
+IFNG                         ucb     seed=3 R5=0.025 R10=0.059 R100=0.343 repeats=0
+IFNG                         ucb     seed=4 R5=0.026 R10=0.053 R100=0.363 repeats=0
+
+screen, policy: mean±sd hit ratio at R5 / R10 / R100 (n=5 seeds)
+IFNG                         random  0.008±0.002 / 0.020±0.004 / 0.167±0.006
+IFNG                         prior   0.028±0.000 / 0.043±0.000 / 0.382±0.000
+IFNG                         knn     0.015±0.008 / 0.040±0.012 / 0.311±0.027
+IFNG                         ucb     0.028±0.003 / 0.069±0.011 / 0.368±0.016

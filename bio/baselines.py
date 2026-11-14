@@ -17,6 +17,7 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import sys
 from pathlib import Path
@@ -60,7 +61,8 @@ def run_policy(policy: str, screen: str, rounds: int, batch: int, seed: int, ano
             pick = [i for i in prior_order if not tested_mask[i]][:batch]
         elif policy in ("knn", "ucb"):
             tidx = np.flatnonzero(tested_mask)
-            absz = np.abs(env._score[tidx]) / (np.abs(env._score).std() or 1)  # revealed values only
+            observed_abs = np.abs(env._score[tidx])
+            absz = observed_abs / (observed_abs.std() or 1)  # revealed values only
             y = np.array([env.is_hit(env.ids[i]) for i in tidx], np.float32) + 0.01 * absz.astype(np.float32)
             sc = _knn_scores(X, tidx, y, untested, k=k, beta=beta if policy == "ucb" else 0.0)
             sc += 1e-6 * rng.random(len(sc))
@@ -83,6 +85,20 @@ def main(argv=None):
     ap.add_argument("--features", choices=["screens", "depmap"], default="screens")
     ap.add_argument("--out", default="bio/runs/baselines.json")
     a = ap.parse_args(argv)
+    out = Path(a.out)
+    if out.exists():
+        raise FileExistsError(f"Choose a fresh output file: {out}")
+    out.parent.mkdir(parents=True, exist_ok=True)
+    metadata = {"baseline_rewards": "observed-score standard deviation only",
+                "code_sha256": {p.name: hashlib.sha256(p.read_bytes()).hexdigest()
+                                for p in (Path(__file__), Path(__file__).with_name("env.py"))}}
+    if a.features == "depmap":
+        from env import DEPMAP_CSV
+        h = hashlib.sha256()
+        with DEPMAP_CSV.open("rb") as f:
+            for chunk in iter(lambda: f.read(1024 * 1024), b""):
+                h.update(chunk)
+        metadata["features_sha256"] = h.hexdigest()
     res = []
     for sc in a.screens:
         for p in a.policies:
@@ -91,10 +107,15 @@ def main(argv=None):
                 assert abs(env.hit_ratio_by_analyze() - env.log[-1].hit_ratio) < 1e-12
                 curve = [l.hit_ratio for l in env.log]
                 res.append({"screen": sc, "policy": p, "seed": s, "curve": curve, **env.totals()})
+                tmp = out.with_suffix(out.suffix + ".tmp")
+                tmp.write_text(json.dumps({"args": vars(a), "metadata": metadata, "runs": res,
+                                           "status": "partial"}))
+                tmp.replace(out)
                 print(f"{sc:28s} {p:7s} seed={s} R5={curve[min(4, len(curve) - 1)]:.3f} R10={curve[min(9, len(curve) - 1)]:.3f} "
                       f"R{a.rounds}={curve[-1]:.3f} repeats={env.totals()['repeats']}", flush=True)
-    Path(a.out).parent.mkdir(parents=True, exist_ok=True)
-    Path(a.out).write_text(json.dumps({"args": vars(a), "runs": res}))
+    tmp = out.with_suffix(out.suffix + ".tmp")
+    tmp.write_text(json.dumps({"args": vars(a), "metadata": metadata, "runs": res, "status": "complete"}))
+    tmp.replace(out)
     # aggregate
     print("\nscreen, policy: mean±sd hit ratio at R5 / R10 / R%d (n=%d seeds)" % (a.rounds, len(a.seeds)))
     for sc in a.screens:
