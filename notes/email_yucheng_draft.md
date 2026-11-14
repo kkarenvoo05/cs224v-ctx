@@ -27,14 +27,19 @@ round 98 vs. the full table, mostly because the summaries drop which genes were 
 scores (the model answers 4 of 381 recall probes correctly). We're adding a control that keeps the
 summary plus the exact tested-ID list to separate the two.
 
+**Prototype status.** Katherine has the release now (pinned to 2026.11.09-166c433f). The BDA task runs
+through a small MCP server, so scores and gene names stay outside the agent. With `--context-window
+16000` the prototype compacted once in an 8-round smoke test (15.5K to 9.2K tokens), and the trace
+shows it. We're using `--harness codex-shipped` as the baseline. Next is the matched 30 x 16 pilot.
+
 **Questions.**
-1. How do we turn off the prototype's structured memory to get a fair baseline with the same runtime?
-2. Which flag sets the compaction threshold or context window, and is 16-20K a supported value?
-3. Is there a Linux build? Karen works on Linux; for now Katherine will run it on an Apple-silicon Mac.
-4. How should we connect a task's tools: is a command-line client the agent can call (our
-   `eval_client.py`) enough, or does it need MCP or another interface?
-5. Can Katherine get access to the release repo? Only Karen has it at the moment.
-6. Monica and you mentioned the benchmark needs to be harder for long horizons. Is ~150-200 rounds on
+1. Is `--harness codex-shipped` the right baseline, i.e. the same runtime with the structured memory off?
+2. Is `--context-window 16000` a reasonable setting for the pilot, or would you set it differently
+   (or use `--catalog-share`)?
+3. On macOS the Codex sandbox can read the whole disk. We scramble gene IDs with a secret seed and audit
+   the trace for reads outside the workspace. Is there a Linux build with the bubblewrap sandbox, or a
+   better way to isolate the task data?
+4. Monica and you mentioned the benchmark needs to be harder for long horizons. Is ~150-200 rounds on
    this screen what you had in mind, or would you rather we add a second screen or tasks with more
    cross-round dependencies?
 
