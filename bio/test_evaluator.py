@@ -71,3 +71,31 @@ def test_unknown_endpoints_and_overwrite_guard(served, tmp_path):
     assert "propose" in client("help")
     with pytest.raises(FileExistsError):
         Evaluator(env, ev.out)
+
+
+def test_gate_and_relay_across_restarts(tmp_path):
+    """Multi-turn runs: the MCP relay is restarted every turn; state and the gate live in the evaluator."""
+    import hashlib
+    from evaluator import RoundGate
+    env = BioEnv(toy_screen(), rounds=2, batch=1, anonymize=True, features=False)
+    gate = RoundGate([hashlib.sha256(t.encode()).hexdigest() for t in ("tok1", "tok2")])
+    ev = Evaluator(env, tmp_path / "ev", gate=gate)
+    srv = make_server(ev, 0)
+    threading.Thread(target=srv.serve_forever, daemon=True).start()
+    url = f"http://127.0.0.1:{srv.server_address[1]}"
+
+    def turn(calls):  # a fresh relay process per turn, like Codex after each follow-up
+        msgs = [{"jsonrpc": "2.0", "id": i, "method": "tools/call", "params": {"name": n, "arguments": a}}
+                for i, (n, a) in enumerate(calls, 1)]
+        r = subprocess.run([sys.executable, "-I", str(HERE / "bda_mcp.py"), "--url", url],
+                           input="\n".join(map(json.dumps, msgs)) + "\n", capture_output=True, text=True, timeout=60)
+        return [json.loads(json.loads(l)["result"]["content"][0]["text"]) for l in r.stdout.splitlines()]
+
+    g = env.ids
+    t1 = turn([("propose", {"ids": [g[0]]}), ("propose", {"ids": [g[0]], "round_token": "tok1"}), ("end_round", {}),
+               ("propose", {"ids": [g[1]], "round_token": "tok1"})])
+    assert "not open" in t1[0]["error"] and t1[1]["accepted"] == [g[0]] and "next" in t1[2]
+    assert "not open" in t1[3]["error"]
+    t2 = turn([("propose", {"ids": [g[1]], "round_token": "tok2"}), ("end_round", {})])
+    assert t2[0]["accepted"] == [g[1]] and t2[1]["rounds_left"] == 0 and "next" not in t2[1]
+    srv.shutdown()

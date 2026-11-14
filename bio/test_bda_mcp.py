@@ -44,3 +44,23 @@ def test_secret_seed_committed_then_revealed(tmp_path):
     seed = (ev / "seed_revealed.txt").read_text().strip()
     assert hashlib.sha256(seed.encode()).hexdigest() == (ev / "seed_sha256.txt").read_text().strip()
     assert '"seed": 0' in (ev / "config.json").read_text() and seed not in (ev / "config.json").read_text()
+
+
+def test_round_gate_needs_each_rounds_token(tmp_path):
+    import hashlib
+    toks = ["alpha1", "bravo2"]
+    hashes = ",".join(hashlib.sha256(x.encode()).hexdigest() for x in toks)
+    calls = [("propose", {"ids": ["G00001"]}), ("propose", {"ids": ["G00001"], "round_token": "alpha1"}),
+             ("end_round", {}), ("propose", {"ids": ["G00002"], "round_token": "alpha1"}),
+             ("propose", {"ids": ["G00002"], "round_token": "bravo2"}), ("end_round", {})]
+    msgs = [{"jsonrpc": "2.0", "id": i, "method": "tools/call", "params": {"name": n, "arguments": a}}
+            for i, (n, a) in enumerate(calls, 1)]
+    r = subprocess.run([sys.executable, "-I", str(HERE / "bda_mcp.py"), "--rounds", "2", "--batch", "1",
+                        "--anonymize", "--round-token-hashes", hashes, "--out", str(tmp_path / "ev")],
+                       input="\n".join(map(json.dumps, msgs)) + "\n", capture_output=True, text=True, timeout=300)
+    res = {m["id"]: m["result"] for m in map(json.loads, r.stdout.splitlines())}
+    body = {i: json.loads(v["content"][0]["text"]) for i, v in res.items()}
+    assert res[1]["isError"] and "not open" in body[1]["error"]
+    assert body[2]["accepted"] == ["G00001"] and "next" in body[3]
+    assert res[4]["isError"]  # round 1's token does not open round 2
+    assert body[5]["accepted"] == ["G00002"] and "next" not in body[6] and body[6]["rounds_left"] == 0

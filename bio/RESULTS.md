@@ -369,3 +369,38 @@ Accepted tests differ by only 54 (1.7%); repeats alone do not explain the hit ga
 
 `llm_agent.py` now writes atomic partial snapshots after completed rounds, diagnoses and probes,
 and refuses to reuse an existing result directory. This is checkpoint preservation, not resume.
+
+## Week 5: prototype (`ours`) on BDA (2026-11-13)
+
+Setup: `ours` release 2026.11.09-166c433f (pinned), gpt-6.1-terra, `--lane subscription`,
+`--context-window 16000` (effective 15,200). Prototype = `--harness codex` (structured memory in
+`data_structures/`); baseline = `--harness codex-shipped` (plain Codex 0.159). Task tools via
+`bio/bda_mcp.py` relaying to `bio/evaluator.py`; gene IDs scrambled with a secret per-run seed;
+week-2 (leaky) features; IFNG. Launcher `ours/run_bda.sh`, audit `ours/audit_trace.py`,
+table `ours/compare.py`.
+
+### Ungated pilot, 30x16: invalid as a context test
+
+| arm | hits | repeats | model requests | peak input tokens | compactions |
+|---|---|---|---|---|---|
+| prototype | 11 | 0 | 8 | 13.4K | 0 |
+| baseline | 116 | 0 | 11 | 13.6K | 0 |
+
+Both agents wrote a JavaScript (code mode) loop in their first turns that ran the rounds by itself,
+so the model never saw most rounds, context never grew, and compaction never fired. The hit gap
+is the gap between two one-shot heuristics: the baseline ranks neighbors of strong genes by the
+*sum* of squared |score| (genes near several strong genes win); the prototype ranks by the *max*
+and spends lookups on any high-|score| gene, not just hits. The prototype's 11 is below random
+(24.5 at 30x16). One seed; this says nothing about memory.
+
+**Design fix: one model turn per round.** `run_bda.sh` (GATE=1, default) draws a random token per
+round and sends round k's token in round k's user message (`--follow-up`). The evaluator holds only
+the tokens' sha256 hashes and refuses `propose` for a round until its token arrives, so a script from
+an earlier turn cannot run later rounds. Codex restarts MCP servers on every follow-up, so state
+lives in one evaluator process per run and `bda_mcp.py --url` relays to it. Gated smoke test (3x4,
+prototype): one round per turn, 21 requests, compaction once (13.1K -> 9.4K), 225K input tokens.
+
+Isolation caveat: the macOS Codex sandbox can read the whole disk (writes only to the workspace),
+and future round tokens are on the `ours` command line. The secret seed makes the screen files
+useless without the evaluator's memory; the audit flags any shell or JS command touching project
+paths or listing processes. 0 flags so far.

@@ -24,7 +24,9 @@ Usage:
         --features depmap --seed 0 --port 8765 --out bio/runs/eval_NAME
 """
 import argparse
+import hashlib
 import json
+import os
 import sys
 import threading
 import time
@@ -38,8 +40,29 @@ from env import BioEnv  # noqa: E402
 HELP = __doc__.split("Scores are revealed")[0].strip()
 
 
+class RoundGate:
+    """One model turn per round: round k opens only with the token sent in that round's user message.
+    Only sha256 hashes are held, so a script written in an earlier turn cannot open later rounds."""
+
+    def __init__(self, hashes: list[str]):
+        self.hashes, self.opened = hashes, set()
+
+    def check(self, round_1based: int, token) -> str | None:
+        if round_1based in self.opened:
+            return None
+        h = self.hashes[round_1based - 1] if round_1based <= len(self.hashes) else None
+        if token is None or h is None or hashlib.sha256(str(token).encode()).hexdigest() != h:
+            return (f"round {round_1based} is not open: pass the round_token given in the user message for "
+                    f"round {round_1based}. If you have not received it yet, stop and wait for the next message.")
+        self.opened.add(round_1based)
+        return None
+
+
 class Evaluator:
-    def __init__(self, env: BioEnv, out: Path, proposals_per_round: int = 3, lookups_per_round: int = 4):
+    def __init__(self, env: BioEnv, out: Path, proposals_per_round: int = 3, lookups_per_round: int = 4,
+                 gate: RoundGate | None = None):
+        self.gate = gate
+        self.on_done = None
         self.env, self.out = env, Path(out)
         self.out.mkdir(parents=True, exist_ok=True)
         if (self.out / "requests.jsonl").exists() or (self.out / "run.json").exists():
@@ -60,10 +83,12 @@ class Evaluator:
                 "lookups_left": self.max_lookups - self.lookups_used, "n_genes": len(e.ids),
                 "tested": len(e.tested), "cum_hits": e.log[-1].cum_hits if e.log else 0}
 
-    def propose(self, ids) -> dict:
+    def propose(self, ids, token=None) -> dict:
         e = self.env
         if e.done:
             return {"error": "episode finished"}
+        if self.gate and (err := self.gate.check(e.round + 1, token)):
+            return {"error": err}
         if self.props_used >= self.max_props:
             return {"error": f"proposal limit ({self.max_props}) reached for this round; call /end_round"}
         if not isinstance(ids, list) or len(ids) > 4 * e.batch:
@@ -85,9 +110,14 @@ class Evaluator:
         log = e.end_round()
         self.props_used = self.lookups_used = 0
         self._save()
-        return {"round": log.round + 1, "results": [{"id": g, "score": round(log.revealed[g], 4),
-                                                     "hit": g in log.hits} for g in log.accepted],
-                "short_by": e.batch - len(log.accepted), "cum_hits": log.cum_hits, "rounds_left": e.rounds - e.round}
+        if e.done and self.on_done:
+            self.on_done()
+        out = {"round": log.round + 1, "results": [{"id": g, "score": round(log.revealed[g], 4),
+                                                    "hit": g in log.hits} for g in log.accepted],
+               "short_by": e.batch - len(log.accepted), "cum_hits": log.cum_hits, "rounds_left": e.rounds - e.round}
+        if self.gate and not e.done:
+            out["next"] = "Round closed. Stop here and end your turn; the next user message gives the next round's token."
+        return out
 
     def lookup(self, ids) -> dict:
         if not isinstance(ids, list):
@@ -124,7 +154,7 @@ class Evaluator:
         with self.lock:
             routes = {("GET", "/status"): lambda: self.status(), ("GET", "/history"): lambda: self.history(),
                       ("GET", "/help"): lambda: {"help": HELP},
-                      ("POST", "/propose"): lambda: self.propose((body or {}).get("ids")),
+                      ("POST", "/propose"): lambda: self.propose((body or {}).get("ids"), (body or {}).get("round_token")),
                       ("POST", "/end_round"): lambda: self.end_round(),
                       ("POST", "/lookup"): lambda: self.lookup((body or {}).get("ids"))}
             fn = routes.get((method, path))
@@ -173,20 +203,30 @@ def main() -> None:
     ap.add_argument("--seed", type=int, default=0)
     ap.add_argument("--proposals-per-round", type=int, default=3, help="first proposal + retries")
     ap.add_argument("--lookups", type=int, default=4, help="lookup IDs per round")
-    ap.add_argument("--port", type=int, default=8765)
+    ap.add_argument("--port", type=int, default=8765, help="0 = any free port (written to OUT/port)")
+    ap.add_argument("--secret-seed", action="store_true",
+                    help="random ID-anonymization seed kept in memory; only its sha256 is written until the end")
+    ap.add_argument("--round-token-hashes", default="", help="comma-separated sha256 per round: gate rounds on tokens")
     ap.add_argument("--out", required=True)
     a = ap.parse_args()
-    env = BioEnv(a.screen, rounds=a.rounds, batch=a.batch, anonymize=a.anonymize, seed=a.seed, features=a.features)
-    ev = Evaluator(env, a.out, a.proposals_per_round, a.lookups)
-    (Path(a.out) / "config.json").write_text(json.dumps(vars(a)))
+    seed = int.from_bytes(os.urandom(4), "big") if a.secret_seed else a.seed
+    env = BioEnv(a.screen, rounds=a.rounds, batch=a.batch, anonymize=a.anonymize, seed=seed, features=a.features)
+    gate = RoundGate([h for h in a.round_token_hashes.split(",") if h]) if a.round_token_hashes else None
+    ev = Evaluator(env, a.out, a.proposals_per_round, a.lookups, gate)
+    out = Path(a.out)
+    (out / "config.json").write_text(json.dumps(vars(a)))
+    if a.secret_seed:
+        (out / "seed_sha256.txt").write_text(hashlib.sha256(str(seed).encode()).hexdigest() + "\n")
     srv = make_server(ev, a.port)
+    (out / "port").write_text(str(srv.server_address[1]))
     print(f"evaluator on http://127.0.0.1:{srv.server_address[1]}  ({len(env.ids)} genes, {a.rounds}x{a.batch})",
           flush=True)
+    if a.secret_seed:
+        ev.on_done = lambda: (out / "seed_revealed.txt").write_text(f"{seed}\n")
     try:
-        srv.serve_forever()
+        srv.serve_forever()  # the launcher stops it
     except KeyboardInterrupt:
         pass
-
 
 if __name__ == "__main__":
     main()

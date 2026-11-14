@@ -16,7 +16,8 @@ from collections import Counter
 from pathlib import Path
 
 SUSPECT = re.compile(r"cs224v-ctx(?!/ours/runs/[^/\s]+/workspace)|feasibility|biodiscoveryagent|achilles|depmap|"
-                     r"env\.py|evaluator|bda_mcp|/evals/|seed_|\.ours|\.\./|~/|\$HOME|/Users/(?!\S*/workspace)", re.I)
+                     r"env\.py|evaluator|bda_mcp|/evals/|/mcp/|seed_|\.ours|\.\./|~/|\$HOME|/Users/(?!\S*/workspace)|"
+                     r"\bps\b|pgrep|/proc/|lsof|sysctl", re.I)
 
 
 def main(run: Path) -> dict:
