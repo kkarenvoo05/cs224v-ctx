@@ -404,3 +404,39 @@ Isolation caveat: the macOS Codex sandbox can read the whole disk (writes only t
 and future round tokens are on the `ours` command line. The secret seed makes the screen files
 useless without the evaluator's memory; the audit flags any shell or JS command touching project
 paths or listing processes. 0 flags so far.
+
+### Gated pilot, 30x16, 16K window (one model turn per round)
+
+Same task seed scheme (secret per-run seed), week-2 features, gpt-6.1-terra, release 166c433f.
+Arms ran one after the other (the baseline's first launch failed on a launcher bug before any
+model call).
+
+| arm | hits | repeats | compactions (avg tokens before -> after) | model requests | input tokens (cached) | wall | state kept in |
+|---|---|---|---|---|---|---|---|
+| prototype (`codex`) | 28 | 0 | 28 (14.9K -> 9.7K) | 268 | 3.25M (91%) | 24 min | `data_structures/` files: measurements, neighbors, strategy (432 references in commands) |
+| baseline (`codex-shipped`) | 54 | 0 | 23 (12.9K -> 8.5K) | 167 | 1.79M | 11 min | re-reading the evaluator's `history` tool (41 calls); empty workspace |
+
+0 isolation flags in either arm. Weekly Codex quota 6% -> 9% for both arms.
+
+Reading:
+- The gate works: context now accumulates and both harnesses compact every ~1-1.5 rounds.
+- Neither arm forgets which genes it tested, but for a different reason each: the prototype keeps
+  its own tables, the baseline just asks the evaluator. **`history` is a perfect external memory,
+  so this task cannot show a memory failure in the baseline.** Next design change: remove `history`
+  (or limit it to the last round) so state must survive compaction in the agent's own memory.
+- Hits: both are near random (24.5) and far below UCB (167) at this size; the baseline's hit rate
+  rises after round 20. One seed each, so the 28 vs 54 gap is not evidence about memory.
+- The prototype spends 1.8x the tokens and 2.3x the time, mostly maintaining its files.
+
+### Karen's paired runs (Nov 10-13, ungated, 48K window, DepMap, restricted sandbox)
+
+| pair | prototype | baseline | diff | model requests (proto/base) | compactions |
+|---|---|---|---|---|---|
+| 30x16 seed 0 (corrected) | 83 | 53 | +30 | 12 / 12 | 0 |
+| 100x32 seed 0 | 292 | 313 | -21 | 21 / 10 | 0 |
+| 100x32 seed 1 | 287 | 314 | -27 | 16 / 12 | 0 |
+| 100x32 seed 2 | 217 | 254 | -37 | 14 / 17 | 0 |
+
+Each finished in ~2-3 minutes with 10-21 model requests and no compaction: the agents scripted the
+rounds in code. These compare one-shot programs, not context handling. Her guarded stack
+(`bio/run_paired_pilot.py`) now has `--gate` for the next pairs.
