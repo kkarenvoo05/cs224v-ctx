@@ -28,9 +28,9 @@ Keep the folder layout as is: the code finds the data by relative path.
    python3 -m venv bio/.venv
    bio/.venv/bin/pip install -r bio/requirements.txt
    ```
-2. **Tests** (should print 11 passed and 5 passed; the BDA tests take ~3 min):
+2. **Tests** (should print 17 passed and 5 passed; the BDA tests take ~3 min):
    ```
-   bio/.venv/bin/python -m pytest -q bio/test_env.py
+   bio/.venv/bin/python -m pytest -q bio/test_env.py bio/test_checkpoint.py bio/test_compaction.py bio/test_evaluator.py
    bio/.venv/bin/python -m pytest -q audit/test_audit.py
    ```
 3. **Claude Code**: install it, run `claude` once and log in. `claude auth status` shows which plan it
@@ -82,3 +82,31 @@ bio/.venv/bin/python -I bio/baselines.py --screens IFNG --policies random prior 
 
 Local integration review and revised priorities: [notes/week4_integration_review.md](notes/week4_integration_review.md).
 # cs224v-ctx
+
+## Added in week 5 (Nov 13)
+
+- **Token-based compaction** for the summary policies: `--threshold-tokens N` keeps the full table until
+  the prompt would pass ~N tokens, then compacts, like a harness's auto-compaction. Without it the old
+  gene-count rule (`--threshold`) applies. Every round's estimated prompt size and each compaction
+  event go to `run.json["context"]` and `run.json["compactions"]`, and the log prints `COMPACTION r<N>`.
+  Estimate: 1.65 characters per token, calibrated on the Opus runs (30.3K estimated vs 31.5K counted at
+  round 99).
+- **`--policy summary_ids`**: the summary view plus the exact list of tested IDs, without scores. It
+  separates forgetting *which* genes were tested from losing their scores.
+- **Evaluator service** for code-capable agents such as the prototype: `bio/evaluator.py` holds the
+  screen, scores and ID mapping in its own process; the agent only gets `bio/eval_client.py` (standard
+  library only) and the URL. Limits per round on proposals and lookups; every request is logged to
+  `OUT/requests.jsonl`; `OUT/run.json` is saved after every round.
+  ```
+  bio/.venv/bin/python -I bio/evaluator.py --screen IFNG --rounds 30 --batch 16 --anonymize \
+    --features depmap --seed 0 --port 8765 --out bio/runs/eval_NAME
+  EVAL_URL=http://127.0.0.1:8765 python3 eval_client.py help
+  ```
+  It only keeps hidden state out of the API: also run the agent in a folder without this repo or the
+  data, and check it can't read them.
+- Tests: `bio/test_compaction.py`, `bio/test_evaluator.py` (22 total with the others, no model calls).
+
+Example: compaction at ~16K tokens on a 100x32 run (fires around round 50):
+```
+... --policy summary --threshold-tokens 16000 ...
+```
