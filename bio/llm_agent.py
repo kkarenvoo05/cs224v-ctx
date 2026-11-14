@@ -6,6 +6,13 @@
              replaced by two LLM summaries (non-hits, hits) produced each round
              from the full table, plus the cumulative-hit history and the BDA
              line "You will not be shown the results until the end".
+    summary_ids  control: the summary view plus the exact list of tested IDs (no
+             scores). Separates losing membership (which genes were tested) from
+             losing the scores themselves.
+    --threshold-tokens N  (summary / summary_ids) compact only once the full-table
+             prompt would exceed ~N tokens, like a harness's auto-compaction, instead
+             of the BDA gene-count rule (--threshold). Every round's context size and
+             each compaction event are traced in run.json["context"].
     retrieval  compact state plus lookup: the prompt shows only the hits table and
              counts; before proposing, the agent lists candidate IDs after
              'Check:' and the experiment log answers tested/score for each (one
@@ -140,7 +147,15 @@ def table(env: BioEnv, ids) -> str:
     return "\n".join(f"{g}  {env.log[env.tested[g]].revealed[g]:.4f}" for g in ids) or "(none)"
 
 
-def memory_view(env: BioEnv, policy: str, threshold: int, llm: LLM, task: str, hits_hist: list[int]) -> str:
+CHARS_PER_TOKEN = 1.65  # calibrated on Opus 5.5 calls with opaque IDs (w4 full 100x32: 51,169 chars ~ 31.5K tokens)
+
+
+def est_tokens(text: str) -> int:
+    return round(len(text) / CHARS_PER_TOKEN)
+
+
+def memory_view(env: BioEnv, policy: str, threshold: int, llm: LLM, task: str, hits_hist: list[int],
+                threshold_tokens: int = 0, base_chars: int = 0, trace: list | None = None) -> str:
     if not env.log:
         return ""
     hits = [g for l in env.log for g in l.hits]
@@ -149,21 +164,37 @@ def memory_view(env: BioEnv, policy: str, threshold: int, llm: LLM, task: str, h
         return (f"\nThis is not your first round. {len(env.tested)} genes have been tested so far; the full results "
                 f"are stored in an experiment log that you can query (see 'Check' below). You have identified "
                 f"{len(hits)} hits so far. The results for the hits are:\n{table(env, hits)}\n")
-    if policy == "full" or len(env.tested) <= threshold:
-        return (f"\nThis is not your first round. All tested genes that are NOT hits and their measured score:\n"
-                f"{table(env, non)}\n\nYou have successfully identified {len(hits)} hits so far over all "
-                f"experiment cycles! The results for the hits are:\n{table(env, hits)}\n")
+    full_view = (f"\nThis is not your first round. All tested genes that are NOT hits and their measured score:\n"
+                 f"{table(env, non)}\n\nYou have successfully identified {len(hits)} hits so far over all "
+                 f"experiment cycles! The results for the hits are:\n{table(env, hits)}\n")
+    full_tok = est_tokens(full_view) + round(base_chars / CHARS_PER_TOKEN)
+    if threshold_tokens:
+        compact = policy in ("summary", "summary_ids") and full_tok > threshold_tokens
+    else:
+        compact = policy in ("summary", "summary_ids") and len(env.tested) > threshold
+    if not compact:
+        if trace is not None:
+            trace.append({"round": env.round, "full_prompt_tokens_est": full_tok, "view_tokens_est": full_tok,
+                          "compacted": False})
+        return full_view
     neg = llm(f"{task}\nTill now, these are all tested genes that are not hits along with their scores:\n"
               f"{table(env, non)}\nSummarize this in a few lines to find some common pattern in these which will "
               f"aid in the next steps of experimental design to maximize your cumulative hits.", "sum_neg", env.round)
     pos = llm(f"{task}\nTill now, you have identified the following genes as hits along with their scores:\n"
               f"{table(env, hits)}\nSummarize this in a few lines to find some common pattern in these which will "
               f"aid in the next steps of experimental design to maximize your cumulative hits.", "sum_pos", env.round)
-    return (f"\nThis is not your first round. The summary of all tested genes and their measured scores is:\n{neg}\n"
+    view = (f"\nThis is not your first round. The summary of all tested genes and their measured scores is:\n{neg}\n"
             f"The summary of these hits is the following: {pos}\n"
             f"Till now, the progression of the number of cumulative hits is: {', '.join(map(str, hits_hist))}\n"
             f"You have successfully identified {len(hits)} hits so far over all experiment cycles! You will not be "
             f"shown the results until the end of all the rounds, so design your strategy accordingly.\n")
+    if policy == "summary_ids":
+        view += (f"Exact list of all {len(env.tested)} gene IDs already tested (scores omitted; do not re-test "
+                 f"these):\n{', '.join(env.tested)}\n")
+    if trace is not None:
+        trace.append({"round": env.round, "full_prompt_tokens_est": full_tok,
+                      "view_tokens_est": est_tokens(view) + round(base_chars / CHARS_PER_TOKEN), "compacted": True})
+    return view
 
 
 def run(a) -> None:
@@ -191,6 +222,7 @@ def run(a) -> None:
     probes = []
     diagnoses = []
     check_log: list[dict] = []
+    context_trace: list[dict] = []
     t_start = time.time()
     view = ""
 
@@ -199,7 +231,9 @@ def run(a) -> None:
         res = {"args": vars(a), "wall_s": round(time.time() - t_start, 1), "n_calls": llm.n,
                "status": "complete" if complete else "partial", "totals": env.totals(),
                "curve": [l.hit_ratio for l in env.log], "rounds": [asdict(l) for l in env.log],
-               "probes": probes, "diagnoses": diagnoses, "checks": check_log, "tested": env.tested}
+               "probes": probes, "diagnoses": diagnoses, "checks": check_log, "tested": env.tested,
+               "context": context_trace,
+               "compactions": [c for c in context_trace if c["compacted"]]}
         tmp = out / "run.json.tmp"
         tmp.write_text(json.dumps(res))
         tmp.replace(out / "run.json")
@@ -266,7 +300,13 @@ def run(a) -> None:
         checkpoint()
         if env.done:
             break
-        view = memory_view(env, a.policy, a.threshold, llm, task, hits_hist)
+        view = memory_view(env, a.policy, a.threshold, llm, task, hits_hist,
+                           threshold_tokens=getattr(a, "threshold_tokens", 0), base_chars=len(task) + len(tool_desc),
+                           trace=context_trace)
+        if context_trace and context_trace[-1]["compacted"]:
+            c = context_trace[-1]
+            print(f"  COMPACTION r{c['round']}: ~{c['full_prompt_tokens_est']} -> ~{c['view_tokens_est']} tokens",
+                  flush=True)
         # ---- recall probe, same memory view the agent sees next round ----
         if a.probes:
             qs = []
@@ -296,11 +336,13 @@ def run(a) -> None:
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
-    ap.add_argument("--policy", choices=["full", "summary", "retrieval"], required=True)
+    ap.add_argument("--policy", choices=["full", "summary", "summary_ids", "retrieval"], required=True)
     ap.add_argument("--screen", default="IFNG")
     ap.add_argument("--rounds", type=int, default=12)
     ap.add_argument("--batch", type=int, default=32)
     ap.add_argument("--threshold", type=int, default=96, help="summary policy: n_tested above which table -> summary")
+    ap.add_argument("--threshold-tokens", type=int, default=0,
+                    help="summary policies: compact once the full-table prompt exceeds ~N tokens (0 = use --threshold)")
     ap.add_argument("--retries", type=int, default=1)
     ap.add_argument("--probes", type=int, default=1)
     ap.add_argument("--menu", type=int, default=0, help="show N random untested IDs each round (BDA gene_choices)")
