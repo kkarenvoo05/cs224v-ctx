@@ -6,6 +6,14 @@
     knn          greedy: predicted value of an untested gene = mean y over its k
                  nearest *tested* genes in feature space; y = hit + 0.01*|z|
     ucb          knn mean + beta * (mean distance to those neighbours)
+    nbr          information-matched with the LLM agents: no feature vectors, only what the evaluator
+                 exposes. Each round it looks up (8 neighbours each) the up-to-4 tested genes with the
+                 largest |score| not yet looked up, then proposes untested neighbours ranked by their best
+                 parent (hit first, then |score|), filling the rest of the batch at random.
+    nbr_c        nbr that obeys the batch constraint (--constraint-top/-min) with perfect bookkeeping: it
+                 keeps every neighbour list it looked up, spends lookups first on current top-set genes it
+                 hasn't looked up, and puts min(M, known) untested neighbours of the current top set in
+                 each batch. The reference for an agent that keeps its derived state exact.
 
 Round 1 of knn/ucb is random (no observations yet).
 
@@ -44,12 +52,57 @@ def _knn_scores(X, tested_idx, y, untested_idx, k=10, beta=0.0, chunk=2048):
     return out
 
 
+def _nbr_pick(env, tested_mask, untested, st, batch, lookups, rng):
+    """Info-matched greedy: lookups on the best tested genes, propose their untested neighbours."""
+    seen = {g: (env.is_hit(g), abs(float(v))) for l in env.log for g, v in l.revealed.items()}
+    best = sorted((g for g in seen if g not in st["looked"]), key=lambda g: seen[g], reverse=True)[:lookups]
+    for g in best:
+        st["looked"].add(g)
+        for h, _ in env.lookup(g):
+            st["cand"][h] = max(st["cand"].get(h, (False, 0.0)), seen[g])
+    ranked = sorted((h for h in st["cand"] if not tested_mask[env.index[h]]), key=lambda h: st["cand"][h], reverse=True)
+    pick = [env.index[h] for h in ranked[:batch]]
+    if len(pick) < batch:
+        chosen = set(pick)
+        rest = np.array([i for i in untested if i not in chosen])
+        pick += list(rng.choice(rest, size=min(batch - len(pick), len(rest)), replace=False))
+    return np.array(pick)
+
+
+def _nbr_c_pick(env, tested_mask, untested, st, batch, lookups, rng):
+    seen = {g: (env.is_hit(g), abs(float(v))) for l in env.log for g, v in l.revealed.items()}
+    absv = {g: v[1] for g, v in seen.items()}
+    top = sorted(absv, key=lambda g: (-absv[g], g))[:env.constraint_top] if env.constraint_top else []
+    want = [g for g in top if g not in st["nl"]]
+    want += sorted((g for g in seen if g not in st["nl"] and g not in want), key=lambda g: seen[g], reverse=True)
+    for g in want[:lookups]:
+        st["nl"][g] = [h for h, _ in env.lookup(g)]
+        for h in st["nl"][g]:
+            st["cand"][h] = max(st["cand"].get(h, (False, 0.0)), seen[g])
+    untested_ok = lambda h: not tested_mask[env.index[h]]
+    key = lambda h: st["cand"].get(h, (False, 0.0))
+    req = []
+    if env.constraint_top and env.round + 1 >= env.constraint_from:
+        known = {h for g in top for h in st["nl"].get(g, []) if untested_ok(h)}
+        req = sorted(known, key=key, reverse=True)[:env.constraint_min]
+    rest = [h for h in sorted(st["cand"], key=key, reverse=True) if untested_ok(h) and h not in req]
+    pick = [env.index[h] for h in (req + rest)[:batch]]
+    if len(pick) < batch:
+        chosen = set(pick)
+        pool = np.array([i for i in untested if i not in chosen])
+        pick += list(rng.choice(pool, size=min(batch - len(pick), len(pool)), replace=False))
+    return np.array(pick)
+
+
 def run_policy(policy: str, screen: str, rounds: int, batch: int, seed: int, anonymize: bool,
-               k: int = 10, beta: float = 0.05, features: str = "screens") -> BioEnv:
+               k: int = 10, beta: float = 0.05, features: str = "screens", lookups: int = 4,
+               constraint: tuple[int, int, int] = (0, 0, 3)) -> BioEnv:
     env = BioEnv(screen, rounds=rounds, batch=batch, anonymize=anonymize, seed=seed, features=features)
+    env.constraint_top, env.constraint_min, env.constraint_from = constraint
     rng = np.random.default_rng(1000 + seed)
     X = env.features.X
     n = len(env.ids)
+    nbr_state = {"looked": set(), "cand": {}, "nl": {}}
     prior_order = np.argsort(-np.linalg.norm(X, axis=1) + 1e-6 * rng.random(n))
     while not env.done:
         tested_mask = np.zeros(n, bool)
@@ -59,6 +112,10 @@ def run_policy(policy: str, screen: str, rounds: int, batch: int, seed: int, ano
             pick = rng.choice(untested, size=min(batch, len(untested)), replace=False)
         elif policy == "prior":
             pick = [i for i in prior_order if not tested_mask[i]][:batch]
+        elif policy == "nbr":
+            pick = _nbr_pick(env, tested_mask, untested, nbr_state, batch, lookups, rng)
+        elif policy == "nbr_c":
+            pick = _nbr_c_pick(env, tested_mask, untested, nbr_state, batch, lookups, rng)
         elif policy in ("knn", "ucb"):
             tidx = np.flatnonzero(tested_mask)
             observed_abs = np.abs(env._score[tidx])
@@ -83,6 +140,8 @@ def main(argv=None):
     ap.add_argument("--seeds", type=int, nargs="+", default=[0, 1, 2])
     ap.add_argument("--anonymize", action="store_true")
     ap.add_argument("--features", choices=["screens", "depmap"], default="screens")
+    ap.add_argument("--constraint", type=int, nargs=3, default=[0, 0, 3], metavar=("TOP", "MIN", "FROM"),
+                    help="batch constraint: top-set size, required neighbours per round, first round (0 0 3 = off)")
     ap.add_argument("--out", default="bio/runs/baselines.json")
     a = ap.parse_args(argv)
     out = Path(a.out)
@@ -103,7 +162,8 @@ def main(argv=None):
     for sc in a.screens:
         for p in a.policies:
             for s in a.seeds:
-                env = run_policy(p, sc, a.rounds, a.batch, s, a.anonymize, features=a.features)
+                env = run_policy(p, sc, a.rounds, a.batch, s, a.anonymize, features=a.features,
+                                 constraint=tuple(a.constraint))
                 assert abs(env.hit_ratio_by_analyze() - env.log[-1].hit_ratio) < 1e-12
                 curve = [l.hit_ratio for l in env.log]
                 res.append({"screen": sc, "policy": p, "seed": s, "curve": curve, **env.totals()})
@@ -112,7 +172,9 @@ def main(argv=None):
                                            "status": "partial"}))
                 tmp.replace(out)
                 print(f"{sc:28s} {p:7s} seed={s} R5={curve[min(4, len(curve) - 1)]:.3f} R10={curve[min(9, len(curve) - 1)]:.3f} "
-                      f"R{a.rounds}={curve[-1]:.3f} repeats={env.totals()['repeats']}", flush=True)
+                      f"R{a.rounds}={curve[-1]:.3f} repeats={env.totals()['repeats']}"
+                      + (f" valid_hits={env.totals()['valid_hits']} violations={env.totals()['violations']}"
+                         if a.constraint[0] else ""), flush=True)
     tmp = out.with_suffix(out.suffix + ".tmp")
     tmp.write_text(json.dumps({"args": vars(a), "metadata": metadata, "runs": res, "status": "complete"}))
     tmp.replace(out)

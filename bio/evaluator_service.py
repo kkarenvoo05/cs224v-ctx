@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import argparse
 from dataclasses import asdict
+import hashlib
 import hmac
 from http.server import BaseHTTPRequestHandler, HTTPServer
 import json
@@ -22,11 +23,17 @@ from env import BioEnv
 
 
 class Evaluator:
-    def __init__(self, env, out, *, max_proposals=3, max_lookups=8, max_requests=10000):
+    def __init__(self, env, out, *, max_proposals=3, max_lookups=8, max_requests=10000, round_token_hashes=None,
+                 history="full"):
         if not env.anonymize:
             raise ValueError("Service requires opaque IDs")
         if min(max_proposals, max_lookups, max_requests) < 1:
             raise ValueError("Budgets must be positive")
+        if history not in ("full", "last", "none"):
+            raise ValueError("history must be full, last or none")
+        # full: history returns every observation; last: last closed round + current round; none: disabled
+        # (each result is seen once, so after compaction the agent has only what it chose to keep).
+        self.history = history
         self.env = env
         self.out = Path(out)
         self.out.mkdir(mode=0o700, parents=True, exist_ok=False)
@@ -34,6 +41,9 @@ class Evaluator:
         self.max_requests = max_requests
         self.proposals = self.lookups = self.requests = 0
         self.cache = {}
+        # Optional gate: round k opens only with the token sent in that round's user message
+        # (sha256 hashes only), so a script from an earlier agent turn cannot run later rounds.
+        self.round_token_hashes, self.opened = list(round_token_hashes or []), set()
         self.trace = (self.out / "requests.jsonl").open("x")
         self.snapshot()
 
@@ -46,7 +56,7 @@ class Evaluator:
                "current": asdict(env._cur), "tested": env.tested,
                "budgets": {"max_proposals_per_round": self.max_proposals,
                            "max_lookups_per_round": self.max_lookups,
-                           "max_requests": self.max_requests},
+                           "max_requests": self.max_requests, "history": self.history},
                "requests": self.requests}
         tmp = self.out / "run.json.tmp"
         with tmp.open("w") as f:
@@ -63,7 +73,7 @@ class Evaluator:
 
     def dispatch(self, action, args):
         env = self.env
-        fields = {"catalog": {"offset", "limit"}, "history": set(), "propose": {"ids"},
+        fields = {"catalog": {"offset", "limit"}, "history": set(), "propose": {"ids", "round_token"},
                   "lookup": {"id", "k"}, "end_round": set()}
         if action not in fields or set(args) - fields[action]:
             raise ValueError("Unknown action or arguments")
@@ -83,7 +93,12 @@ class Evaluator:
                     "proposal_calls_per_round": self.max_proposals,
                     "lookup_calls_per_round": self.max_lookups}
         if action == "history":
-            return {"observations": self.observations(), "round": env.round + 1,
+            if self.history == "none":
+                raise ValueError("history is disabled in this run: each result is shown once, when proposed")
+            obs = self.observations()
+            if self.history == "last":
+                obs = [x for x in obs if x["round"] >= env.round]  # last closed round (1-based = env.round) + current
+            return {"observations": obs, "round": env.round + 1,
                     "done": env.done, "remaining": 0 if env.done else env.remaining_in_batch()}
         if env.done:
             raise ValueError("Episode finished")
@@ -104,6 +119,15 @@ class Evaluator:
                 raise ValueError("ids must contain 1..batch short strings")
             if self.proposals >= self.max_proposals:
                 raise ValueError("Proposal/retry budget exhausted; end the round")
+            k = env.round + 1
+            if self.round_token_hashes and k not in self.opened:
+                token = args.get("round_token")
+                want = self.round_token_hashes[k - 1] if k <= len(self.round_token_hashes) else None
+                if not isinstance(token, str) or want is None or not hmac.compare_digest(
+                        hashlib.sha256(token.encode()).hexdigest(), want):
+                    raise ValueError(f"Round {k} is not open: pass the round_token from the user message for "
+                                     f"round {k}. If you have not received it yet, stop and wait for the next message.")
+                self.opened.add(k)
             self.proposals += 1
             cur = env.propose(ids)
             return {"accepted": list(cur.accepted), "observations": [
@@ -111,9 +135,15 @@ class Evaluator:
                     "invalid": list(cur.invalid), "repeats": list(cur.repeats),
                     "duplicates": list(cur.dup_in_batch), "overflow": list(cur.overflow),
                     "remaining": env.remaining_in_batch()}
+        if self.round_token_hashes and env.round + 1 not in self.opened:
+            raise ValueError(f"Round {env.round + 1} is not open, so it cannot be closed: wait for the next user "
+                             f"message and propose with its round_token first")
         env.end_round()
         self.proposals = self.lookups = 0
-        return {"completed_round": env.round, "done": env.done}
+        out = {"completed_round": env.round, "done": env.done}
+        if self.round_token_hashes and not env.done:
+            out["next"] = "Round closed. Stop and end your turn; the next user message gives the next round's token."
+        return out
 
     def request(self, body):
         # Request IDs make exact transport retries idempotent. Failed requests also
@@ -194,6 +224,9 @@ def main():
     p.add_argument("--max-proposals", type=int, default=3)
     p.add_argument("--max-lookups", type=int, default=8)
     p.add_argument("--max-requests", type=int, default=10000)
+    p.add_argument("--round-token-hashes", default="",
+                   help="comma-separated sha256 per round: one agent turn per round (see run_paired_pilot --gate)")
+    p.add_argument("--history", choices=["full", "last", "none"], default="full")
     a = p.parse_args()
     if a.rounds < 1 or a.batch < 1:
         p.error("rounds and batch must be positive")
@@ -201,8 +234,8 @@ def main():
     env = BioEnv(a.screen, rounds=a.rounds, batch=a.batch, anonymize=True,
                  seed=a.seed, features="depmap")
     e = Evaluator(env, a.out, max_proposals=a.max_proposals,
-                  max_lookups=a.max_lookups, max_requests=a.max_requests)
-    import hashlib
+                  max_lookups=a.max_lookups, max_requests=a.max_requests,
+                  round_token_hashes=[h for h in a.round_token_hashes.split(",") if h], history=a.history)
     import platform
     from env import DATA_DIR, DEPMAP_CSV
     from validate_depmap import sha256

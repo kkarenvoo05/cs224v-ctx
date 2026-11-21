@@ -14,3 +14,17 @@ bio/runs/*evaluator*smoke*/service.log
 bio/runtime_setup/private/
 bio/runtime_setup/model_info/
 bio/runtime_setup/*mcp*.json
+*.pyc
+.venv/
+.DS_Store
+*.pid
+*.tmp
+.pre_karen_*/
+*.zip
+# prototype runs: request bodies, Codex state and account rate limits; keep local
+ours/runs/
+ours/evals/
+ours/mcp/
+ours/model_info/
+ours/*.log
+ours/seed_empty/

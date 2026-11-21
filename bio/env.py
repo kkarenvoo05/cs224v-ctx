@@ -165,12 +165,20 @@ class RoundLog:
     revealed: dict = field(default_factory=dict)  # id -> score
     hits: list[str] = field(default_factory=list)
     invalid: list[str] = field(default_factory=list)
+    reserved: list[str] = field(default_factory=list)  # held out for hypothesis grading; cannot be tested
     repeats: list[str] = field(default_factory=list)  # tested in an EARLIER round
     dup_in_batch: list[str] = field(default_factory=list)
     overflow: list[str] = field(default_factory=list)
     cum_hits: int = 0
     hit_ratio: float = 0.0
     n_tested: int = 0
+    wasted: int = 0  # batch slots spent on repeats (only when BioEnv.repeat_cost is on)
+    # Batch constraint (only when BioEnv.constraint_top > 0, from round constraint_from on):
+    cons_active: bool = False
+    cons_required: int = 0  # min(constraint_min, untested neighbours of the top set at round start)
+    cons_met: int = 0       # accepted genes that were untested neighbours of the top set
+    cons_ok: bool = True
+    cum_valid_hits: int = 0  # hits counted only from rounds that met the constraint
 
 
 class BioEnv:
@@ -207,8 +215,44 @@ class BioEnv:
     def done(self) -> bool:
         return self.round >= self.rounds
 
+    # When True, proposing an already-tested gene uses up a batch slot (a wasted experiment), so
+    # forgetting the tested set costs hits. Off by default: earlier runs re-filled rejected slots for free.
+    repeat_cost = False
+
+    # Batch constraint (off when constraint_top == 0). From round constraint_from (1-based) on, at least
+    # constraint_min accepted genes per round must be untested lookup-neighbours (k = constraint_nn, the same
+    # lists /lookup returns) of the constraint_top tested genes with the largest |score| at the start of the
+    # round. A round that misses it scores no valid hits. The top set moves every round, so the agent has
+    # to keep neighbour lists for its current top genes, not just a log of results.
+    constraint_top = 0
+    constraint_min = 0
+    constraint_from = 3
+    constraint_nn = 8
+
+    # Genes held out from testing (hypothesis grading set). Empty unless set_reserve is called.
+    reserved: frozenset = frozenset()
+
+    def set_reserve(self, frac: float, seed: int) -> None:
+        rng = np.random.default_rng(seed)
+        n = int(round(frac * len(self.ids)))
+        self.reserved = frozenset(self.ids[i] for i in rng.choice(len(self.ids), n, replace=False))
+
+    def constraint_set(self) -> set[str]:
+        """Untested neighbours of the current top set (tested genes only, as of the round's start)."""
+        if not self.constraint_top or not self.tested:
+            return set()
+        sc = {g: abs(l.revealed[g]) for l in self.log for g in l.accepted}
+        top = sorted(sc, key=lambda g: (-sc[g], g))[:self.constraint_top]
+        out = set()
+        for g in top:
+            out.update(h for h, _ in self.lookup(g, self.constraint_nn))
+        return out - set(self.tested)
+
+    def constraint_active(self) -> bool:
+        return bool(self.constraint_top) and self.round + 1 >= self.constraint_from
+
     def remaining_in_batch(self) -> int:
-        return self.batch - len(self._cur.accepted)
+        return self.batch - len(self._cur.accepted) - self._cur.wasted
 
     def propose(self, genes: list[str]) -> RoundLog:
         """Submit proposals for the current round (may be called again to top up)."""
@@ -218,11 +262,17 @@ class BioEnv:
             g = str(g).strip()
             if g not in self.index:
                 cur.invalid.append(g)
+            elif g in self.reserved:
+                cur.reserved.append(g)
             elif g in self.tested:
-                cur.repeats.append(g)
+                if self.repeat_cost and self.remaining_in_batch() <= 0:
+                    cur.overflow.append(g)  # batch already full: no slot left to waste
+                else:
+                    cur.repeats.append(g)
+                    cur.wasted += self.repeat_cost
             elif g in cur.accepted:
                 cur.dup_in_batch.append(g)
-            elif len(cur.accepted) >= self.batch:
+            elif self.remaining_in_batch() <= 0:
                 cur.overflow.append(g)
             else:
                 cur.accepted.append(g)
@@ -234,11 +284,18 @@ class BioEnv:
 
     def end_round(self) -> RoundLog:
         cur = self._cur
+        if self.constraint_active():
+            S = self.constraint_set()  # before this round's genes join the tested set
+            cur.cons_active = True
+            cur.cons_required = min(self.constraint_min, len(S))
+            cur.cons_met = sum(g in S for g in cur.accepted)
+            cur.cons_ok = cur.cons_met >= cur.cons_required
         for g in cur.accepted:
             self.tested[g] = self.round
         cur.n_tested = len(self.tested)
         cur.cum_hits = (self.log[-1].cum_hits if self.log else 0) + len(cur.hits)
         cur.hit_ratio = cur.cum_hits / self.n_hits_total
+        cur.cum_valid_hits = (self.log[-1].cum_valid_hits if self.log else 0) + (len(cur.hits) if cur.cons_ok else 0)
         self.log.append(cur)
         self.round += 1
         self._cur = RoundLog(self.round)
@@ -265,7 +322,10 @@ class BioEnv:
         return {"rounds": len(self.log), "tested": len(self.tested), "cum_hits": self.log[-1].cum_hits if self.log else 0,
                 "hit_ratio": self.log[-1].hit_ratio if self.log else 0.0, "invalid": f("invalid"),
                 "repeats": f("repeats"), "dup_in_batch": f("dup_in_batch"), "overflow": f("overflow"),
-                "short_batches": sum(len(l.accepted) < self.batch for l in self.log)}
+                "short_batches": sum(len(l.accepted) < self.batch for l in self.log),
+                **({"valid_hits": self.log[-1].cum_valid_hits if self.log else 0,
+                    "violations": sum(not l.cons_ok for l in self.log),
+                    "constrained_rounds": sum(l.cons_active for l in self.log)} if self.constraint_top else {})}
 
     def hit_ratio_by_analyze(self) -> float:
         """Independent recomputation exactly as analyze.py (set(pred) ∩ topmovers / |topmovers|)."""

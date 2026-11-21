@@ -369,3 +369,211 @@ Accepted tests differ by only 54 (1.7%); repeats alone do not explain the hit ga
 
 `llm_agent.py` now writes atomic partial snapshots after completed rounds, diagnoses and probes,
 and refuses to reuse an existing result directory. This is checkpoint preservation, not resume.
+
+## Week 5: prototype (`ours`) on BDA (2026-11-13)
+
+Setup: `ours` release 2026.11.09-166c433f (pinned), gpt-6.1-terra, `--lane subscription`,
+`--context-window 16000` (effective 15,200). Prototype = `--harness codex` (structured memory in
+`data_structures/`); baseline = `--harness codex-shipped` (plain Codex 0.159). Task tools via
+`bio/bda_mcp.py` relaying to `bio/evaluator.py`; gene IDs scrambled with a secret per-run seed;
+week-2 (leaky) features; IFNG. Launcher `ours/run_bda.sh`, audit `ours/audit_trace.py`,
+table `ours/compare.py`.
+
+### Ungated pilot, 30x16: invalid as a context test
+
+| arm | hits | repeats | model requests | peak input tokens | compactions |
+|---|---|---|---|---|---|
+| prototype | 11 | 0 | 8 | 13.4K | 0 |
+| baseline | 116 | 0 | 11 | 13.6K | 0 |
+
+Both agents wrote a JavaScript (code mode) loop in their first turns that ran the rounds by itself,
+so the model never saw most rounds, context never grew, and compaction never fired. The hit gap
+is the gap between two one-shot heuristics: the baseline ranks neighbors of strong genes by the
+*sum* of squared |score| (genes near several strong genes win); the prototype ranks by the *max*
+and spends lookups on any high-|score| gene, not just hits. The prototype's 11 is below random
+(24.5 at 30x16). One seed; this says nothing about memory.
+
+**Design fix: one model turn per round.** `run_bda.sh` (GATE=1, default) draws a random token per
+round and sends round k's token in round k's user message (`--follow-up`). The evaluator holds only
+the tokens' sha256 hashes and refuses `propose` for a round until its token arrives, so a script from
+an earlier turn cannot run later rounds. Codex restarts MCP servers on every follow-up, so state
+lives in one evaluator process per run and `bda_mcp.py --url` relays to it. Gated smoke test (3x4,
+prototype): one round per turn, 21 requests, compaction once (13.1K -> 9.4K), 225K input tokens.
+
+Isolation caveat: the macOS Codex sandbox can read the whole disk (writes only to the workspace),
+and future round tokens are on the `ours` command line. The secret seed makes the screen files
+useless without the evaluator's memory; the audit flags any shell or JS command touching project
+paths or listing processes. 0 flags so far.
+
+### Gated pilot, 30x16, 16K window (one model turn per round)
+
+Same task seed scheme (secret per-run seed), week-2 features, gpt-6.1-terra, release 166c433f.
+Arms ran one after the other (the baseline's first launch failed on a launcher bug before any
+model call).
+
+| arm | hits | repeats | compactions (avg tokens before -> after) | model requests | input tokens (cached) | wall | state kept in |
+|---|---|---|---|---|---|---|---|
+| prototype (`codex`) | 28 | 0 | 28 (14.9K -> 9.7K) | 268 | 3.25M (91%) | 24 min | `data_structures/` files: measurements, neighbors, strategy (432 references in commands) |
+| baseline (`codex-shipped`) | 54 | 0 | 23 (12.9K -> 8.5K) | 167 | 1.79M | 11 min | re-reading the evaluator's `history` tool (41 calls); empty workspace |
+
+0 isolation flags in either arm. Weekly Codex quota 6% -> 9% for both arms.
+
+Reading:
+- The gate works: context now accumulates and both harnesses compact every ~1-1.5 rounds.
+- Neither arm forgets which genes it tested, but for a different reason each: the prototype keeps
+  its own tables, the baseline just asks the evaluator. **`history` is a perfect external memory,
+  so this task cannot show a memory failure in the baseline.** Next design change: remove `history`
+  (or limit it to the last round) so state must survive compaction in the agent's own memory.
+- Hits: both are near random (24.5) and far below UCB (167) at this size; the baseline's hit rate
+  rises after round 20. One seed each, so the 28 vs 54 gap is not evidence about memory.
+- The prototype spends 1.8x the tokens and 2.3x the time, mostly maintaining its files.
+
+Follow-up (Nov 14, code only): `evaluator.py`, `bda_mcp.py` and `evaluator_service.py` take
+`--history full|last|none` (`HISTORY=` in `ours/run_bda.sh`, `--history` in `run_paired_pilot.py`).
+With `none` the tool is gone and each result is shown once; the prompt says so. Repeats then
+measure forgetting, since a forgotten gene can only be caught by the propose call's
+`already_tested` rejection (counted as a repeat).
+
+### Gated pilot with history off, 30x16, 16K window (2026-11-14)
+
+Same settings as the gated pilot above, plus `HISTORY=none`. One seed each.
+
+| arm | hits | repeats | compactions | model requests | max input | input tokens | wall |
+|---|---|---|---|---|---|---|---|
+| prototype (`codex`) | 14 | 0 | 25 | 260 | 16.3K | 3.18M | 23 min |
+| baseline (`codex-shipped`) | 24 | 6 | 16 | 135 | 14.4K | 1.67M | 26 min |
+
+0 isolation flags in either arm. About 4% of the weekly Codex quota (9% → 13%).
+
+Reading:
+- **First memory failure in the baseline.** All 6 repeats came in round 29, on genes first tested in
+  rounds 1, 11, 20, 20, 26 and 26. The propose call rejected them and the agent topped up, so
+  they cost no hits, but the agent had lost track of which genes it had tested.
+- **Why it showed up late:** each baseline compaction freed less room. After the first one it went
+  13.4K → 9.2K; by request 99 it was 14.2K → 13.3K, as the summary itself grew toward the
+  15.2K effective window. The baseline's later turns ran right at the limit.
+- The prototype kept 0 repeats with no history tool: its files held the tested set.
+- **Hits are uninformative:** both are at or below random (24.5 expected); without history, both
+  arms did worse than with it (28 → 14 and 54 → 24). One seed, so take the direction only.
+- Next: a harder memory load (100x32 at 16K, where the tested set no longer fits in a summary),
+  more seeds, and a score-dependent task so memory affects hits, not just repeats.
+
+### 100x32, 16K window, history off, report every 10 rounds (2026-11-14, week-2 features)
+
+| arm | hits | repeats | top-10 reports correct | compactions | model requests | wall |
+|---|---|---|---|---|---|---|
+| prototype (`codex`) | 314 | 0 | 10/10 at all 10 checkpoints | 103 | 1,025 | 1h40 |
+| baseline (`codex-shipped`) | 93 by round 28, then invalid | 8 | 10, 10, 9, 9 | 98 by round 44 | | stopped at 3h40 |
+
+- The prototype played every round (one turn per round, 0 isolation flags) and kept the tested set,
+  scores and lookups in its files. Hits are inflated for both arms by the leaky week-2 features.
+- **Gate bug:** after closing round 28 the baseline kept going in the same turn, proposed with the
+  old token (rejected), then called end_round. The evaluator closed round 29 empty without it ever
+  being opened, and from then on ran one round ahead of the user messages: every later token was
+  for the wrong round, so rounds 29-44 accepted 0 genes. Fixed: end_round now refuses a round that
+  was never opened (`evaluator.py` and `evaluator_service.py`, with regression tests). All earlier
+  gated runs were checked: no empty rounds.
+- The baseline was stopped at round 44; seeds 1-2 were cancelled to save quota (13% → 34% weekly).
+  Rerun as a DepMap pair with the fixed gate (`dm_*_s0`).
+
+### DepMap 100x32, 16K window, history off, report every 10 rounds, fixed gate (2026-11-15, `dm_*_s0`)
+
+| arm | hits | repeats | top-10 reports correct | compactions | model requests | input tokens | wall |
+|---|---|---|---|---|---|---|---|
+| prototype (`codex`) | 229 | 16 (all in round 2) | 10/10 at all 10 checkpoints | 99 | 986 | 12.4M | 2h02 |
+| baseline (`codex-shipped`) | 212 | 0 | 10/10 at all 10 checkpoints | 44 | 437 | 5.2M | 46 min |
+
+- Random picks would average about 160 hits (3,200 of 18,418 genes, 920 hits). Both arms beat
+  random by a similar margin. Hits by round 10/30/50: prototype 38/90/129, baseline 28/91/129.
+- Both arms played all 100 rounds, one turn per round, with no gate errors, no empty rounds and
+  0 isolation flags.
+- **Correction (Nov 15):** I first misread the 0-based round index and called the prototype's 16
+  repeats same-round resends. They are real: in round 2 it re-proposed 16 of the genes it had tested
+  in round 1 (rejected, then refilled; 32 new genes that round). None after round 2.
+- **No memory gap.** With the history tool removed, plain Codex wrote every round's results to its
+  own files (`workspace/screen_records/round_NNN.json`, 100 files) and read them back. The prototype
+  kept its own files too (`data_structures/scores.jsonl`, `neighbors.jsonl`). Both had an exact
+  external memory, so neither forgot anything after round 2 and the report probe was saturated.
+  The earlier history-off baselines (`hpilot_base_30x16`, `long_base_s0`) wrote no files and did
+  forget (6 and 8 repeats, reports down to 9/10), so whether plain Codex writes files varies by run.
+- **Reference baselines, DepMap 100x32, 5 seeds** (`bio/runs/baselines_depmap_100x32.json`): random
+  153 (148-161), kNN 286 (250-315), UCB 338 (316-362), prior 351 (same every seed). Both LLM arms
+  (229, 212) sit between random and kNN. The baselines are not information-matched: they use every
+  gene's full DepMap profile, while the agents see only 8 neighbors for up to 4 genes per round.
+  `prior` (rank once by profile size, no feedback) reaching 38% of hits says a gene's DepMap
+  profile alone predicts strong IFNG effects; the agents can't see that signal.
+- **Information-matched baseline** (`nbr`, `bio/runs/baselines_depmap_nbr_100x32.json`, 5 seeds): no
+  feature vectors, only the evaluator's own lookup (8 neighbours, up to 4 genes per round). Each round
+  it looks up its best tested genes and proposes their untested neighbours, filling with random picks.
+  221 hits (215-226); by round 10/30/50: 21/80/130. Both LLM arms (229, 212; 38/90/129 and 28/91/129)
+  match it: with the same information, neither agent beats a two-line heuristic yet.
+- Cost: the prototype used 2.4x the input tokens and 2.3x the requests of the baseline for +17 hits
+  (one seed). Weekly quota went 34% → 44%.
+
+### Repeats cost a slot: `--repeat-cost` (added Nov 15) and offline re-scoring
+
+Until now a rejected repeat cost nothing: the agent re-filled the slot in its next propose call, so
+forgetting the tested set never cost hits. `evaluator.py --repeat-cost` (`REPEAT_COST=1` in
+`ours/run_bda.sh`) makes a repeat use up its slot, like a wasted experiment. Off by default, so every
+run above keeps its scoring. `bio/rescore_repeat_cost.py` replays a finished run's requests under the
+new rule (an upper bound on the loss: the agent never saw the cost, and dropped genes stay "tested"):
+
+| run | hits | hits if repeats cost a slot | slots wasted |
+|---|---|---|---|
+| dm_ours_s0 (prototype) | 229 | 228 | 16 |
+| dm_base_s0 (plain Codex, files) | 212 | 212 | 0 |
+| nf_base_s0 (plain Codex, no files) | 211 | 180 | 627 |
+| dm_ours_s1 (prototype, seed 1) | 210 | 210 | 0 |
+| nf_base_s1 (plain Codex, no files, seed 1) | 215 | 176 | 815 |
+| dm_ours_s2 (prototype, seed 2) | 223 | 223 | 0 |
+
+`nf_base_s0`: told not to write files, it complied (0 workspace files), proposed 811 already-tested
+genes over 92 rounds (from round 4 on), and still named the top 10 correctly at every report. It kept
+the short top list through compaction but not the 3,200-gene tested set.
+
+**Seeds (Nov 16).** `nf_base_s1`: 0 files, 1,167 repeats over 69 rounds (first in round 21), 100/100
+reports, 187 compactions, 7.8M input tokens, 4h53 (slow: most turns re-proposed tested genes).
+`dm_ours_s2`: 0 repeats, 100/100 reports, 105 compactions, 12.9M input tokens. No gate errors or
+empty rounds in either. `nf_base_s2` was not run: the list's quota guard stopped at 80% weekly
+(limit 75%; resets Fri Nov 20).
+
+| arm | seeds | hits | mean | if repeats cost a slot | repeats | reports |
+|---|---|---|---|---|---|---|
+| prototype | 3 | 229 / 210 / 223 | 221 | 228 / 210 / 223 | 16 / 0 / 0 | 100/100 each |
+| plain Codex, no files (`NOFILES=1`) | 2 | 211 / 215 | 213 | 180 / 176 | 811 / 1,167 | 100/100 each |
+| plain Codex, files allowed | 1 | 212 | 212 | 212 | 0 | 100/100 |
+| `nbr` (no LLM) | 5 | 215-226 | 221 | (no repeats) | 0 | – |
+
+Reading: under the current scoring all arms tie with `nbr` (~210-230). Without files, plain Codex
+loses the tested set (hundreds of repeats, both seeds) while keeping the top-10, and that costs about
+35-40 hits once repeats use a slot (offline bound). The prototype's files keep the tested set exact
+in all three seeds. Top-10 recall stays saturated everywhere.
+
+### Karen's paired runs (Nov 10-13, ungated, 48K window, DepMap, restricted sandbox)
+
+| pair | prototype | baseline | diff | model requests (proto/base) | compactions |
+|---|---|---|---|---|---|
+| 30x16 seed 0 (corrected) | 83 | 53 | +30 | 12 / 12 | 0 |
+| 100x32 seed 0 | 292 | 313 | -21 | 21 / 10 | 0 |
+| 100x32 seed 1 | 287 | 314 | -27 | 16 / 12 | 0 |
+| 100x32 seed 2 | 217 | 254 | -37 | 14 / 17 | 0 |
+
+Each finished in ~2-3 minutes with 10-21 model requests and no compaction: the agents scripted the
+rounds in code. These compare one-shot programs, not context handling. Her guarded stack
+(`bio/run_paired_pilot.py`) now has `--gate` for the next pairs.
+
+## Graded hypotheses pilot (Nov 19)
+
+Harder task (files allowed for both arms): 15% of genes are held out and never testable; every 10
+rounds and at the end the agent submits up to 5 modules (3-10 tested genes + sign), each graded on the
+8 held-out genes most frequent in its members' lookup lists (fraction that are hits of that sign;
+score = sum / 5). Grades are not shown to the agent. Design and offline baselines:
+`notes/harder_task_design.md`, `bio/hypothesis_baselines.py`.
+
+| run | arm | hits | hypothesis score | repeats | held-out proposals | workspace files |
+|---|---|---|---|---|---|---|
+| hyp_ours_30x16 | prototype | 48 | 0.050 | 0 | 94 | 8 |
+| hyp_base_30x16 | plain Codex, files allowed | 35 | 0.008 | 17 | 88 | 0 |
+
+Offline at 30x16: random modules 0.015, same-sign hits 0.040, nbr_hits 0.030; at 100x32: 0.032,
+0.083, 0.162. One seed, 30x16: a mechanics check, not a result.

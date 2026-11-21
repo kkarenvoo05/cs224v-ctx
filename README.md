@@ -28,9 +28,9 @@ Keep the folder layout as is: the code finds the data by relative path.
    python3 -m venv bio/.venv
    bio/.venv/bin/pip install -r bio/requirements.txt
    ```
-2. **Tests** (should print 11 passed and 5 passed; the BDA tests take ~3 min):
+2. **Tests** (should print 17 passed and 5 passed; the BDA tests take ~3 min):
    ```
-   bio/.venv/bin/python -m pytest -q bio/test_env.py
+   bio/.venv/bin/python -m pytest -q bio/test_env.py bio/test_checkpoint.py bio/test_compaction.py bio/test_evaluator.py
    bio/.venv/bin/python -m pytest -q audit/test_audit.py
    ```
 3. **Claude Code**: install it, run `claude` once and log in. `claude auth status` shows which plan it
@@ -83,3 +83,82 @@ bio/.venv/bin/python -I bio/baselines.py --screens IFNG --policies random prior 
 Local integration review and revised priorities: [notes/week3_integration_review.md](notes/week3_integration_review.md).
 Evaluator API, smoke checks, and remaining prototype gates: [bio/EVALUATOR.md](bio/EVALUATOR.md).
 # cs224v-ctx
+
+## Added in week 5 (Nov 13)
+
+- **Token-based compaction** for the summary policies: `--threshold-tokens N` keeps the full table until
+  the prompt would pass ~N tokens, then compacts, like a harness's auto-compaction. Without it the old
+  gene-count rule (`--threshold`) applies. Every round's estimated prompt size and each compaction
+  event go to `run.json["context"]` and `run.json["compactions"]`, and the log prints `COMPACTION r<N>`.
+  Estimate: 1.65 characters per token, calibrated on the Opus runs (30.3K estimated vs 31.5K counted at
+  round 99).
+- **`--policy summary_set`** (Karen's, same idea as my earlier summary_ids): the summary view plus the exact set of tested IDs, without scores. It
+  separates forgetting *which* genes were tested from losing their scores.
+- **Evaluator service** for code-capable agents such as the prototype: `bio/evaluator.py` holds the
+  screen, scores and ID mapping in its own process; the agent only gets `bio/eval_client.py` (standard
+  library only) and the URL. Limits per round on proposals and lookups; every request is logged to
+  `OUT/requests.jsonl`; `OUT/run.json` is saved after every round.
+  ```
+  bio/.venv/bin/python -I bio/evaluator.py --screen IFNG --rounds 30 --batch 16 --anonymize \
+    --features depmap --seed 0 --port 8765 --out bio/runs/eval_NAME
+  EVAL_URL=http://127.0.0.1:8765 python3 eval_client.py help
+  ```
+  It only keeps hidden state out of the API: also run the agent in a folder without this repo or the
+  data, and check it can't read them.
+- Tests: `bio/test_compaction.py`, `bio/test_evaluator.py` (22 total with the others, no model calls).
+
+Example: compaction at ~16K tokens on a 100x32 run (fires around round 50):
+```
+... --policy summary --threshold-tokens 16000 ...
+```
+
+## Running the prototype (`ours`) on the BDA task
+
+Mac with Apple silicon only. Needs read access to Yucheng's release repo and a ChatGPT plan with Codex
+(runs use that plan's quota, not Claude's).
+
+1. Install and pin a version so runs match:
+   ```
+   gh release download --repo Yucheng-Jiang/context-management-codex-integration-release --pattern install.sh --output - | sh
+   ~/.ours/bin/ours use 2026.11.09-166c433f
+   ~/.ours/bin/ours login            # skip if `~/.ours/current/codex/bin/codex login status` says logged in
+   cd ours && ~/.ours/bin/ours fetch-model gpt-6.1-terra --out model_info/gpt-6.1-terra.json
+   ```
+2. Run: `ours/run_bda.sh NAME HARNESS CONTEXT_WINDOW ROUNDS BATCH [WALL_S]`.
+   - `HARNESS=codex` is the prototype (structured memory under `data_structures/`).
+   - `HARNESS=codex-shipped` is plain Codex 0.159, the matched baseline.
+   - The task's tools come from `bio/bda_mcp.py`, an MCP server that holds the screen, scores and
+     gene mapping in its own process. It scrambles gene IDs with a random seed it keeps in memory, and
+     writes only the seed's hash until the episode ends. The scoring goes to `ours/evals/NAME/`.
+   - `GATE=1` (default) runs one model turn per round: each round's random token arrives in that
+     round's user message, so the agent can't script the whole episode in code.
+   - `HISTORY=full|last|none` (default `full`) sets what the history tool returns. With `full` an
+     agent can re-read every result after compaction, so forgetting costs nothing. Use `none` for
+     memory comparisons: each result is shown once, in end_round's reply.
+   ```
+   HISTORY=none ours/run_bda.sh hpilot_ours_30x16 codex 16000 30 16
+   HISTORY=none ours/run_bda.sh hpilot_base_30x16 codex-shipped 16000 30 16
+   python3 -I ours/compare.py hpilot_ours_30x16 hpilot_base_30x16
+   ```
+   - `REPORT_EVERY=K` (default off) adds a score-memory probe: after every K-th and the last round
+     the agent must name its 10 tested genes with the largest |score| before proposing again. The
+     evaluator scores it (`report_score` in compare.py) without showing the agent. This needs exact
+     scores from early rounds, not just the tested set.
+   - `ours/run_series.sh PREFIX CW ROUNDS BATCH N_PAIRS [WALL_S]` runs N matched pairs, alternating arm
+     order, and stops before any arm once the weekly Codex quota passes `MAX_WEEKLY` (default 70%).
+   - `NOFILES=1`: tells the plain-Codex arm only not to write files (by instruction; `compare.py`'s
+     `workspace_files` column shows whether it complied). The prototype keeps its own file memory.
+   - `ours/run_list.sh CW ROUNDS BATCH WALL_S NAME:HARNESS[:ENV=VAL,...] ...` runs arms in order with the
+     same quota guard, e.g. `nf_base_s0:codex-shipped:NOFILES=1 dm_ours_s1:codex`.
+   Karen's isolated stack takes the gate and history options: `bio/run_paired_pilot.py --gate --history none`
+   (no report probe there yet).
+3. Audit: `python3 -I ours/audit_trace.py ours/runs/<run>` gives tool calls, input tokens per request,
+   each compaction (tokens before and after), and isolation flags. macOS's sandbox lets the agent
+   *read* the whole disk, so isolation here is detection: any shell or JavaScript command that touches
+   project files or paths outside the workspace is flagged. Check every flag by hand.
+
+Notes from the smoke tests (Nov 13):
+- `--context-window 16000` gives an effective window of 15,200 tokens. The first prompt is about
+  8K tokens.
+- At 4 genes a round, the prototype grows about 600-900 tokens per request (it also writes its data
+  files), and the baseline about 200. The prototype compacted once in 8 rounds (15.5K → 9.2K).

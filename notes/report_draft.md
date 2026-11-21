@@ -76,6 +76,39 @@ and measure end-task hits plus accepted tests at matched budgets.
 Used as a sanity check, as in the proposal [Zeng, Huang, He 2026]. Its mock MCP servers needed
 pinned dependencies, documented in `loca/NOTES.md`.
 
+### 2.4 Prototype comparison on the screen (ours run)
+
+We run the mentor's prototype (`ours run --harness codex`, release 2026.11.09-166c433f) against
+plain Codex (`--harness codex-shipped`) with the same model on the IFNG screen, served by our
+evaluator as an MCP tool server outside the agent's folder. Settings common to all runs:
+- `--context-window 16000`, so compaction fires about every round at 100x32;
+- a round gate: each user message carries a one-round token, so the agent takes one turn per
+  round (ungated, every agent wrote a script that played all rounds and never compacted);
+- no history tool: each result is shown once, so what the agent knows must survive compaction
+  in whatever memory it keeps;
+- DepMap neighbour lookups (4 genes per round, 8 neighbours each) as the only gene features;
+- a probe every 10 rounds: name the 10 tested genes with the largest |score|;
+- `--repeat-cost` (later runs): a re-proposed gene uses up its batch slot.
+
+Both arms may write files. The prototype keeps its memory in files it writes; plain Codex
+sometimes does the same unprompted. A run that told only plain Codex not to write files was
+dropped as an unfair control (course staff, Nov 17).
+
+**Graded hypotheses.** Hits alone do not separate the arms: a no-LLM policy using the same
+lookups matches both, because a flat log of tested genes suffices. We therefore add a task
+that needs scores, signs and lookup results combined. 15% of genes are held out (seeded, never
+testable; proposing one is rejected as `held_out`). After every 10th round and the last, the
+agent must submit up to 5 modules, each 3-10 tested genes with a predicted sign, before it may
+propose again. A module is graded on the 8 held-out genes that occur most often in its members'
+lookup lists; its score is the fraction that are hits of the predicted sign, and the
+checkpoint score is the sum over modules divided by 5. Grades are never shown. Grading on
+held-out rather than untested genes matters: an agent that tests its hits' neighbours would
+otherwise use up the genes it is graded on, and sensible strategies scored below random.
+No-LLM references (`bio/hypothesis_baselines.py`): random modules, same-sign hits grouped at
+random, and same-sign hits grouped by shared looked-up neighbours with perfect bookkeeping.
+An earlier design (each batch must contain untested neighbours of the current top hits) was
+dropped because a simple heuristic satisfied it every round.
+
 ## 3. Trace audit
 
 ### 3.1 Event schema and labels
@@ -135,3 +168,9 @@ measure false "tested" claims.
 - Probes and diagnoses are self-reports. A model may answer a recall question differently from
   how it would act, which is exactly the gap `ignored_known` measures, but it also means probes
   are not ground truth about the model's internal state.
+- Prototype comparisons rest on 1-3 seeds per arm, and offline hypothesis scores vary widely
+  across seeds (0.03-0.29 for the same strategy at 100x32). Whether plain Codex keeps files is
+  itself variable across runs, so the no-memory failure mode appears in some baseline runs and
+  not others.
+- The prototype uses about 2.4x the baseline's input tokens; comparisons are at matched rounds
+  and batch size, not matched cost.
