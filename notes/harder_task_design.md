@@ -104,3 +104,20 @@ hypothesis tool at all 3 checkpoints, held-out genes were rejected, grades were 
 Plain Codex wrote no files (unlike dm_base_s0), lost track of tested genes (round 21 batch fully
 rejected: repeats plus held-out), padded batches with patterned IDs (G00001, G01001, ...), and put
 non-hits in modules. The prototype under-submitted (scores divide by 5 modules). One seed only.
+
+### 100x32, 3 seeds per arm (Nov 20-21)
+
+Full table in `bio/RESULTS.md`. Hypothesis score: prototype 0.156* / 0.047 / 0.137 (mean 0.113),
+plain Codex 0.102 / 0.192 / 0.082 (mean 0.125): no difference. Hits: prototype 198* / 215 / 218,
+plain Codex 188 / 185 / 189; plain Codex repeated 161 and 195 genes in s0 and s2 despite writing
+120+ files. (\* s0 stopped at round 99 on the usage limit.) Both arms submitted 5 modules every
+checkpoint (the prompt fix worked); member precision 0.82-0.97.
+
+What this says about the task:
+- The score barely moves after about round 30: most runs resubmit identical modules, so it tests
+  early grouping, not memory over 100 rounds.
+- Members' neighbour lists contain 2-5 held-out genes on average (of 8 graded), so the ceiling
+  per module is often 0.25-0.6. Grading on the held-out genes actually present (or a fixed
+  per-module set drawn from a larger reserve) would cut this noise.
+- Possible fixes: require modules to change (e.g. grade only modules containing a gene tested
+  since the last checkpoint), or grade at the end only on modules built from late-tested genes.

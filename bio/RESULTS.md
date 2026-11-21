@@ -577,3 +577,46 @@ score = sum / 5). Grades are not shown to the agent. Design and offline baseline
 
 Offline at 30x16: random modules 0.015, same-sign hits 0.040, nbr_hits 0.030; at 100x32: 0.032,
 0.083, 0.162. One seed, 30x16: a mechanics check, not a result.
+
+## Graded hypotheses, 100x32, 3 seeds per arm (Nov 20-21)
+
+16K window, round gate, history off, DepMap lookups, repeats cost a slot, 15% reserve, hypotheses
+every 10 rounds. Task text asks for 5 modules (score averages over 5). `ours/compare.py`, plus a
+per-checkpoint audit of `ours/evals/NAME/run.json`.
+
+| run | hits | hypothesis score | per-checkpoint | member precision | repeats | top-10 report | short batches | files | input tokens | quota |
+|---|---|---|---|---|---|---|---|---|---|---|
+| hyp_ours_s0 | 198* | 0.156* | 0.03 → 0.20 | 0.88 | 28 | 1.00 | 12 | 15 | 21.4M | ≥16% |
+| hyp_base_s0 | 188 | 0.102 | 0.03 → 0.12 | 0.92 | 161 | 0.82 | 55 | 124 | 11.8M | ~10% |
+| hyp_ours_s1 | 215 | 0.047 | 0.03 → 0.05 | 0.82 | 3 | 1.00 | 10 | 10 | 23.6M | 14% |
+| hyp_base_s1 | 185 | 0.192 | 0.30 → 0.10 | 0.97 | 4 | 1.00 | 12 | 238 | 11.8M | 7% |
+| hyp_ours_s2 | 218 | 0.137 | 0.05 → 0.15 | 0.85 | 3 | 1.00 | 13 | 10 | 23.2M | 15% |
+| hyp_base_s2 | 189 | 0.082 | 0.17 → 0.03 | 0.96 | 195 | 0.72 | 60 | 121 | 10.8M | 8% |
+
+\* hyp_ours_s0 hit the weekly usage limit after round 99, so it has 9 checkpoints, not 10.
+
+| arm | hits (mean) | hypothesis score (mean) | repeats | top-10 reports |
+|---|---|---|---|---|
+| prototype | 198 / 215 / 218 (210) | 0.156 / 0.047 / 0.137 (0.113) | 28 / 3 / 3 | 1.0 all |
+| plain Codex | 188 / 185 / 189 (187) | 0.102 / 0.192 / 0.082 (0.125) | 161 / 4 / 195 | 0.82 / 1.0 / 0.72 |
+| offline refs (100x32) | – | random 0.03, same-sign hits 0.08, nbr_hits 0.16 (0.03-0.29) | | |
+
+Reading:
+- **Hypothesis score: no difference.** The means are 0.113 vs 0.125, and the seed spread (0.05-0.19) is
+  larger than the gap. Both arms submitted 5 modules every checkpoint, and both beat random and
+  same-sign hits. Neither reliably beats nbr_hits.
+- **Hits: the prototype is ahead on every seed** (+23 mean), because plain Codex lost the tested set in
+  2 of 3 seeds (161 and 195 repeats, each costing a slot; 55-60 short batches). It wrote 121-238
+  files in every seed, yet still repeated. hyp_base_s1, the one plain Codex seed with an exact
+  record (4 repeats), has the best hypothesis score of all six runs.
+- **Modules freeze.** After about round 30 most runs resubmit the same 5 modules, so the score is
+  set early and later bookkeeping doesn't change it. In plain Codex s1 and s2 it fell after the
+  first checkpoints.
+- **Grading ceiling.** A module's members' neighbour lists hold only 2-5 held-out genes on average
+  (of 8), and missing ones count as misses, so few modules can score above 0.6. This applies
+  equally to the offline references.
+- **Cost:** the prototype used about 2x the input tokens, 2x the wall time (195-212 vs 79-109 min) and
+  about 2x the quota (14-16% vs 7-10% per run).
+- **Isolation:** 28 flags in plain Codex s0/s2, checked by hand. 26 are JS variables named `ps`;
+  in the other two, s0 ran `ls -la ../trace`, which listed an
+  empty folder. No evaluator, data or seed access.

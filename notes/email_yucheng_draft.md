@@ -1,4 +1,4 @@
-Subject: CS224V context management: results from 100-round runs, and the comparison question
+Subject: CS224V context management: 100-round results, a harder task, and the comparison question
 
 Hi Yucheng,
 
@@ -33,18 +33,30 @@ agent never sees the grade. Doing well means keeping scores, signs and lookup re
 grouping hits by shared neighbours. A no-LLM reference that does this with perfect bookkeeping scores
 0.16 at 100x32, against 0.03 for random modules (max 1.0). In a 30x16 pilot (one seed) the prototype
 scored 0.05 and plain Codex 0.008; plain Codex wrote no files this time and put non-hits in most of its
-modules. The prototype also under-submitted (1-3 modules per checkpoint
-instead of 5), so the task text now says the score averages over 5. The 100x32 runs, 3 seeds per arm,
-started Nov 20 and should finish by Nov 21; we'll send those results and logs when they're in.
+modules. We then ran 100x32, 3 seeds per arm
+(Nov 20-21):
+- **Hypothesis score: a tie.** Prototype 0.156 / 0.047 / 0.137 (mean 0.11), plain Codex 0.102 /
+  0.192 / 0.082 (mean 0.13). The spread between seeds is bigger than the gap. Both arms land
+  between grouping hits at random (0.08) and the neighbour-grouping reference (0.16).
+- **Hits: the prototype leads on every seed**, 198 / 215 / 218 vs 188 / 185 / 189. Plain Codex wrote
+  120+ files in every seed but still re-proposed 161 and 195 tested genes in two of them. The
+  one seed where it kept an exact record had the best hypothesis score of all six runs.
+- **The task still doesn't need long-horizon memory.** Most runs resubmit the same modules from
+  about round 30 on, so the score is mostly set early. We're looking at grading only modules
+  that include recently tested genes.
+- The prototype used about twice the tokens and wall time (21-24M vs 11-12M input tokens per run).
+
+(The prototype's seed 0 hit our usage limit at round 99, so it has 9 of 10 checkpoints.)
 
 **Questions.**
 1. Does this kind of task test what the prototype's structured memory is meant to do? Is there a
-   task shape you'd expect to show its advantage more clearly?
+   task shape you'd expect to show its advantage more clearly? (Its clearest edge so far is
+   keeping the tested set exact when plain Codex's own files don't.)
 2. Is gating one round per user message (with `--follow-up`) a fair way to use the prototype for a
    long multi-turn task, or is there a mode you'd rather we use?
 3. Is a 16K window reasonable, or should we also run one at the real 48K (batch 64 or about 200 rounds)?
 
-**Logs.** [LINK] has, for each of the 6 runs, the `ours run` output folder (traces, requests,
+**Logs.** [LINK] has, for each of the 6 earlier runs and the 6 hypothesis runs, the `ours run` output folder (traces, requests,
 workspace) and our evaluator's request log, plus a results table and the launch commands. They're
 shared only with you, since the release isn't for redistribution.
 

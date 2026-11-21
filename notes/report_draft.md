@@ -109,6 +109,24 @@ random, and same-sign hits grouped by shared looked-up neighbours with perfect b
 An earlier design (each batch must contain untested neighbours of the current top hits) was
 dropped because a simple heuristic satisfied it every round.
 
+**Results (100x32, 3 seeds per arm, Nov 20-21).**
+
+| arm | hits | hypothesis score | repeats | top-10 reports | input tokens / run |
+|---|---|---|---|---|---|
+| prototype | 198* / 215 / 218 (mean 210) | 0.156* / 0.047 / 0.137 (0.113) | 28 / 3 / 3 | 1.0 all | 21-24M |
+| plain Codex | 188 / 185 / 189 (mean 187) | 0.102 / 0.192 / 0.082 (0.125) | 161 / 4 / 195 | 0.82 / 1.0 / 0.72 | 11-12M |
+
+\* stopped by the usage limit after round 99 (9 of 10 checkpoints). Offline references at 100x32:
+random 0.03, same-sign hits 0.08, nbr_hits 0.16 (0.03-0.29 across seeds).
+
+On hypothesis scores the arms tie: the seed spread is larger than the gap, and both sit between
+same-sign hits and nbr_hits. The prototype is ahead on hits in every seed, because plain Codex lost
+the tested set in two of three seeds (161 and 195 repeats, each costing a slot), even though it
+wrote 121-238 files in each. The one plain Codex seed with an exact record (s1, 4 repeats) had the
+best hypothesis score of all six runs. Most runs resubmit the same modules from about round 30,
+so the hypothesis score reflects early choices more than long-horizon memory. The prototype used
+about twice the tokens, wall time and quota.
+
 ## 3. Trace audit
 
 ### 3.1 Event schema and labels
@@ -159,6 +177,9 @@ measure false "tested" claims.
   NeurIPS 2026]; DiscoveryWorld; MetaSyn.
 
 ## 5. Threats to validity (keep updated)
+- Graded hypotheses: modules are scored on at most 8 held-out neighbours, but members' lookup lists
+  hold only 2-5 on average and missing ones count as misses, which caps most module scores well
+  below 1; agents also freeze their modules early, so later checkpoints add little signal.
 - Qwen3-8B runs and one-seed Opus pilots have different capability and sampling controls;
   compare context policies within a fixed model, scaffold and feature source.
 - Anonymized-screen features leak from sibling screens; DepMap code exists but real-data
